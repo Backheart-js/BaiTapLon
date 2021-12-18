@@ -1,0 +1,39 @@
+/* index.php */
+.container-fluid {
+    padding: 0;
+}
+    /* Header */
+#navbar {
+    display: flex;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logo-wrap {
+    flex: 1;
+}
+.navbar__logo-img {
+    width: 50%;
+}
+
+.navbar__search-wrap {
+    flex: 7;
+}
+.navbar__input-wrap {
+    position: relative;
+}
+.navbar__input-icon {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+}
+.navbar__search-input {
+    width: 70%;
+    padding-left: 40px;
+}
+
+.navbar__login-wrap {
+    flex: 2;
+}
