@@ -1,39 +1,129 @@
-/* index.php */
-.container-fluid {
-    padding: 0;
+* {
+    overflow: hidden;
 }
+/* index.php */
     /* Header */
 #navbar {
-    display: flex;
+    position: fixed;
     height: 64px;
-    background-color: rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
 }
 
 .navbar__logo-wrap {
-    flex: 1;
+    height: 100%;
 }
 .navbar__logo-img {
     width: 50%;
 }
 
 .navbar__search-wrap {
-    flex: 7;
+    height: 100%;
+    align-items: center;
 }
 .navbar__input-wrap {
     position: relative;
+    flex: 1;
 }
 .navbar__input-icon {
     position: absolute;
-    height: 100%;
-    width: 40px;
+    left: 12px;
+    transform: translateY(5px);
 }
 .navbar__search-input {
-    width: 70%;
-    padding-left: 40px;
+    border: unset;
+    width: 100%;
+    padding: 6px 0 6px 40px;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.7);
 }
 
-.navbar__login-wrap {
-    flex: 2;
+.navbar__user-wrap {
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar__login-btn {
+    background: transparent;
+    border-color: transparent;
+    color: #fff;
+}
+.navbar__signup-wrap {
+    width: 100px;
+}
+.navbar__signup-btn {
+    width: 100%;
+}
+
+/* Content */
+    /* Slider/body */
+.bg-slider-guest {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+    /* Text on slider */
+.content__text {
+    position: absolute;
+    top: 20%;
+    z-index: 4;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 640px;
+
+}
+.content__text-title {
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+.content__text-sub {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #fff;
+
+}
+.content__text-btn {
+    height: 64px;
+    line-height: 48px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.content__text-btn:hover {
+    color: #666;
+}
+
+/* Footer */
+.footer__home-guest {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #212124;
+}
+.footer__home-guest-list {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 12px 0;
+}
+.footer__home-guest-item {
+    display: contents;
+}
+.footer__home-guest-link {
+    text-decoration: none;
+    color: #ccc;
+}
+.footer__home-guest-link:hover {
+    color: #fff;
+}
+.footer__home-guest-icon {
+    font-size:20px;
 }
