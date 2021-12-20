@@ -138,6 +138,7 @@
                             <a href="" class="footer__home-guest-link">
                                 <i class="footer__home-guest-icon fab fa-instagram"></i>
                             </a>
+                            
                         </div>
                         
                     </li>
