@@ -18,7 +18,9 @@
             <div class="container-fluid" id="navbar">
                 <div class="row ps-4 pe-4 h-100">
                     <div class="navbar__logo-wrap col-md-2 d-flex">
-                        <img class="navbar__logo-img" src="./Assets/data_img/flickr_demo.svg" alt="">
+                        <a href="#" class="d-flex">
+                            <img class="navbar__logo-img" src="./Assets/data_img/flickr_demo.svg" alt="">
+                        </a>
                     </div>
                     <div class="container-fluid col-md-10">
                         <div class="row h-100">
