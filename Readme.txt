@@ -1,5 +1,5 @@
 - Giao diện khách ban đầu (Bình)
-- Giao diện khách tìm kiếm ảnh
+- Giao diện tìm kiếm ảnh
 - Giao diện home user (Loan)
 - Kho ảnh người dùng (đẩy ảnh lên) (Huyền)
 - Login	
