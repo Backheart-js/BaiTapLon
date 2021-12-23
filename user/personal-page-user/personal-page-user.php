@@ -59,6 +59,9 @@
         <li><a class="subnav navbar-brand px-5 fs-4" href="#">Albums</a></li>
         <li><a class="subnav navbar-brand px-5 fs-4" href="#">Faves</a></li>
         <li><a class="subnav navbar-brand px-5 fs-4" href="#">Galleries</a></li>
+        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Group</a></li>
+        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Stats</a></li>
+        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Camera Roll</a></li>
       </ul>
      
     </div>
