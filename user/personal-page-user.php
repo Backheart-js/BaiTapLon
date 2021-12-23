@@ -59,7 +59,6 @@
         <li><a class="subnav navbar-brand px-5 fs-4" href="#">Albums</a></li>
         <li><a class="subnav navbar-brand px-5 fs-4" href="#">Faves</a></li>
         <li><a class="subnav navbar-brand px-5 fs-4" href="#">Galleries</a></li>
-        <li><a class="navbar-brand px-5 fs-3 " href="#"><i class="bi bi-three-dots text-end"></i></a></li>
       </ul>
      
     </div>
