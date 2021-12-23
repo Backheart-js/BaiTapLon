@@ -48,61 +48,31 @@
       </div>
   </nav>
   </header>
-  <div class="slider">
-    <div class="item_slider"></div>
+  <div class="slider position-relative">
+    <div class="row my-5 position-absolute mb-3 bottom-0 text-center">
+      <div class="col-md edit m-5 text-center d-inline">
+        <img src="/BTL_Test/BaiTapLon/Assets/data_img/icon_edit.png" class="rounded-circle " style="width: 100px;" alt="Avatar" />
+      </div>
+      <div class="edit col-md edit my-5 text-center d-flex">
+        <h1 class="text-center my-4">PhamHuyen</h1>
+        <button class="text-center m-5 mt-3 fs-3"><i class="bi bi-three-dots px-3"></i></button>
+      </div>
+    </div>
   </div>
   <nav class="navbar navbar-light bg-light pt-0">
     <div class="container-fluid text-center mx-5">
       <ul class="container-fluid d-flex mx-5 " type="none">
-        <li> <a class="subnav navbar-brand px-5 fs-4" href="#">About</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Photostream</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Albums</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Faves</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Galleries</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Group</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Stats</a></li>
-        <li><a class="subnav navbar-brand px-5 fs-4" href="#">Camera Roll</a></li>
+        <li> <a class="col-fm subnav navbar-brand px-5 fs-4" href="About.php">About</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Photostream.php">Photostream</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Albums.php">Albums</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Faves.php">Faves</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Galleries.php">Galleries</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Group.php">Group</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Stats.php">Stats</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Camera_roll.php">Camera Roll</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="footer position-absolute bottom-0 px-5 container-fluid" >
-      <div class="firstFooter text-center m-4">
-        <a class="navbar-brand px-5 fs-4" href="#">About</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Job</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Blog</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Developers</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Guidelines</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Help</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Report abuse</a>
-        <a class="navbar-brand px-5 fs-4" href="#">Help forum</a>
-        <select class="navbar-brand fs-4" name="cars">
-              <option value="volvo">VietNamese</option>
-              <option value="saab">Japanese</option>
-              <option value="fiat" selected>English</option>
-              <option value="audi">Chinese</option>
-        </select>
-        <hr>
-      </div>
-      <div class="subFooter row text-center m-4 ">
-        <div class="col-md d-flex ">
-          <a class="navbar-brand ps-5 pe-3 fs-4" href="#">Privacy</a>
-          <a class="navbar-brand px-3 fs-4" href="#">Terms</a>
-          <a class="navbar-brand px-3 fs-4" href="#">Cookies</a>
-        </div>
-        <div class="col-md d-flex">
-          <a class="navbar-brand px-3 fs-4" href="#">SmugMug+Flickr. Connecting people through photography.</a>
-        </div>
-        <div class="col-md d-flex float-end ">
-          <a class="navbar-brand px-3 fs-4" href="#"><i class="bi bi-facebook"></i></a>
-          <a class="navbar-brand px-3 fs-4" href="#"><i class="bi bi-twitter"></i></a>
-          <a class="navbar-brand px-3 fs-4" href="#"><i class="bi bi-instagram"></i></a>
-        </div>
-      </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+  
+ 
