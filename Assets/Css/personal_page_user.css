@@ -3,14 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* body{
-    background-image:url(/BTL/assets/data_img/background.jpg);
+
+body{
+    /* background-image:url(/BTL/assets/data_img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
-    height: 100vh;  
+    background-size:cover;*/
+    height: 100vh;   
     position: relative;
-} */
+}
 .header{
     top: 0;
     position: fixed;
@@ -54,4 +55,24 @@ nav li .subnav{
     display: block;
     line-height: 60px;
     text-align: center;
+}
+
+.footer{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    height: 200px;
+}
+.footer div a{
+    color: white;
+}
+.footer .subFooter a{
+    color: gray;
+}
+.footer select{
+    background: none;
+    border: none;
+    color: white;
+    width: 110px;
 }

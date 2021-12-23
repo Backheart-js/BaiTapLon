@@ -75,11 +75,8 @@
             <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href="" class="text-decoration-none">Log in here.</a></p>
           </div>
         </form>
-<<<<<<< HEAD
-=======
         <script type="text/javascript" src="signup.js" >
         </script>
->>>>>>> e2154ad4f651b09bb712d81ffd73bb3290799777
       </div>
         <div class="footer d-flex text-alight" >
           <div class="col-md-6">
@@ -96,19 +93,15 @@
         </div>
         <div class="end">033120190455 by HuyenPham , From VietNam</div>
     </div>
-<<<<<<< HEAD
   </main>
   <!-- footer -->
   
   <script type="text/javascript" src="/javascript/signup.js" >
   </script>
-=======
     <br>
-  </main>
   <!-- footer -->
   
   
->>>>>>> e2154ad4f651b09bb712d81ffd73bb3290799777
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
