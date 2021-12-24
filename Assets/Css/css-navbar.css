@@ -6,6 +6,7 @@
     padding-right: 0;
     background-color: #202023;
     z-index: 5;
+    top: 0;
 }
 .navbar-search-content {
     height: 100%;

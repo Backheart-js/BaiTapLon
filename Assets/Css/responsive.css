@@ -1,0 +1,17 @@
+/* Tablet and mobile */
+@media (max-width: 1023px) {
+    /* Header */
+    .navbar__cate-wrap {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+
+}
