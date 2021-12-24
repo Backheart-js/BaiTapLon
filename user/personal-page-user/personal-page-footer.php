@@ -1,5 +1,5 @@
 <div class="footer position-absolute bottom-0 px-5 container-fluid" >
-      <div class="firstFooter text-center m-4">
+      <div class="firstFooter text-center mx-4 mt-3">
         <a class="navbar-brand px-5 fs-4" href="#">About</a>
         <a class="navbar-brand px-5 fs-4" href="#">Job</a>
         <a class="navbar-brand px-5 fs-4" href="#">Blog</a>
@@ -17,7 +17,7 @@
         <hr>
       </div>
       <div class="subFooter row  mx-4 mb-5  ">
-        <div class="col-md col-sm d-flex ps-5 text-center">
+        <div class="col-md col-sm d-flex ps-4 text-center">
           <a class="navbar-brand ps-5 pe-3 fs-4" href="#">Privacy</a>
           <a class="navbar-brand px-3 fs-4" href="#">Terms</a>
           <a class="navbar-brand px-3 fs-4" href="#">Cookies</a>

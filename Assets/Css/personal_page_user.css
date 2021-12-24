@@ -11,6 +11,7 @@ body{
     height: 100vh;   
     position: relative;
     overflow: scroll;
+    width: 100%;
 }
 .header{
     top: 0;
@@ -54,6 +55,11 @@ body{
     /* line-height: 100px; */
     color: white;
 }
+.navbar{
+    /* display: inline-block; */
+     height: 70px;
+     /* box-sizing: border-box; */
+}
 nav li .subnav:hover {
     /* background: blue; */
     /* border-style: solid; */
@@ -62,7 +68,7 @@ nav li .subnav:hover {
 }
 .container-fluid{
     /* display: block; */
-    height: 60px;
+    /* height: 60px; */
     /* text-align: center; */
 }
 nav li .subnav{
@@ -76,7 +82,9 @@ nav li .subnav{
     display: inline-block;
     background-color: black;
     color: white;
-    height: 200px;
+    /* height: 200px; */
+    overflow: visible;
+    width: 100%;
 }
 .footer div a{
     color: white;
@@ -94,5 +102,5 @@ nav li .subnav{
     background: none;
     border: none;
     color: white;
-    width: 150px;
+    /* width: 200px; */
 }

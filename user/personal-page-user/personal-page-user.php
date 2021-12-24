@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header ">
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid me-5">
         <img src="/BTL_Test/BaiTapLon/assets/data_img/flickr_demo.svg" alt="" class="d-inline-block align-text-top ps-5 ms-5" style="height:30px">

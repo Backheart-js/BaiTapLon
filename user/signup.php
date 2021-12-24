@@ -34,7 +34,7 @@
   <main>
     <div class="body-background">
       <div class="container-fluid d-flex justify-content-center align-items-center h-100">
-        <form class="card p-3 text-center py-4">
+        <form class="card p-3 text-center py-4" action="signup-process.php" method="post">
           <div class="justify-content-center container-fluid">
             <img src="/BTL/assets/data_img/icon_flickr.png" alt="" class="logo mt-3 align-items-center"
               style="height:30px">
@@ -45,15 +45,15 @@
             <label for="inputFirstName" class="placeholder">First name</label>
           </div>
           <div class="mt-3 px-3">
-            <input type="text" class="form-control ps-4" name="txtLastNam" id="inputLastName " placeholder=" ">
+            <input type="text" class="form-control ps-4" name="txtLastName" id="inputLastName " placeholder=" ">
             <label for="inputLastName" class="placeholder">Last name</label>
           </div>
           <div class="mt-3 px-3">
-            <input type="text" class="form-control ps-4" name="txtAge" id="inputAge" placeholder=" ">
+            <input type="number" class="form-control ps-4" name="txtAge" id="inputAge" placeholder=" ">
             <label for="inputAge" class="placeholder">Your age</label>
           </div>
           <div class="mt-3 px-3">
-            <input type="text" class="form-control ps-4" name="txtEmail" id="inputEmail" placeholder=" ">
+            <input type="email" class="form-control ps-4" name="txtEmail" id="inputEmail" placeholder=" ">
             <label for="inputEmail" class="placeholder">Email address</label>
           </div>
           <div class="mt-3 mx-3 position-relative">
@@ -66,7 +66,7 @@
             <div class="g-recaptcha " data-sitekey="6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-"></div>
           </div>
           <div class="mt-3 d-grid px-3"> 
-              <button class="btn btn-primary btn-block btn-signup text-uppercase" onclick="checkInput();">
+              <button class="btn btn-primary btn-block btn-signup text-uppercase" onclick="checkInput();" name="btnSignUp">
               <span>Sign up</span> </button> 
           </div>
           <div class="mt-3 px-3 fw-normal">
@@ -79,7 +79,7 @@
         </script>
       </div>
         <div class="footer d-flex text-alight" >
-          <div class="col-md-6">
+          <div class="col-md-3">
             <select id="cars" name="cars">
               <option value="volvo">VietNamese</option>
               <option value="saab">Japanese</option>
@@ -87,9 +87,9 @@
               <option value="audi">Chinese</option>
             </select>
           </div>
-          <div class="col-md"><a href="#">Help</a> </div>
-          <div class="col-md"><a href="#">Privacy</a> </div>
-          <div class="col-md"><a href="#">Terms</a> </div>
+          <div class="col-md-3"><a href="#">Help</a> </div>
+          <div class="col-md-3"><a href="#">Privacy</a> </div>
+          <div class="col-md-3"><a href="#">Terms</a> </div>
         </div>
         <div class="end">033120190455 by HuyenPham , From VietNam</div>
     </div>
