@@ -1,0 +1,9 @@
+- Giao diện chính (Bình) 
+- Giao diện tìm kiếm ảnh (Bình)
+- Giao diện home user (Loan)
+- Login	(Loan)
+- Kho ảnh người dùng (đẩy ảnh lên) (Huyền)
+- Register	(Huyền)
+- Admin (Bình)
+- Thiết kế Database 
+- Responsive 
