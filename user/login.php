@@ -14,19 +14,25 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-    <link rel="stylesheet" href="/Assets/Css/style.css">
+    <link rel="stylesheet" href="/Assets/Css/main.css">
   </head>
   <body>
-    <div class="mymodal container-fluid">
-    <div class="header">
-      <div class="img_header-icon">
-          <img src="img/bieutuongfilchr.jpeg" alt="" class="header_img" />
+    <div class="mymodal ">
+    <div class="header container-fluid">
+      <div class="container">
+        <div class="row ">
+        <div class="img_header-icon col-md-2 col-sm-2">
+          <img src="/Assets/data_img/flickr_demo.svg" alt="" class="header_img" />
         </div>
+      </div>
+      </div>
+      
+      
       </div>
       <form action="process-login.php" class="form-login" method="post">
         <div class="container modal__container">
         <div class="modal__body">
-          <div class="modal__body-icon col-md row">
+          <div class="modal__body-icon col-md col-sm row">
             
               <!---->
               <use
