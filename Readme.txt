@@ -1,7 +1,9 @@
-- Giao diện khách ban đầu (Bình)
-- Giao diện tìm kiếm ảnh
+- Giao diện chính (Bình) 
+- Giao diện tìm kiếm ảnh (Bình)
 - Giao diện home user (Loan)
+- Login	(Loan)
 - Kho ảnh người dùng (đẩy ảnh lên) (Huyền)
-- Login	
-- Register	
-- Admin
+- Register	(Huyền)
+- Admin (Bình)
+- Thiết kế Database 
+- Responsive 

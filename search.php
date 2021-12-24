@@ -103,34 +103,39 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container-fluid category-search-wrap">
-            <div class="container category-search-content ps-4 pe-4">
-                <div class="container-fluid category-search__select">
-                        <ul class="row category-search__select-list">
-                            <li class="category-search__select-item">
-                                <a href="" class="category-search__select-link">
-                                    <span>Hình ảnh</span>
-                                </a>
-                            </li>
-                            <li class="category-search__select-item">
-                                <a href="" class="category-search__select-link">
-                                    <span>Mọi người</span>
-                                </a>
-                            </li>
-                            <li class="category-search__select-item">
-                                <a href="" class="category-search__select-link">
-                                    <span>Nhóm</span>
-                                </a>
-                            </li>
-                        </ul>
-                </div>
-                <div class="container-fluid category-search__filer">
-
+            <div class="container-fluid category-search-wrap">
+                <div class="container category-search-content ps-4 pe-4">
+                    <div class="container-fluid category-search__select">
+                            <ul class="row category-search__select-list">
+                                <li class="category-search__select-item">
+                                    <a href="" class="category-search__select-link">
+                                        <span>Hình ảnh</span>
+                                    </a>
+                                </li>
+                                <li class="category-search__select-item">
+                                    <a href="" class="category-search__select-link">
+                                        <span>Mọi người</span>
+                                    </a>
+                                </li>
+                                <li class="category-search__select-item">
+                                    <a href="" class="category-search__select-link">
+                                        <span>Nhóm</span>
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="container-fluid category-search__filer">
+    
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="container-fluid body-search-wrap">
+            <div class="container body-search-content">
+                
+            </div>
+        </div>
+
         
     
 

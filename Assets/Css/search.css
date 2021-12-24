@@ -1,7 +1,6 @@
 /* Search */
 .category-search-wrap {
-    height: 102px;
-    margin-top: 50px;
+    height: 90px;
     background-color:#fff;
 }
 .category-search-content {
@@ -47,3 +46,13 @@
     transform-origin: bottom left;
     transform: scaleX(1);
   }
+
+
+/* Body */
+.body-search-wrap {
+    height: 1000px;
+    background-color: var(--bg-main-color);
+}
+.body-search-content {
+
+}
