@@ -5,7 +5,7 @@
         $Age = $_POST['txtAge'];
         $Email = $_POST['txtEmail'];
         $Password = $_POST['txtPassword'];
-
+        
 
         //kết nối đến csdl
         $conn = mysqli_connect('localhost','root','','database_admin');
