@@ -35,9 +35,6 @@ main{
 .form-control:focus {
     box-shadow: none
 }
-.notice{
-    margin-left: 0;
-}
 
 .btn-signup {
     height: 50px;
