@@ -70,6 +70,7 @@
 .navbar__cate-item:hover .navbar__subcate-list {
     cursor: pointer;
     display: block;
+    z-index: 1;
 }
 
 .navbar__cate-link {
