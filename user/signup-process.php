@@ -23,8 +23,7 @@
             include_once "./signup-process/send-mail.php";
             if(SendMailRegisterAcount($_POST['txtEmail'])){
                 // header("location:signup.php");
-                echo header("location:signup.php");
-                
+                // echo header("location:signup.php");
             }
             else{
                 echo 'Message has not been sent';

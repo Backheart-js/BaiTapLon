@@ -43,7 +43,6 @@
           <div class="mt-3 px-3 text-start"> 
             <input type="text" class="form-control ps-4" name="txtFirstName" id="inputFirstName " placeholder=" " >
             <label for="inputFirstName" class="placeholder">First name</label>
-<<<<<<< HEAD
             <label for="" class="notice" name="noticeFirstName">Required</label>
           </div>
           <div class="mt-3 px-3 text-start">
@@ -70,26 +69,6 @@
             <div class="advise">
               <label for="" class="notice" name="noticePassword">Required</label>
             </div>
-=======
-          </div>
-          <div class="mt-3 px-3">
-            <input type="text" class="form-control ps-4" name="txtLastNam" id="inputLastName " placeholder=" ">
-            <label for="inputLastName" class="placeholder">Last name</label>
-          </div>
-          <div class="mt-3 px-3">
-            <input type="text" class="form-control ps-4" name="txtAge" id="inputAge" placeholder=" ">
-            <label for="inputAge" class="placeholder">Your age</label>
-          </div>
-          <div class="mt-3 px-3">
-            <input type="text" class="form-control ps-4" name="txtEmail" id="inputEmail" placeholder=" ">
-            <label for="inputEmail" class="placeholder">Email address</label>
-          </div>
-          <div class="mt-3 mx-3 position-relative">
-            <input type="password" class="form-control ps-4" name="txtPassword" id="inputPassword" placeholder=" ">
-            <label for="inputPassword" class="placeholder ps-0 " id="password">Password</label>
-            <i class="position-absolute bi bi-eye  bg-light p-2 px-3 rounded-end top-50 end-0 translate-middle-y me-1"
-              style="height:43px"></i>
->>>>>>> HuyenLocal
           </div>
           <div class="mt-3 px-3 mx-auto">
             <div class="g-recaptcha " data-sitekey="6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-"></div>
