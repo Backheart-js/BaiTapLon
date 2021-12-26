@@ -1,22 +1,35 @@
 <?php
     if(isset($_POST['btnSignUp'])){
-        $FirstName=$_POST['txtFirstName'];
-        $LastName = $_POST['txtLastName'];
-        $Age = $_POST['txtAge'];
-        $Email = $_POST['txtEmail'];
-        $Password = $_POST['txtPassword'];
-        
+        //kiểm tra dữ liệu nhập :
+        //1: chưa nhập
+        //2: Nhập sai yêu cầu
+        //3: đã tồn tại email trong csdl
+        //4: chưa click vào captcha
 
-        //kết nối đến csdl
-        $conn = mysqli_connect('localhost','root','','database_admin');
-        if(!$conn){
-            die("Kết nối thất bại.Vui lòng kiểm tra lại thông tin máy chủ.");
+
+
+
+
+
+
+
+        //sau khi ktra xong nếu đáp ứng hết yếu cầu 
+        //1: send mail 
+        //2: insert vào bảng dữ liệu
+        //3: điều hướng đến trang chủ
+
+
+        if(isset($_POST['txtEmail']) && ($_POST['txtEmail']) !=''){
+            include_once "./signup-process/send-mail.php";
+            if(SendMailRegisterAcount($_POST['txtEmail'])){
+                // header("location:signup.php");
+                echo header("location:signup.php");
+                
+            }
+            else{
+                echo 'Message has not been sent';
+            }
         }
-        
-        //thực hiện truy vấn, thêm , kiểm tra thông tin
-        //Kiểm tra xem email đã tồn tại chưa
-        $sql="select email from signup_user where email='$Email'";
-        $result=mysqli_query($conn,$sql);
     }
     else{
         header("location:signup.php");

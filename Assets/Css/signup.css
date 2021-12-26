@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image:url(/BaiTapLon/Assets/data_img/background.jpg);
+    background-image:url(/BTL_Test/BaiTapLon/Assets/data_img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -33,6 +33,10 @@ main{
 
 .form-control:focus {
     box-shadow: none
+}
+.notice{
+    color: rgb(245, 88, 88);
+    /* display: none; */
 }
 
 .btn-signup {
@@ -71,7 +75,9 @@ main{
     /* font-size: 13px; */
     color: cornflowerblue;
 }
-
+form .eye:checked{
+    
+}
 .footer{
     color: white;
     width: 370px;
