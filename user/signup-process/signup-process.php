@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST['btnSignUp'])){
+    if(isset($_POST['btnSignup'])){
         //kiểm tra dữ liệu nhập :
         //1: chưa nhập
         //2: Nhập sai yêu cầu
@@ -20,11 +20,12 @@
 
 
         if(isset($_POST['txtEmail']) && ($_POST['txtEmail']) !=''){
-            include_once "./signup-process/send-mail.php";
+            include_once "./send-mail.php";
             if(SendMailRegisterAcount($_POST['txtEmail'])){
                 // header("location:signup.php");
-                echo header("location:signup.php");
-                
+                // echo header("location:signup.php");
+                echo 'Message has been sent';
+
             }
             else{
                 echo 'Message has not been sent';
@@ -32,7 +33,8 @@
         }
     }
     else{
-        header("location:signup.php");
+        echo 'Message has not been sent1';
+        // header("location:signup.php");
     }
 
 
