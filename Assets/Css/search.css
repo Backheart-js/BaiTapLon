@@ -92,7 +92,12 @@
 .body-search-wrap {
     height: 1000px;
     background-color: var(--bg-main-color);
+    margin-top: 140px;
 }
 .body-search-content {
+    margin-top: 35px;
+}
+
+.body-search__img-wrap {
 
 }
