@@ -34,10 +34,13 @@ main{
 .form-control:focus {
     box-shadow: none
 }
+<<<<<<< HEAD
 .notice{
     color: rgb(245, 88, 88);
     /* display: none; */
 }
+=======
+>>>>>>> HuyenLocal
 
 .btn-signup {
     height: 50px;
