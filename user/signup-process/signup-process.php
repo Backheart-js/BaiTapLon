@@ -23,8 +23,11 @@
             if(SendMailRegisterAcount($_POST['txtEmail'])){
                 // header("location:signup.php");
                 // echo header("location:signup.php");
+<<<<<<< HEAD:user/signup-process/signup-process.php
                 echo 'Message has been sent';
 
+=======
+>>>>>>> 692dc122ff7ed0d254136b107109ac97c2bdd1dd:user/signup-process.php
             }
             else{
                 echo 'Message has not been sent';

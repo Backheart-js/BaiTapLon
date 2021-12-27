@@ -44,6 +44,7 @@ function SendMailRegisterAcount($email)
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Flickr - Verify your account';
             $mail->Body    = '<div>
+<<<<<<< HEAD
             <span>
                 We are excited you are joined Flickr.</br>
                 As soon as you verify your email to confirm this is you, we can get started.</br>
@@ -56,6 +57,17 @@ function SendMailRegisterAcount($email)
                 </br>
                 The Flickr team.
             </span>
+=======
+            <pre>
+                We’re excited you’ve joined Flickr.
+                As soon as you verify your email to confirm this is you, we can get started.
+                Just click the link below:
+                <a>Confirm my Flickr account</a>
+                Link will expire in 24 hours.
+                Having trouble? Contact our support heroes <a>here.</a>
+                The Flickr team.
+            </pre>
+>>>>>>> 692dc122ff7ed0d254136b107109ac97c2bdd1dd
             </div>';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             if($mail->send()){
