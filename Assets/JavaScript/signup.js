@@ -1,5 +1,4 @@
 
-
 function CheckInput(){
     let inputFirstName = document.getElementById('inputFirstName').value;
     // alert ('đến đây rùi');
@@ -35,8 +34,8 @@ function CheckInput(){
         document.getElementById('errorAge').innerHTML='';
     }
     // let regex_Email=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    let regex_Email=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(inputEmail.length===0 && !regex_Email.test(inputEmail)){
+    let regex_Email=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(inputEmail.length===0 || !regex_Email.test(inputEmail)){
       document.getElementById('errorEmail').innerHTML='Invalid Email';
       CheckInput=true;
     }

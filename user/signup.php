@@ -74,11 +74,7 @@ if(isset($_POST['btnSignup']))
           <div class="mt-3 px-3 text-start"> 
             <input type="text" class="form-control ps-4" name="txtFirstName" id="inputFirstName" placeholder=" " >
             <label for="inputFirstName" class="placeholder">First name</label>
-<<<<<<< HEAD
             <span for="" class="notice" id="errorFirstName"></span>
-=======
-            <label for="" class="notice" name="noticeFirstName">Required</label>
->>>>>>> 692dc122ff7ed0d254136b107109ac97c2bdd1dd
           </div>
           <div class="mt-3 px-3 text-start">
             <input type="text" class="form-control ps-4" name="txtLastName" id="inputLastName" placeholder=" " >
