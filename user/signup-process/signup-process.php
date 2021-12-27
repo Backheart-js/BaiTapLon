@@ -2,6 +2,13 @@
     if(isset($_POST['btnSignup'])){
         //kiểm tra dữ liệu nhập :
         //1: chưa nhập
+        header("location:resend-mail.php");
+        if(!($_POST['txtFirstName']) || !($_POST['txtLastName']) || !($_POST['txtEmail']) || !($_POST['txtAge']) || !($_POST['txtPassword'])){
+            header("location:signup.php");
+        }
+        else{
+            
+        }
         //2: Nhập sai yêu cầu
         //3: đã tồn tại email trong csdl
         
@@ -23,11 +30,8 @@
             if(SendMailRegisterAcount($_POST['txtEmail'])){
                 // header("location:signup.php");
                 // echo header("location:signup.php");
-<<<<<<< HEAD:user/signup-process/signup-process.php
                 echo 'Message has been sent';
 
-=======
->>>>>>> 692dc122ff7ed0d254136b107109ac97c2bdd1dd:user/signup-process.php
             }
             else{
                 echo 'Message has not been sent';
