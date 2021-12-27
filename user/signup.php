@@ -1,3 +1,37 @@
+<?php
+if(isset($_POST['btnSignup']))
+{
+       
+        //4: Kiểm tra click vào captcha
+        $site_key = '6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-'; // change this to yours
+        $secret_key = '6Lf80rIdAAAAAA7oB3UOTp8yWZdkpzzS3gRZG5Zo'; // change this to yours
+        if(isset($_POST['g-recaptcha-response']))
+        {
+            $api_url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . $secret_key . '&response='.$_POST['g-recaptcha-response'];
+            $response = @file_get_contents($api_url);
+            $data = json_decode($response);
+
+            if($data->success ==0)
+            {
+                echo "You are a robot.";
+                
+            }
+            else
+            {
+               echo "Success.";
+            }
+        }
+        else
+        {
+          echo "You are a robot.";
+        }
+
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +65,7 @@
     <div class="body-background">
       <div class="container-fluid d-flex justify-content-center align-items-center h-100">
         <!-- action="./signup-process/signup-process.php" method="post" -->
-        <form class="card p-3 text-center py-4"  action="./signup-process/signup-process.php" method="post">
+        <form class="card p-3 text-center py-4" action="./signup-process/signup-process.php" method="post">
           <div class="justify-content-center container-fluid" >
             <img src="/BaiTapLon/Assets/data_img/icon_flickr.png" alt="" class="logo mt-3 align-items-center"
               style="height:30px">
@@ -68,7 +102,7 @@
             </div>
           </div>
           <div class="mt-3 px-3 mx-auto">
-            <div class="g-recaptcha " data-sitekey="6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-"></div>
+            <div class="g-recaptcha" data-sitekey="6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-"></div>
           </div>
           <div class="mt-3 d-grid px-3"> 
               <button class="btn btn-primary btn-block btn-signup text-uppercase" onclick="return CheckInput()" name="btnSignup">

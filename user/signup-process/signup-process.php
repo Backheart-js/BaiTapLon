@@ -4,10 +4,9 @@
         //1: chưa nhập
         //2: Nhập sai yêu cầu
         //3: đã tồn tại email trong csdl
+        
         //4: chưa click vào captcha
-
-
-
+        
 
 
 
@@ -33,8 +32,8 @@
         }
     }
     else{
-        echo 'Message has not been sent1';
-        // header("location:signup.php");
+        // echo 'Message has not been sent1';
+        header("location:signup.php");
     }
 
 
