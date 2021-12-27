@@ -32,6 +32,7 @@
 .navbar-search__input-wrap {
     position: relative;
     width: 55%;
+    animation: sizedown linear 0.2s; 
 }
 .navbar-search__input {
     font-size: 14px;
@@ -46,6 +47,41 @@
     left: 12px;
     transform: translateY(2px);
 }
+.navbar-search__select-wrap {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 33.4px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #333;
+    border-radius: 2px;
+}
+.navbar-search__select-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar-search__select-item {
+    height: 37px;
+    align-items: center;
+    padding-left: 14px;
+    border-top: 1px solid #dcdcdc;
+}
+.navbar-search__select-item:hover {
+    background-color: #ccc;
+}
+.navbar-search__select-link {
+    text-decoration: none;
+    color: #006dac;
+    font-size: 15px;
+    display: block;
+    line-height: 37px;
+}
+.navbar-search__select-icon {
+    margin-right: 8px;
+}
+
 
 .navbar__cate-wrap {
 
@@ -70,6 +106,7 @@
 .navbar__cate-item:hover .navbar__subcate-list {
     cursor: pointer;
     display: block;
+    z-index: 1;
 }
 
 .navbar__cate-link {
@@ -78,7 +115,7 @@
     font-size: 17px;
 }
 
-/* Subcate */
+/* Subcategory */
 .navbar__subcate-list {
     display: none;
     position: absolute;
@@ -153,4 +190,11 @@
 .navbar-search__signup-wrap,
 .navbar-search__signup-btn {
     width: 100px;
+}
+
+@keyframes sizedown {
+    from {
+        width: 85%;
+    }
+    to { width: 55%;}
 }
