@@ -16,15 +16,32 @@ input.addEventListener('input', function(e) {
     console.log(value);
 })
 
-input.addEventListener('click', function(e) {
-    input_wrap.classList.add('input-width-enter');
-})
+// input.addEventListener('click', function(e) {
+//     input_wrap.classList.add('input-width-enter');
+// })
 
 input.addEventListener('change', function(e) {
     var valuechange = '';
     valuechange = e.target.value;
     console.log(valuechange);
-    if (valuechange == '') {
-        input_wrap.classList.remove('input-width-enter');
+    if (valuechange !== '') {
+        search_select.classList.remove('d-block');
     }
+})
+
+input.addEventListener('focus', function(e) {
+    input_wrap.classList.add('input-width-enter','bg-light');
+})
+input.addEventListener('focusout', function(e) {
+    input_wrap.classList.remove('input-width-enter','bg-light');
+})
+
+var btn_login = document.querySelector('.navbar-search__login-btn'),
+    btn_signup = document.querySelector('.navbar-search__signup-btn');
+
+btn_login.addEventListener('click', function(e) {
+    window.location.assign('user/login.php');
+})
+btn_signup.addEventListener('click', function(e) {
+    window.location.assign('user/signup.php');
 })
