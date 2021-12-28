@@ -65,7 +65,7 @@
     <div class="body-background">
         <div class="container-fluid d-flex justify-content-center align-items-center  ">
           <!-- action="./signup-process/signup-process.php" method="post" -->
-          <form class="card p-3 text-center pt-4" action="./signup-process/signup-process.php" method="post">
+          <form class="card p-3 text-center pt-4" action="./signup-process/resend-mail.php" method="post">
             <div class="justify-content-center container-fluid" >
               <img src="/BaiTapLon/Assets/data_img/icon_flickr.png" alt="" class="logo mt-3 align-items-center"
                 style="height:30px">

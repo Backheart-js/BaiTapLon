@@ -1,3 +1,10 @@
+<?php
+    if(isset($_POST['btnSignup'])){
+      $email=$_POST['txtEmail'];
+      echo $email;
+    }
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,21 +38,23 @@
   <div class="body-background p-5 mt-5">
         <div class="container-fluid  justify-content-center align-items-center h-100 pt-5 mt-5">
           <!-- action="./signup-process/signup-process.php" method="post" -->
-          <form class="card py-5 mx-auto mt-5 p-3" action="" method="post">
-              <i class="bi bi-envelope ms-auto me-auto"></i>
-              <p class="ms-auto me-auto fs-4 p-2">Check Your Email</p>   
-              <div class="ms-auto me-auto fs-5 p-2" id="email">
+          <form class="card py-5 mx-auto mt-5 p-3" action="resend-mail-process.php" method="post">
+              <i class="bi bi-envelope ms-auto me-auto font-weight-bold"></i>
+              <p class="ms-auto me-auto fs-4 px-3 font-weight-bold">Check Your Email</p>   
+              <p class="ms-auto me-auto fs-5 px-3 py-4 font-weight-bold" id="email">
                   We sent a verification link to 
+                  <a name="ReEmail">
                   <?php 
-                      $email=$_POST['txtFirstName'];
-                      print "$email.";
-                  ?>
+                      // print "$email.";
+                      echo $email;
+                  ?>.
+                  </a>
                   <!-- <script type="text/javascript">
                       document.getElementById('email').InnerHTML=document.getElementById('inputEmail').value;
                   </script> -->
-                  .Please check your email for the next step.
-              </div>
-              <button type="submit" class="bg-primary py-2 fs-4" >Resend Email</button>
+                  Please check your email for the next step.
+              </p>
+              <button type="submit" class="bg-primary py-2 fs-4" name="btnResendMail">Resend Email</button>
           </form>
         </div>
         <div class="footer d-flex text-alight" >
