@@ -42,15 +42,70 @@ function CheckInput(){
     else{
         document.getElementById('errorEmail').innerHTML='';
     }
-    if(inputPassword.length===0){
-      document.getElementById('errorPassword').innerHTML='Invalid Password';
+    let regex_password=/^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}$/;
+    if(inputPassword.length===0 || !regex_password.test(inputPassword)){
+      // document.getElementById('errorPassword').innerHTML='Invalid Password';
+      document.getElementById('errorPassword').innerHTML='Please use at least 8 characters,one digit,one lower case,one upper case ';
       CheckInput=true;
     }
     else{
         document.getElementById('errorPassword').innerHTML='';
     }
+
+    // var recaptcha_response = '';
+    // if(grecaptcha.getResponse().length === 0) {
+    //   alert("Đã đến đây2");
+    //   document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+    //   CheckInput=true;
+    // }else{
+    //   function callback(token) {
+    //     recaptcha_response = token;
+    //     document.getElementById('g-recaptcha-error').innerHTML = '';
+    //     alert('ni');
+    //     alert(recaptcha_response.length);
+    //   }
+    // }
+
+    function isCaptchaChecked() {
+      return grecaptcha && grecaptcha.getResponse().length !== 0;
+    }
+    
+    if (!isCaptchaChecked()) {
+      alert('đã vào đây');   
+      console.log
+      document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+      CheckInput=true;
+    }
+    else{
+      document.getElementById('g-recaptcha-error').innerHTML = '';
+    }
+
+
+
+    //function callback(){
+        
+     
+    //   if(recaptcha_response.length == 0) {
+    //     document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+    //     return false;
+    //   }
+    // return true;
+      //console.log("The user has already solved the captcha, now you can submit your form.");
+      // document.getElementById('Unchecked').innerHTML='Unchecked captcha';
+      // if(grecaptcha.getResponse() == ""){
+      //   alert('Oops, you have to check the recaptcha !');
+      //   document.getElementById('Unchecked').innerHTML='Unchecked captcha';
+      //   CheckInput=true;
+      // }
+    //}
+    
     if(CheckInput){
         return false;
     }
     
+    
   }
+  // function callback(token) {
+  //     recaptcha_response = token;
+  //     document.getElementById('g-recaptcha-error').innerHTML = '';
+  // }

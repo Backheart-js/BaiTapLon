@@ -1,7 +1,10 @@
 <?php
     if(isset($_POST['btnSignup'])){
       $email=$_POST['txtEmail'];
-      echo $email;
+      // echo $email;
+      session_start();// Khởi tạo Session
+      $_SESSION['ReEmail'] = $email;; // Khởi tạo session có tên là ReEmail và giá trị là $email
+
     }
 ?>
 
@@ -38,23 +41,25 @@
   <div class="body-background p-5 mt-5">
         <div class="container-fluid  justify-content-center align-items-center h-100 pt-5 mt-5">
           <!-- action="./signup-process/signup-process.php" method="post" -->
-          <form class="card py-5 mx-auto mt-5 p-3" action="resend-mail-process.php" method="post">
+          <form class="card py-5 mx-auto mt-5 p-5" action="resend-mail-process.php" method="post">
               <i class="bi bi-envelope ms-auto me-auto font-weight-bold"></i>
-              <p class="ms-auto me-auto fs-4 px-3 font-weight-bold">Check Your Email</p>   
-              <p class="ms-auto me-auto fs-5 px-3 py-4 font-weight-bold" id="email">
+              <h3 class="ms-auto me-auto fs-4 px-3 font-weight-bold">Check Your Email</h3>   
+              <p class="mx-4 fs-5 pt-3 font-weight-bold mb-2" id="email">
                   We sent a verification link to 
-                  <a name="ReEmail">
                   <?php 
-                      // print "$email.";
-                      echo $email;
-                  ?>.
-                  </a>
+                      if(isset($_GET['email'])){
+                        echo "<h5 style='font-weight: bold'> {$_GET['email']} </h5>";
+                        // echo "{$_GET['email']}."."";
+                      }
+                  ?>
                   <!-- <script type="text/javascript">
                       document.getElementById('email').InnerHTML=document.getElementById('inputEmail').value;
                   </script> -->
-                  Please check your email for the next step.
+                  
               </p>
-              <button type="submit" class="bg-primary py-2 fs-4" name="btnResendMail">Resend Email</button>
+              <p class="fs-5">Please check your email for the next step.</p>
+              <button type="" class="bg-primary py-2 fs-4 mt-2" name="btnResendMail">Resend Email</button>
+              <a href="#" class="ms-auto me-auto text-decoration-none mt-3">Can't access your email?</a>
           </form>
         </div>
         <div class="footer d-flex text-alight" >

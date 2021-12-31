@@ -13,7 +13,7 @@
     use PHPMailer\PHPMailer\SMTP;
 
 
-function SendMailRegisterAcount($email)
+function SendMailRegisterAcount($email,$link)
 {
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -49,8 +49,8 @@ function SendMailRegisterAcount($email)
                 As soon as you verify your email to confirm this is you, we can get started.</br>
                 </br>
                 Just click the link below:</br>
-                <a href="#">Confirm my Flickr account</a></br>
-                Link will expire in 24 hours.</br>
+                </br>
+                '.$link.'Link will expire in 24 hours.</br>
                 </br>
                 Having trouble? Contact our support heroes <a href="#">here.</a></br>
                 </br>

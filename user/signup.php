@@ -1,35 +1,3 @@
-//<?php
-//if(isset($_POST['btnSignup']))
-//{
-       
-//        //4: Kiểm tra click vào captcha
-//        $site_key = '6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-'; // change this to yours
-//        $secret_key = '6Lf80rIdAAAAAA7oB3UOTp8yWZdkpzzS3gRZG5Zo'; // change this to yours
-//        if(isset($_POST['g-recaptcha-response']))
-//        {
-//            $api_url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . $secret_key . '&response='.$_POST['g-recaptcha-response'];
-//            $response = @file_get_contents($api_url);
-//            $data = json_decode($response);
-//
-//            if($data->success ==0)
-//            {
-//                echo "You are a robot.";
-//                
-//            }
-//            else
- //           {
- //              echo "Success.";
-//            }
-//        }
-//        else
-//        {
-//          echo "You are a robot.";
-//        }
-
-//}
-//?>
-
-
 
 
 <!DOCTYPE html>
@@ -45,6 +13,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <!-- <link rel="stylesheet" href="/BTL/css/signup.css"> -->
   <link rel="stylesheet" href="/BaiTapLon/Assets/Css/signup.css?v=<?php echo time(); ?>">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/BaiTapLon/Assets/Javascript/signup_use_ajax.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" ></script>
   
 </head>
@@ -65,7 +35,8 @@
     <div class="body-background">
         <div class="container-fluid d-flex justify-content-center align-items-center  ">
           <!-- action="./signup-process/signup-process.php" method="post" -->
-          <form class="card p-3 text-center pt-4" action="./signup-process/resend-mail.php" method="post">
+          <!-- <form class="card p-3 text-center pt-4" action="./signup-process/resend-mail.php" method="post"> -->
+          <form class="card p-3 text-center pt-4" action="./signup-process/signup-process.php" method="post">
             <div class="justify-content-center container-fluid" >
               <img src="/BaiTapLon/Assets/data_img/icon_flickr.png" alt="" class="logo mt-3 align-items-center"
                 style="height:30px">
@@ -101,21 +72,46 @@
                 <span for="" class="notice" id="errorPassword"></span>
               </div>
             </div>
-            <div class="mt-3 px-3 mx-auto">
-              <div class="g-recaptcha" data-sitekey="6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-"></div>
+            <?php
+                if(isset($_GET['error'])){
+                  echo "<h5 style='color:red'> {$_GET['error']} </h5>";
+                }
+
+            ?>
+
+            <div class="mt-3 px-3 mx-auto text-start">
+              <div class="g-recaptcha" data-callback="callback" data-sitekey="6Lf80rIdAAAAABDbQdQ-w4MWXnGoOlGmZrmktxB-"></div>
+              <span for="" class="notice" id="Unchecked"></span>
             </div>
-            <div class="mt-3 d-grid px-3"> 
-                <button class="btn btn-primary btn-block btn-signup text-uppercase" onclick="return CheckInput()" name="btnSignup">
+            
+            <div class="mt-4 d-grid px-3"> 
+                <!-- <button id="btnSignup" class="btn btn-primary btn-block btn-signup text-uppercase" onclick="return CheckInput()" name="btnSignup" > -->
+                <button id="btnSignup" class="btn btn-primary btn-block btn-signup text-uppercase" name="btnSignup" >
                 <span>Sign up</span> </button> 
             </div>
+            <script>
+                // function isCaptchaChecked() {
+                //   return grecaptcha && grecaptcha.getResponse().length !== 0;
+                // }
+                
+                // if (!isCaptchaChecked()) {
+                //   document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+                  
+                // }
+                // else{
+                //   document.getElementById('g-recaptcha-error').innerHTML = '';
+                // }
+
+                
+            </script>
+            
             <div class="mt-3 px-3 fw-normal">
               <p style="font-size: 12px" class="text-center lead  px-3 pt-2" >By signing up,you agree with Flickr's <a href="" class="text-decoration-none">Terms of Services</a> and <a href="" class="text-decoration-none">Privacy Policy.</a></p>
               <hr>
               <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href="" class="text-decoration-none">Log in here.</a></p>
             </div>
           </form>
-          <script type="text/javascript" src="/BaiTapLon/Assets/Javascript/signup.js">
-          </script>
+          
         </div>
         <div class="footer d-flex text-alight" >
           <div class="col-md-6">
@@ -141,7 +137,7 @@
   </main>
   <!-- footer -->
   
-  
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
