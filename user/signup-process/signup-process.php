@@ -41,9 +41,6 @@
             // $error="Email was exists!";
             header("location:signup.php");
         }
-
-
-
     }
     else{
         // echo 'Message has not been sent1';

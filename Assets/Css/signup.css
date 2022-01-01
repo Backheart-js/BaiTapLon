@@ -101,3 +101,6 @@ form div .notice{
     color: #a7a7a7;
     text-align: right;
 }
+.errorInput{
+    color: rgb(228, 74, 74);
+}
