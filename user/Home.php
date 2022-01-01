@@ -11,26 +11,27 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Assets/Css/main.css" />
+    <link rel="stylesheet" href="../Assets/Css/main.css" /> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     />
   </head>
   <body>
+    
     <div class="home-header container-fluid">
       <div class="header-navbar container">
         <nav
           class="navbar navbar-expand-lg container home-container home-navbar"
         >
           <div class="img_header-navbar">
-            <img
-              src="/Assets/data_img/flickr_demo.svg"
+            <img Sử dụng cmd + shift + l hộ
+              src="../Assets/data_img/flickr_demo.svg"
               alt=""
               class="header_img"
             />
           </div>
-
+ <!-- -->
           <div class="container-fluid navbar__category">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
@@ -209,7 +210,7 @@
                   <div class="card">
                     <a href="">
                       <img
-                        src="/Assets/data_img/forest.jpeg"
+                        src="../Assets/data_img/forest.jpeg"
                         class="card-img-top"
                         alt="..."
                       />
@@ -218,7 +219,7 @@
                   <div class="card">
                     <a href="" class="">
                       <img
-                        src="/Assets/data_img/snow.jpeg"
+                        src="../Assets/data_img/snow.jpeg"
                         class="card-img-top"
                         alt="..."
                       />
@@ -227,7 +228,7 @@
                   <div class="card">
                     <a href="" class="">
                       <img
-                        src="/Assets/data_img/moutanin-2.jpeg"
+                        src="../Assets/data_img/moutanin-2.jpeg"
                         class="card-img-top"
                         alt="..."
                       />
@@ -241,7 +242,7 @@
                 <div class="card col-md-6">
                   <a href="">
                     <img
-                      src="/Assets/data_img/river.jpeg"
+                      src="../Assets/data_img/river.jpeg"
                       class="card-img-top"
                       alt="..."
                     />
@@ -250,7 +251,7 @@
                 <div class="card col-md-6">
                   <a href="">
                     <img
-                      src="/Assets/data_img/sky.jpeg"
+                      src="../Assets/data_img/sky.jpeg"
                       class="card-img-top"
                       alt="..."
                     />
@@ -259,7 +260,7 @@
                 <div class="card col-md-6">
                   <a href="" class="">
                     <img
-                      src="/Assets/data_img/mountains_hero.jpeg"
+                      src="../Assets/data_img/mountains_hero.jpeg"
                       class="card-img-top"
                       alt="..."
                     />
@@ -277,7 +278,7 @@
               </strong>
               <div class=" col-md-6">
                 <img
-                  src="/Assets/data_img/field.jpeg"
+                  src="../Assets/data_img/field.jpeg"
                   class="card-img-top-subribe"
                   alt="..."
                 />
@@ -291,7 +292,7 @@
               </div>
               <div class=" col-md-6">
                 <img
-                  src="/Assets/data_img/snow.jpeg"
+                  src="../Assets/data_img/snow.jpeg"
                   class="card-img-top-subribe"
                   alt="..."
                 />
@@ -306,7 +307,7 @@
               </div>
               <div class=" col-md-6">
                 <img
-                  src="/Assets/data_img/village.jpeg"
+                  src="../Assets/data_img/village.jpeg"
                   class="card-img-top-subribe"
                   alt="..."
                 />
@@ -321,7 +322,7 @@
               </div>
               <div class=" col-md-6">
                 <img
-                  src="/Assets/data_img/forest.jpeg"
+                  src="../Assets/data_img/forest.jpeg"
                   class="card-img-top-subribe"
                   alt="..."
                 />
@@ -342,21 +343,21 @@
             </strong>
             <div>
             <div class="content__group-list  ">
-              <img src="/Assets/data_img/flickr_icon.jpeg" style="border-radius: 40rem; margin-left: 20px;"alt="" />
-             <button type="button" class="btn btn-primary content__group-btn "style="width: 120px;height: 40px;border-radius: 4px;">Tham gia</button> 
+              <img src="../Assets/data_img/flickr_icon.jpeg" style="border-radius: 40rem; margin-left: 20px;"alt="" />
+             <button ..type="button" class="btn btn-primary content__group-btn "style="width: 120px;height: 40px;border-radius: 4px;">Tham gia</button> 
             </div>
             <div>
               <div class="card-group col-md-10">
                 <div class="card">
-                  <img src="/Assets/data_img/img-sea.jpeg" class="card-img-top" alt="...">
+                  <img src="../Assets/data_img/img-sea.jpeg" class="card-img-top" alt="...">
                   
                 </div>
                 <div class="card">
-                  <img src="/Assets/data_img/img-tree.jpeg" class="card-img-top" alt="...">
+                  <img src="../Assets/data_img/img-tree.jpeg" class="card-img-top" alt="...">
                   
                 </div>
                 <div class="card">
-                  <img src="/Assets/data_img/sunshine.jpeg" class="card-img-top" alt="...">
+                  <img src="../Assets/data_img/sunshine.jpeg" class="card-img-top" alt="...">
                  
                 </div>
               </div>
@@ -364,20 +365,20 @@
             </div>
            
             <div class="content__group-list">
-              <img src="/Assets/data_img/image-user.jpeg" alt="" style="width:40px;height: 40px;border-radius: 40px;margin-left: 20px;" />
-             <button type="button " class="btn btn-primary content__group-btn" style="width: 120px;height: 40px;border-radius: 4px;">Tham gia</button> 
+              <img src="../Assets/data_img/image-user.jpeg" alt="" style="width:40px;height: 40px;border-radius: 40px;margin-left: 20px;" />
+             <button ..type="button " class="btn btn-primary content__group-btn" style="width: 120px;height: 40px;border-radius: 4px;">Tham gia</button> 
             </div>
             <div class="card-group col-md-10">
               <div class="card">
-                <img src="/Assets/data_img/dog-stupdi.jpeg" class="card-img-top" alt="...">
+                <img src="../Assets/data_img/dog-stupdi.jpeg" class="card-img-top" alt="...">
                 
               </div>
               <div class="card">
-                <img src="/Assets/data_img/img-dog.jpeg" class="card-img-top" alt="...">
+                <img src="../Assets/data_img/img-dog.jpeg" class="card-img-top" alt="...">
                 
               </div>
               <div class="card">
-                <img src="/Assets/data_img/cat.jpeg" class="card-img-top" alt="...">
+                <img src="../Assets/data_img/cat.jpeg" class="card-img-top" alt="...">
                
               </div>
             </div>
@@ -390,7 +391,7 @@
                 <h5 class="col-md-12 mt-5" style="font-size: 1rem;">Blog Flickr</h5>
               </strong>
               <img
-                src="/Assets/data_img/flickr short best.jpeg"
+                src="../Assets/data_img/flickr short best.jpeg"
                 alt=""
                 class="col-md-12"
               />

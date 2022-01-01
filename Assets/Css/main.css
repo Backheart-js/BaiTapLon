@@ -4,13 +4,12 @@
 }
 .mymodal{
  
-    background-image: url('/Assets/data_img/background2.jpeg') ;
+    background-image: url('../Assets/data_img/background2.jpeg') ;
     padding-top: 57%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
-    
 
 }
 
@@ -71,6 +70,20 @@ height: 2px;
     border-radius: 4px;
     
 }
+#eye {
+    background: #fff;
+    color: #333;
+    margin: 5.9px 0 0 0;
+    margin-left: 15px;
+    padding: 15px 9px 19px 0px;
+    border-radius: 0px 5px 5px 0px;
+    position: relative;
+    right: 1%;
+    top: -.2%;
+    z-index: 5;
+    
+    cursor: pointer;
+}
 .form__login{
     width: 100%;
 }
@@ -110,9 +123,7 @@ margin-top: 28px;
 .btn-outline-secondary{
   border: none;
 }
-.form-cotrol-password{
-    
-}
+
 .contact__agree{
     display: flex;
 
@@ -315,4 +326,5 @@ margin-top: 28px;
     background-color: #128fdc;
     margin: 0 0 0 12px;
 }
+
 
