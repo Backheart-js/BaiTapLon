@@ -1,5 +1,5 @@
 
-
+//xử lí phần mắt nhưng đang lỗi
 function show() {
     var p = document.getElementById('pwd');
     p.setAttribute('type', 'text');
