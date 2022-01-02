@@ -74,18 +74,22 @@ $(document).ready(function(){
             $("#errorPassword").text("");
         }
     })
-    // function callback(){
-    //     $("#Unchecked").text("now you can submit your form");
+    if(checkNull===true){
+        return false;
+    }
+    // if(grecaptcha.getResponse().length==0){
+    //     $("#Unchecked").text("Unchecked captcha");
     // }
-    // var rcres = grecaptcha.getResponse();
-    // if(rcres.length){
-    //   grecaptcha.reset();
-    //   showHideMsg("Form Submitted!","success");
-    // }else{
-    //   showHideMsg("Please verify reCAPTCHA","error");
+    // else{
+    //     $("#Unchecked").text("");
+
     // }
-
-
+    // grecaptcha.getResponse(function(){
+    //     if("success"== true){
+    //         $("#Unchecked").text("");
+    //     }
+    // })
+    // $("#Unchecked").text("");
     $("#btnSignup").click(function(event){
         if($("#inputFirstName").val()===""){
             // alert($("#inputFirstName").val());
@@ -108,24 +112,33 @@ $(document).ready(function(){
             $("#errorPassword").text("You are not entered password");
             checkNull=true;
         }
-        var $captcha = false;
-        $("#Unchecked").click(function(){
-            $captcha = true;
-        });
+        // var $captcha = false;
+        // $(".recaptcha-checkbox-border").click(function(){
+        //     $captcha = true;
+        // });
         
-        if (!$captcha){
+        // if ($captcha===false){
+        //     $("#Unchecked").text("Unchecked captcha");
+        //     event.preventDefault();
+        // }
+        // else{
+        //     $("#btnSignup").submit();
+        //     $("#Unchecked").text("");
+            
+        // }
+        $("#Unchecked").text("");
+        if(grecaptcha.getResponse().length==0 || $("#inputFirstName").val()==="" || $("#inputLastName").val()==="" || $("#inputAge").val()==="" || $("#inputEmail").val()==="" || $("#inputPassword").val()===""){
             $("#Unchecked").text("Unchecked captcha");
-            // event.preventDefault();
+            
+                event.preventDefault();
         }
         else{
             $("#Unchecked").text("");
-            
+            $("#btnSignup").submit();
         }
         
     });
     
-    if(checkNull===true){
-        return false;
-    }
+    
     // alert($("#inputFirstName").val());
 })
