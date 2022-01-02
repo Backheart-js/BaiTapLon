@@ -49,8 +49,9 @@
                                     <div class="col-md-12 mt-3 mb-3">
                                         <input type="email" class="form-control" placeholder="Địa chỉ email" required
                                             autofocus aria-label="Recipient's username" aria-describedby="button-addon2"
-                                            name="txtEmail" />
+                                            name="txtEmail" id="email" />
                                           <!-- form-control form-cotrol-password -->
+                                          <small id="emailHelp" class="form-text "></small>
                                     </div>
                                     <div class="col-md-12  password">
                                         <input type="password" class="form-control form-cotrol-password"

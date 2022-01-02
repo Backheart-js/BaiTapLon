@@ -127,7 +127,7 @@
               />
               <div class="d-flex">
               <a href="../uploads" class="text-white ms-2">
-               <input type="submit"><i class="fas fa-cloud-download-alt"></i> </input> 
+               <i class="fas fa-cloud-download-alt"></i> 
                </a> 
                <a href="" class="text-white ms-2">
                  <i class="far fa-bell"></i>
@@ -413,6 +413,8 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../Assets/JavaScript/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
