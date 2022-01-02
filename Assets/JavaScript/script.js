@@ -21,3 +21,7 @@ document.getElementById("eye").addEventListener("click", function () {
         hide();
     }
 }, false);
+
+//
+
+$(document).ready();
