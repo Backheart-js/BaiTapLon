@@ -28,6 +28,7 @@
 .navbar-search__input-wrapper {
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 0;
 }
 .navbar-search__input-wrap {
     position: relative;
@@ -40,7 +41,7 @@
     width: 100%;
     padding: 6px 0 6px 40px;
     border-radius: 4px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.7)
 }
 .navbar-search__input-icon {
     position: absolute;
@@ -68,6 +69,10 @@
     padding-left: 14px;
     border-top: 1px solid #dcdcdc;
 }
+.navbar-search__item-wrap {
+    height: 100%;
+    align-items: center;
+}
 .navbar-search__select-item:hover {
     background-color: #ccc;
 }
@@ -77,9 +82,13 @@
     font-size: 15px;
     display: block;
     line-height: 37px;
+    width: 100%;
+    display: flex;
+    padding: 0;
 }
 .navbar-search__select-icon {
     margin-right: 8px;
+    color: #006dac;
 }
 
 

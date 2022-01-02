@@ -92,7 +92,7 @@
 .body-search-wrap {
     height: 1000px;
     background-color: var(--bg-main-color);
-    margin-top: 140px;
+    padding-top: 140px;
 }
 .body-search-content {
     margin-top: 35px;
@@ -100,4 +100,15 @@
 
 .body-search__img-wrap {
 
+}
+
+.body-search__list {
+    list-style: none;
+    padding-left: 0;
+    padding: 0 24px;
+}
+.body-search__item{
+    height: 210px; 
+    width: auto; 
+    padding: 0 8px 8px 0;
 }
