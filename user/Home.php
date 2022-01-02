@@ -126,8 +126,8 @@
                 aria-label="Search"
               />
               <div class="d-flex">
-              <a href="" class="text-white ms-2">
-                <i class="fas fa-cloud-download-alt"></i>
+              <a href="../uploads" class="text-white ms-2">
+               <input type="submit"><i class="fas fa-cloud-download-alt"></i> </input> 
                </a> 
                <a href="" class="text-white ms-2">
                  <i class="far fa-bell"></i>
