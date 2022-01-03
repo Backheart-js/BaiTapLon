@@ -24,9 +24,6 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
             //echo $fileName;die;
-
-
-            
             try{
                 $sql = "INSERT into db_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
             //echo $sql;die;
