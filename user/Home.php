@@ -25,7 +25,7 @@
           class="navbar navbar-expand-lg container home-container home-navbar"
         >
           <div class="img_header-navbar">
-            <img Sử dụng cmd + shift + l hộ
+            <img 
               src="../Assets/data_img/flickr_demo.svg"
               alt=""
               class="header_img"

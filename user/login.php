@@ -56,7 +56,9 @@
                                     <div class="col-md-12  password">
                                         <input type="password" class="form-control form-cotrol-password"
                                             placeholder="Mật khẩu" 
-                                            name="txtPass1" id="pwd"required  />
+                                            name="txtPass1" id="pwd"required 
+
+                                         />
                                         
                                         <span>
                                         <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
@@ -111,3 +113,11 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+

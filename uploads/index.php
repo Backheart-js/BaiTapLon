@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="/css/upload_form.css" />
   </head>
   <body style="margin:0;">
-    <header class="">biểu tượng</header>
+    <header class="" style="height:40px;">
+    <img src="../Assets/data_img/logo_flickr.png" alt="" style=" width: 98px;height: 22px;margin-left:40px;  padding-top: 10px;">
+  
+  </header>
     <div class="  "style="background-color: #313131;">
       <form
         action="upload.php"
@@ -17,10 +20,13 @@
         class="form_upload"
         style="height :100vh;margin=0;"
       >
-        <h3 class=""style="color:#fefefe">Bạn có thể tải thêm 1000 ảnh và video lên</h3>
-        <h5 style="color:#fefefe">Kéo & thả ảnh và video ở đây hoặc</h5>
-        <input type="file" name="myfile" class="btn btn-primary" />
+        <h2 class=""style="color:#fefefe;margin:0 404px 0 404px;padding-top:120px">Bạn có thể tải thêm 1000 ảnh và video lên</h2>
+        <h4 style="color:#fefefe;margin:0 480px 0 480px;padding-top:40px">Kéo & thả ảnh và video ở đây hoặc</h4>
+        <div style ="margin:0 440px 0 440px;padding-top:40px;  background-color: #0062db">
+              <input type="file" name="myfile" class="btn btn-primary" />
         <input type="submit" name="sbmUpload" value="Upload" />
+        </div>
+    
       </form>
     </div>
   </body>

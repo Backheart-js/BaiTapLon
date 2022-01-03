@@ -19,10 +19,12 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){//Kiểm tra 1 giá trị có thuộc mảng không
         //xử lí upload đang lưu ở thư mục tạm
-        
-        if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetFilePath)){//Lấy từ nơi tạm đẩy vào nơi chính
+
+
+        $tagetFile = "uploads/abc.jpeg";
+        if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
-          echo"chạy đến đây chưa?"; 
+          echo"1"; die;
             $sql = "INSERT into db_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
             echo $sql;
             $insert=mysqli_query($db,$sql);
@@ -33,7 +35,8 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
                 $statusMsg = "File upload failed, please try again.";
             } 
         }
-        else{
+        else{       
+            echo"2"; die;
             $statusMsg = "Sorry, there was an error uploading your file.";
         }
     }
