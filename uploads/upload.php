@@ -12,11 +12,7 @@ $targetFilePath = $targetDir . $fileName;//đây là tên đầy đủ+đường
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);//đang bắt định dạng tệp tin
 //Bước 2: Kiểm tra người dùng đã bấm submit và file đã được chọn chưa
 if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
-     
-
-
-
-    if (file_exists($targetFilePath)) {
+     if (file_exists($targetFilePath)) {
         echo "Tệp tin đã tồn tại";
     }
     else{
