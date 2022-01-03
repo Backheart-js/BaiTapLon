@@ -36,15 +36,15 @@ $(document).ready(function()
             $("#emailHelp").text("Email không hợp lệ").css("color","red");
         } else {
             // Server : gửi dữ liệu về server để kiểm tra và phản hồi nếu có lỗi
-            $.ajax({
-                url:"login-process.php",
-               type:"post",
-               data:{email:$(this).val(),pass:$("#pwd").val()},
-               //call backfunction
-               success:function(res){
-                $("#emailHelp").text(res).css("color","red");
-               }
-            })
+            // $.ajax({
+            //     url:"login-process.php",
+            //    type:"post",
+            //    data:{email:$(this).val(),pass:$("#pwd").val()},
+            //    //call backfunction
+            //    success:function(res){
+            //     $("#emailHelp").text(res).css("color","red");
+            //    }
+            // })
         }
     })
 })
