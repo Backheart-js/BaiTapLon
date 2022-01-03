@@ -1,10 +1,11 @@
 <?php
     if(isset($_POST['Email'])){
         //kết nối đến csdl
-        $conn=mysqli_connect('localhost','root','','database_admin');
-        if(!$conn){
-            die("The connection failed.");
-        }
+        // $conn=mysqli_connect('localhost','root','','database_admin');
+        // if(!$conn){
+        //     die("The connection failed.");
+        // }
+        require "../db.php";
         $sqlCheckEmail="SELECT * From users where email='".$_POST['Email']."' ";
         //B1: kiểm tra đã tồn tại email người dùng hay chưa
         $resultCheckEmail = mysqli_query($conn,$sqlCheckEmail);
