@@ -30,21 +30,22 @@ $(document).ready(function()
     //kiểm tra tính hơp lệ của email
     $("#email").change(function(){
         alert($("#email").val());
-        let emailPattern = /(@gmail.com)$/;
-        if (emailPattern.test($this.val()) == false)
+        let emailPattern = /\S+@\S+\.\S+/;
+        if (emailPattern.test($(this).val()) == false)
         {
             $("#emailHelp").text("Email không hợp lệ").css("color","red");
+        } else {
+            //Server : gửi dữ liệu về server để kiểm tra và phản hồi nếu có lỗi
+            // $.ajax({
+            //     url:"login-process.php",
+            //    type:"post",
+            //    data:{email:$(this).val(),pass:$("#pwd").val()},
+            //    //call backfunction
+            //    success:function(res){
+            //     $("#emailHelp").text(res).css("color","red");
+            //    }
+            // })
         }
-        //Server : gửi dữ liệu về server để kiểm tra và phản hồi nếu có lỗi
-        $.ajax({
-            url:"login-process.php",
-           type:"post",
-           data:{email:$(this).val(),pass:$("#pwd").val()},
-           //call backfunction
-           success:function(res){
-            $("#emailHelp").text(res).css("color","red");
-           }
-        })
     })
 })
 
