@@ -19,7 +19,6 @@ else {
     // Bước 02: Thực hiện truy vấn
     $sql = "select * FROM tb_taikhoan WHERE Email = '$email'";
   
-
     
     $result = mysqli_query($conn,$sql);
 

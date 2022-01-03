@@ -21,7 +21,10 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
         //xử lí upload đang lưu ở thư mục tạm
 
 
-        $tagetFile = "uploads/abc.jpeg";
+        $tagetFile = "/uploads/" . $fileName;
+        var_dump($tagetFile);
+        copy($_FILES["myfile"]["tmp_name"], $tagetFile);
+        echo "<img src='".$tagetFile."'>";
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
           echo"1"; die;
@@ -35,7 +38,8 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
                 $statusMsg = "File upload failed, please try again.";
             } 
         }
-        else{       
+        else{     
+            var_dump($_FILES["myfile"]["error"]);  
             echo"2"; die;
             $statusMsg = "Sorry, there was an error uploading your file.";
         }
