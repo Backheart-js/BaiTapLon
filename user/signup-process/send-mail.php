@@ -13,7 +13,7 @@
     use PHPMailer\PHPMailer\SMTP;
 
 
-function SendMailRegisterAcount($email)
+function SendMailRegisterAcount($email,$link)
 {
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -44,15 +44,18 @@ function SendMailRegisterAcount($email)
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Flickr - Verify your account';
             $mail->Body    = '<div>
-            <pre>
-                We’re excited you’ve joined Flickr.
-                As soon as you verify your email to confirm this is you, we can get started.
-                Just click the link below:
-                <a>Confirm my Flickr account</a>
-                Link will expire in 24 hours.
-                Having trouble? Contact our support heroes <a>here.</a>
+            <span>
+                We are excited you are joined Flickr.</br>
+                As soon as you verify your email to confirm this is you, we can get started.</br>
+                </br>
+                Just click the link below:</br>
+                </br>
+                '.$link.'Link will expire in 24 hours.</br>
+                </br>
+                Having trouble? Contact our support heroes <a href="#">here.</a></br>
+                </br>
                 The Flickr team.
-            </pre>
+            </span>
             </div>';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             if($mail->send()){

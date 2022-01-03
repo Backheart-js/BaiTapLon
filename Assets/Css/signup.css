@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image:url(/BTL_Test/BaiTapLon/Assets/data_img/background.jpg);
+    background-image:url(/BaiTapLon/Assets/data_img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -34,13 +34,10 @@ main{
 .form-control:focus {
     box-shadow: none
 }
-<<<<<<< HEAD
-.notice{
+form div .notice{
     color: rgb(245, 88, 88);
     /* display: none; */
 }
-=======
->>>>>>> HuyenLocal
 
 .btn-signup {
     height: 50px;
@@ -78,9 +75,9 @@ main{
     /* font-size: 13px; */
     color: cornflowerblue;
 }
-form .eye:checked{
+/* form .eye:checked{
     
-}
+} */
 .footer{
     color: white;
     width: 370px;
@@ -103,4 +100,7 @@ form .eye:checked{
 .end{
     color: #a7a7a7;
     text-align: right;
+}
+.errorInput{
+    color: rgb(228, 74, 74);
 }
