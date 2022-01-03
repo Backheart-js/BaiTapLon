@@ -232,8 +232,6 @@
             </div>
         </div>
 
-        
-    
-        <script src="./Assets/JavaScript/app.js"></script>
+        <script src="./Assets/JavaScript/search-img.js"></script>
 </body>
 </html>

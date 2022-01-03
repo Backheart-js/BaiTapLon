@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="Assets/Css/base.css"/>
     <link rel="stylesheet" href="Assets/Css/style.css"/>
     <link rel="stylesheet" href="Assets/Css/responsive.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="Main">
@@ -24,14 +26,39 @@
                     <div class="container-fluid col-md-10">
                         <div class="row h-100">
                             <div class="navbar__search-wrap col-md-9 d-flex">
-                                <div class="navbar__input-wrap">
+                                <form action="search.php" method="POST" class="navbar__input-wrap">
                                     <span class="navbar__input-icon">
                                         <i class="fas fa-search" style="font-size: 17px; transform: translateY(3px); color: #999;"></i>
                                     </span>
                                     <span>
-                                        <input class="navbar__search-input" type="text" placeholder="Ảnh, mọi người hoặc nhóm">
+                                        <input class="navbar__search-input" name="textInput" type="text" placeholder="Ảnh, mọi người hoặc nhóm">
                                     </span>
-                                </div>
+                                    <div class="navbar__select-wrap">
+                                        <ul class="navbar__select-list">
+                                            <li class="navbar__select-item">
+                                                <div class="navbar__item-wrap d-flex">
+                                                    <i class="navbar__select-icon bi bi-image"></i>
+                                                    <input type="submit" value="Tìm ảnh" class="navbar__select-link btn" id="submit-search-img">
+                                                    </input>
+                                                </div>
+                                            </li>
+                                            <li class="navbar__select-item">
+                                                <div class="navbar__item-wrap d-flex">
+                                                    <i class="navbar__select-icon bi bi-people-fill"></i>                                                      
+                                                    <input type="submit" value="Tìm người" class="navbar__select-link btn">
+                                                    </input>
+                                                </div>
+                                            </li>
+                                            <li class="navbar__select-item">
+                                                <div class="navbar__item-wrap d-flex">
+                                                    <i class="navbar__select-icon fas fa-users"></i>                                                
+                                                    <input type="submit" value="Tìm nhóm" class="navbar__select-link btn">
+                                                    </input>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
                             </div>
     
                             <div class="navbar__user-wrap d-flex col-md-3">
@@ -76,11 +103,11 @@
                         <h3 class="content__text-sub">
                             Hãy tham gia cộng đồng Flickr, ngôi nhà của hàng chục tỷ bức ảnh và 2 triệu nhóm.
                         </h3>
-                        <a href="" class="content__text-btn btn btn-light">
+                        <button href="" class="content__text-btn btn btn-light">
                             <p>
                                 Bắt đầu miễn phí
                             </p>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -148,5 +175,7 @@
         </footer>
     </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./Assets/JavaScript/main-interface.js"></script>
+    <!-- <script src="./Assets/JavaScript/search-img.js"></script> -->
 </body>
 </html>

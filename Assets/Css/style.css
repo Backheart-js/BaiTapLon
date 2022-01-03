@@ -1,6 +1,6 @@
-* {
+/* * {
     overflow: hidden;
-}
+} */
 /* index.php */
     /* Header */
 #navbar {
@@ -39,6 +39,50 @@
     border-radius: 4px;
     background-color: rgba(255,255,255,0.7);
 }
+.navbar__select-wrap {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35.4px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #333;
+    border-radius: 2px;
+}
+.navbar__select-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar__select-item {
+    height: 37px;
+    align-items: center;
+    padding-left: 14px;
+    border-top: 1px solid #dcdcdc;
+}
+.navbar__select-item:hover {
+    background-color: #ccc;
+}
+
+.navbar__item-wrap {
+    height: 100%;
+    align-items: center;
+}
+.navbar__select-icon {
+    margin-right: 8px;
+    color: #006dac;
+}
+.navbar__select-link {
+    text-decoration: none;
+    color: #006dac;
+    font-size: 15px;
+    display: block;
+    line-height: 37px;
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+
 
 .navbar__user-wrap {
     align-items: center;
@@ -58,6 +102,7 @@
 
 /* Content */
     /* Slider/body */
+.content__home-guest {}
 .bg-slider-guest {
     position: relative;
     display: flex;
