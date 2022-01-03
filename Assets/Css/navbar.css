@@ -33,6 +33,7 @@
 .navbar-search__input-wrap {
     position: relative;
     width: 55%;
+    margin-bottom: 0;
     animation: sizedown linear 0.2s; 
 }
 .navbar-search__input {

@@ -80,7 +80,7 @@
                                         <i class="fas fa-search" style="font-size: 17px; transform: translateY(3px); color: #999;"></i>
                                     </span>
                                     <span>
-                                        <input class="navbar-search__input" name="textInput" type="text" placeholder="Ảnh, mọi người hoặc nhóm" value="">
+                                        <input class="navbar-search__input" name="textInput" type="text" placeholder="Ảnh, mọi người hoặc nhóm">
                                     </span>
                                     <div class="navbar-search__select-wrap">
                                         <ul class="navbar-search__select-list">
@@ -221,3 +221,5 @@
                 </div>
             </div>
         </div>
+
+        <!-- <script src="./Assets/JavaScript/search-img.js"></script> -->

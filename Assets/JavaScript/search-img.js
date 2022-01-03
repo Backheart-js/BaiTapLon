@@ -72,9 +72,9 @@ var photoQueryURL = 'https://api.flickr.com/services/rest/?' + $.param({
               var i;
               for (i = 0; i < len; i++) {
                 var src = `https://farm${output_data[i].farm}.staticflickr.com/${output_data[i].server}/${output_data[i].id}_${output_data[i].secret}.jpg`;
-                html += "<li class='col-md-3'>";
-                html += `<img src=${src}>`;
-                html += "</li>";
+                  html += "<li class='body-search__item'>";
+                  html += `<img src=${src} style='height:100%'>`;
+                  html += "</li>";
               }
               $(".body-search__list").html(html);
             }
