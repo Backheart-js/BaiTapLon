@@ -2,7 +2,7 @@
     
     if($_GET['email'] && $_GET['token'])
     {
-        require "db.php";
+        require "../db.php";
         $email = $_GET['email'];
         $token = $_GET['token'];
         $sql="SELECT * FROM users WHERE email_verification_link='$token' and email='$email'";

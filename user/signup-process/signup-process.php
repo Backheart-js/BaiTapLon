@@ -30,7 +30,7 @@
             if($sqlInsert == true){
                 echo "success";
                 include_once "./send-mail.php";
-                $link="<a href='http://localhost/BaiTapLon/user/login.php?email=".$Email."&token=".$token."'>Confirm my Flickr account</a>";
+                $link="<a href='http://localhost/BaiTapLon/user/signup-process/activationAccount.php?email=".$Email."&token=".$token."'>Confirm my Flickr account</a>";
                 if(SendMailRegisterAcount($Email,$link)){
                     // $email=$Email;
                     header("location:resend-mail.php?email=$Email");

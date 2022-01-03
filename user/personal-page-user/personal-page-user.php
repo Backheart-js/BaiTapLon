@@ -10,7 +10,9 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <!-- <link rel="stylesheet" href="/BTL/css/signup.css"> -->
-  <link rel="stylesheet" href="/BTL_Test/BaiTapLon/Assets/Css/personal_page_user.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="/BaiTapLon/Assets/Css/personal_page_user.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/BaiTapLon/Assets/Javascript/personal-page-user.js"></script>
 </head>
 
 <body>
@@ -55,24 +57,26 @@
       </div>
       <div class="edit col-md edit my-5 text-center d-flex">
         <h1 class="text-center my-4">PhamHuyen</h1>
-        <button class="text-center m-5 mt-3 fs-3"><i class="bi bi-three-dots px-3"></i></button>
+        <button class="text-center ms-5 py-2 m-auto fs- bg-transparent border border-white"><i class="bi bi-three-dots p-3"></i></button>
       </div>
     </div>
-  </div>
-  <nav class="navbar navbar-light bg-light pt-0">
-    <div class="container-fluid text-center mx-5">
-      <ul class="container-fluid d-flex mx-5 " type="none">
-        <li> <a class="col-fm subnav navbar-brand px-5 fs-4" href="About.php">About</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Photostream.php">Photostream</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Albums.php">Albums</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Faves.php">Faves</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Galleries.php">Galleries</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Group.php">Group</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Stats.php">Stats</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" href="Camera_roll.php">Camera Roll</a></li>
+  </div> 
+  <nav class="navbar navbar-light bg-white pt-0 ">
+    <div class="container-fluid text-center mx-5 pb-1">
+      <ul class="container-fluid d-flex mx-5" type="none">
+        <li> <a class="col-fm subnav navbar-brand px-5 fs-4 " id="about" href="About.php">About</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="photostream" href="Photostream.php">Photostream</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="albums" href="Albums.php">Albums</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="faves" href="Faves.php">Faves</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="galleries" href="Galleries.php">Galleries</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="group" href="Group.php">Group</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="stats" href="Stats.php">Stats</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="cameraRoll" href="Camera_roll.php">Camera Roll</a></li>
       </ul>
     </div>
   </nav>
+  
+  
 
   
  

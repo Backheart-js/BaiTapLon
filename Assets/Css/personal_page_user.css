@@ -30,7 +30,7 @@ body{
 }
 .slider{
     background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)),
-    url(/BTL_Test/BaiTapLon/assets/data_img/img_slider.jpg);
+    url(/BaiTapLon/Assets/data_img/img_slider.jpg);
     height: 500px;
     background-repeat: no-repeat;
     background-position: center;
@@ -64,6 +64,7 @@ nav li .subnav:hover {
     /* background: blue; */
     /* border-style: solid; */
     border-bottom: blue solid;
+    /* z-index: 2; */
     /* border-color: blue; */
 }
 .container-fluid{
@@ -103,4 +104,22 @@ nav li .subnav{
     border: none;
     color: white;
     /* width: 200px; */
+}
+.about {
+    box-sizing: border-box;
+}
+.about .main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.main a{
+    color: rgb(102, 95, 95);
+}
+.main .showcase{
+    background: url(/BaiTapLon/Assets/data_img/about_empty.jpg);
+    /* background-image:url(/BTL/assets/data_img/about_empty.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 400px;
 }

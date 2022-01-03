@@ -1,4 +1,4 @@
-<div class="footer position-absolute bottom-0 px-5 container-fluid" >
+<div class="footer  bottom-0 px-5 container-fluid" >
       <div class="firstFooter text-center mx-4 mt-3">
         <a class="navbar-brand px-5 fs-4" href="#">About</a>
         <a class="navbar-brand px-5 fs-4" href="#">Job</a>
