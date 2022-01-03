@@ -132,7 +132,7 @@
                <a href="" class="text-white ms-2">
                  <i class="far fa-bell"></i>
                </a>
-                <a href="" class="text-white ms-2">
+                <a href="../user/logout.php" class="text-white ms-2">
                  <i class="fas fa-camera-retro"></i> 
                 </a>
                 
