@@ -53,7 +53,7 @@
   <div class="slider position-relative">
     <div class="row my-5 position-absolute mb-3 bottom-0 text-center">
       <div class="col-md edit m-5 text-center d-inline">
-        <img src="/BTL_Test/BaiTapLon/Assets/data_img/icon_edit.png" class="rounded-circle " style="width: 100px;" alt="Avatar" />
+        <img src="/BaiTapLon/Assets/data_img/icon_edit.png" class="rounded-circle " style="width: 100px;" alt="Avatar" />
       </div>
       <div class="edit col-md edit my-5 text-center d-flex">
         <h1 class="text-center my-4">PhamHuyen</h1>
@@ -64,17 +64,19 @@
   <nav class="navbar navbar-light bg-white pt-0 ">
     <div class="container-fluid text-center mx-5 pb-1">
       <ul class="container-fluid d-flex mx-5" type="none">
-        <li> <a class="col-fm subnav navbar-brand px-5 fs-4 " id="about" href="About.php">About</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="photostream" href="Photostream.php">Photostream</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="albums" href="Albums.php">Albums</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="faves" href="Faves.php">Faves</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="galleries" href="Galleries.php">Galleries</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="group" href="Group.php">Group</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="stats" href="Stats.php">Stats</a></li>
-        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="cameraRoll" href="Camera_roll.php">Camera Roll</a></li>
+        <li> <a class="col-fm subnav navbar-brand px-5 fs-4 " id="about" href="index.php">Giới thiệu</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="photostream" href="Photostream.php">Kho ảnh</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="albums" href="Albums.php">Album</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="faves" href="Faves.php">Yêu thích</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="galleries" href="Galleries.php">Thư viện</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="group" href="Group.php">Nhóm</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="stats" href="Stats.php">Thống kê</a></li>
+        <li><a class="col-fm subnav navbar-brand px-5 fs-4" id="cameraRoll" href="Camera_roll.php">Cuộn camera</a></li>
       </ul>
     </div>
   </nav>
+
+  
   
   
 
