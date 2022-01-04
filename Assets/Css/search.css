@@ -1,0 +1,114 @@
+/* Search */
+.category-search-wrap {
+    height: 90px;
+    background-color:#fff;
+}
+.category-search-content {
+
+}
+
+.category-search__select {
+    height: 50px;
+}
+.category-search__select-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    height: 100%;
+    border-bottom: 1px solid #dcdcdc;
+}
+.category-search__select-item {
+    position: relative;
+    width: 105px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+.category-search__select-link {
+    text-decoration: none;
+    color: #000;
+}
+.category-search__select-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #0091dc;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+.category-search__select-item:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+.category-dropdown {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+.category-dropdown__wrap {
+    position: relative;
+    margin-right: 32px;
+}
+.dropdown__content {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+}
+
+.category-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+.category-filter__wrap {
+    margin-left: 32px;
+
+}
+.category-filter__content {
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #333;
+}
+.category-filter__icon {
+    margin-left: 10px;
+    font-size: 18px;
+}
+.category-filter__icon:hover {
+    color: #666;
+}
+
+/* Body */
+.body-search-wrap {
+    height: 1000px;
+    background-color: var(--bg-main-color);
+    padding-top: 140px;
+}
+.body-search-content {
+    margin-top: 35px;
+}
+
+.body-search__img-wrap {
+
+}
+
+.body-search__list {
+    list-style: none;
+    padding-left: 0;
+    padding: 0 24px;
+}
+.body-search__item{
+    height: 210px; 
+    width: auto; 
+    padding: 0 8px 8px 0;
+}

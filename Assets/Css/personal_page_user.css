@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-image:url(/BTL/assets/data_img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;*/
+    height: 100vh;   
+    position: relative;
+    overflow: scroll;
+    width: 100%;
+}
+.header{
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.header li .nav-link{
+    color: white;
+}
+.bi-search{
+    
+}
+.header .icon{
+    color: white;
+}
+.slider{
+    background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)),
+    url(/BTL_Test/BaiTapLon/assets/data_img/img_slider.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    box-sizing: border-box;
+    z-index: 0;
+    /* background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)); */
+}
+.item_slider{
+    height: 500px;
+}
+.slider .edit{
+    z-index: 1;
+}
+.edit>img{
+    /* line-height: 100px; */
+}
+.edit>img:hover{
+    
+}
+.edit >h1{
+    /* line-height: 100px; */
+    color: white;
+}
+.navbar{
+    /* display: inline-block; */
+     height: 70px;
+     /* box-sizing: border-box; */
+}
+nav li .subnav:hover {
+    /* background: blue; */
+    /* border-style: solid; */
+    border-bottom: blue solid;
+    /* border-color: blue; */
+}
+.container-fluid{
+    /* display: block; */
+    /* height: 60px; */
+    /* text-align: center; */
+}
+nav li .subnav{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+}
+
+.footer{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    /* height: 200px; */
+    overflow: visible;
+    width: 100%;
+}
+.footer div a{
+    color: white;
+}
+.footer div a:hover{
+    color: gray;
+}
+.footer .subFooter a{
+    color: gray;
+}
+.footer .subFooter a:hover{
+    color: white;
+}
+.footer select{
+    background: none;
+    border: none;
+    color: white;
+    /* width: 200px; */
+}

@@ -1,0 +1,106 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(/BaiTapLon/Assets/data_img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 100vh;  
+    position: relative;
+}
+.header{
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+main{
+    margin-top: 55px;
+}
+.card {
+    width: 400px;
+    border: none
+}
+
+.form-control {
+    height: 45px;
+    border-radius: 10px
+}
+
+.form-control:focus {
+    box-shadow: none
+}
+form div .notice{
+    color: rgb(245, 88, 88);
+    /* display: none; */
+}
+
+.btn-signup {
+    height: 50px;
+    border-radius: 10px
+}
+.placeholder {
+    color: rgb(136, 126, 126);
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 75px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    margin-top: -60px;
+    padding-left: 30px;
+  }
+  .form-control:focus ~ .placeholder,
+.form-control:not(:placeholder-shown) ~ .placeholder
+{   
+    /* border-color: blueviolet; */
+    /* border-width: 2px; */
+    transform: translateY(-15px) translateX(10px) scale(0.8);
+    /* font-size: 12px; */
+}
+  .form-control:focus ~ #password,
+.form-control:not(:placeholder-shown) ~ #password
+{   
+    /* border-color: blueviolet; */
+    /* border-width: 2px; */
+    transform: translateY(-15px) translateX(5px) scale(0.8);
+    /* font-size: 12px; */
+}
+.form-control:focus ~ .placeholder{
+    /* font-size: 13px; */
+    color: cornflowerblue;
+}
+/* form .eye:checked{
+    
+} */
+.footer{
+    color: white;
+    width: 370px;
+    justify-items: center;
+    margin: 0 auto 0;
+}
+.footer select{
+    color: white;
+    background: transparent;
+    border: none;
+    width: 75px;
+}
+.footer>div>a{
+    color: white;
+    text-decoration: none;
+}
+.footer select option{
+    color: black;
+}
+.end{
+    color: #a7a7a7;
+    text-align: right;
+}
+.errorInput{
+    color: rgb(228, 74, 74);
+}
