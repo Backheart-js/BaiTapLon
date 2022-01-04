@@ -11,13 +11,13 @@ else {
 }
 
     // Bước 01: Kết nối Database Server
-    $conn = mysqli_connect('localhost','root','12345678','BaiTapLon');
+    $conn = mysqli_connect('localhost','root','12345678','database_BaiTapLon');
     
     if(!$conn){
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
-    $sql = "select * FROM tb_taikhoan WHERE Email = '$email'";
+    $sql = "select * FROM login WHERE Email = '$email' and Password='$password'";
   
     
     $result = mysqli_query($conn,$sql);
@@ -30,7 +30,7 @@ else {
         //var_dump(password_hash('12345678', PASSWORD_DEFAULT));die;
         
 
-        if(password_verify($password, $row['Matkhau']))// so sánh kiểm chứng mật khẩu 
+        if(password_verify($password, $row['Password']))// so sánh kiểm chứng mật khẩu 
         {   
             $_SESSION['isLoginOK']=$email;
             header("location: Home.php");//Chuyển hướng về Trang quản trị
