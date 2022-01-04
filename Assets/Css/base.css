@@ -1,3 +1,19 @@
 :root {
     --bg-main-color: #f3f5f6;
 }
+
+.input-width-enter {
+    width: 85%;
+    animation: sizeup linear .2s;
+}
+
+.d-block {
+    display: block;
+}
+
+@keyframes sizeup {
+    from {
+        width: 55%;
+    }
+    to { width: 85%};
+}

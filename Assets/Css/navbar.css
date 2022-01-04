@@ -28,10 +28,13 @@
 .navbar-search__input-wrapper {
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 0;
 }
 .navbar-search__input-wrap {
     position: relative;
     width: 55%;
+    margin-bottom: 0;
+    animation: sizedown linear 0.2s; 
 }
 .navbar-search__input {
     font-size: 14px;
@@ -39,13 +42,56 @@
     width: 100%;
     padding: 6px 0 6px 40px;
     border-radius: 4px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.7)
 }
 .navbar-search__input-icon {
     position: absolute;
     left: 12px;
     transform: translateY(2px);
 }
+.navbar-search__select-wrap {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 33.4px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #333;
+    border-radius: 2px;
+}
+.navbar-search__select-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar-search__select-item {
+    height: 37px;
+    align-items: center;
+    padding-left: 14px;
+    border-top: 1px solid #dcdcdc;
+}
+.navbar-search__item-wrap {
+    height: 100%;
+    align-items: center;
+}
+.navbar-search__select-item:hover {
+    background-color: #ccc;
+}
+.navbar-search__select-link {
+    text-decoration: none;
+    color: #006dac;
+    font-size: 15px;
+    display: block;
+    line-height: 37px;
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+.navbar-search__select-icon {
+    margin-right: 8px;
+    color: #006dac;
+}
+
 
 .navbar__cate-wrap {
 
@@ -70,6 +116,7 @@
 .navbar__cate-item:hover .navbar__subcate-list {
     cursor: pointer;
     display: block;
+    z-index: 1;
 }
 
 .navbar__cate-link {
@@ -78,7 +125,7 @@
     font-size: 17px;
 }
 
-/* Subcate */
+/* Subcategory */
 .navbar__subcate-list {
     display: none;
     position: absolute;
@@ -153,4 +200,11 @@
 .navbar-search__signup-wrap,
 .navbar-search__signup-btn {
     width: 100px;
+}
+
+@keyframes sizedown {
+    from {
+        width: 85%;
+    }
+    to { width: 55%;}
 }
