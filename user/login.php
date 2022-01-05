@@ -71,8 +71,8 @@
                                     </div>
                                 </div>
 
-                                <div class="contact__agree mt-3">
-                                    <label>
+                                <div class="contact__agree mt-3 d-flex flex-column">
+                                    <label class="d-block">
                                         <input type="checkbox" class="checkbox" value="remember-me">
                                         Ghi nhớ địa chỉ email
                                     </label>
@@ -80,7 +80,7 @@
 
                                       if(isset($_GET['error']))
                                       {
-                                        echo "<h5 style ='color:red'> {$_GET['error']} </h5>";
+                                        echo "<h5 style ='color:red;font-size:0.8rem;'> {$_GET['error']} </h5>";
                                       }
                                     ?>
 

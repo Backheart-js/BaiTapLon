@@ -30,7 +30,7 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
                 $insert=mysqli_query($db,$sql);
                 if($insert){ //kiểm tra việc query thành công
                     $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                    header("location:show.php");
+                    header("location: ../user/personal-page-user/Albums.php");
                 }else{
                     $statusMsg = "File upload failed, please try again.";
                 } 
