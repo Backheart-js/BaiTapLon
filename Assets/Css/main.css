@@ -115,11 +115,6 @@ height: 2px;
 .form_link-password{
     padding: 0 120px;
 }
-.btn-primary {
-background-color: #128fdc;
-width:100%;
-margin-top: 28px;
-}
 .btn-outline-secondary{
   border: none;
 }
@@ -181,6 +176,7 @@ margin-top: 28px;
 }
 .nav-item {
     margin-right: 16px;
+    list-style: none;
 }
 
 .navbar__category-link {

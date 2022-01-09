@@ -1,4 +1,7 @@
-<!-- <!DOCTYPE html>
+<?php
+    $value = $_POST['textInput'];
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,23 +11,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./Assets/Css/navbar.css">
-    <link rel="stylesheet" href="./Assets/Css/search.css"/>
-    <link rel="stylesheet" href="./Assets/Css/base.css"/>
-    <link rel="stylesheet" href="./Assets/Css/responsive.css"/>
+    <link rel="stylesheet" href="../Assets/Css/navbar.css">
+    <link rel="stylesheet" href="../Assets/Css/search.css"/>
+    <link rel="stylesheet" href="../Assets/Css/base.css"/>
+    <link rel="stylesheet" href="../Assets/Css/responsive.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-</head> -->
-
+</head>
+<body>
         <div class="container-fluid navbar-search-wrap">
             <div class="container navbar-search-content">
                 <div class="row ps-4 pe-4 h-100">
                     <div class="navbar-search__logo-wrap col-md-5 col-sm-5 row">
-                        <a href="index.php" class="col-md-3 col-sm-8 d-flex">
-                            <img class="navbar-search__logo-img" src="./Assets/data_img/flickr_demo.svg" alt="">
+                        <a href="./Home.php" class="col-md-3 col-sm-8 d-flex">
+                            <img class="navbar-search__logo-img" src="../Assets/data_img/flickr_demo.svg" alt="">
                         </a>
                         <div class="navbar__cate-wrap col-md-9">
                             <ul class="navbar__cate-list">
+                                <li class="navbar__cate-item">
+                                    <a href="" class="navbar__cate-link">Bạn</a>
+                                    <ul class="navbar__subcate-list">
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Giới thiệu</a>
+                                        </li>
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Kho ảnh</a>
+                                        </li>
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Album</a>
+                                        </li>
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Yêu thích</a>
+                                        </li>
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Thư viện</a>
+                                        </li>
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Nhóm</a>
+                                        </li>
+                                        <li class="navbar__subcate-item">
+                                            <a href="" class="navbar__subcate-link">Cuộn camera</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="navbar__cate-item">
                                     <a href="" class="navbar__cate-link">Khám phá</a>
                                     <ul class="navbar__subcate-list">
@@ -75,12 +104,12 @@
                     <div class="navbar-search__input-login col-md-7">
                         <div class="row h-100">
                             <div class="navbar-search__input-wrapper col-md-7 d-flex">
-                                <form action="search.php" method="POST" class="navbar-search__input-wrap">
+                                <form action="./search-user.php" method="POST" class="navbar-search__input-wrap">
                                     <span class="navbar-search__input-icon">
                                         <i class="fas fa-search" style="font-size: 17px; transform: translateY(3px); color: #999;"></i>
                                     </span>
                                     <span>
-                                        <input class="navbar-search__input" name="textInput" type="text" placeholder="Ảnh, mọi người hoặc nhóm">
+                                        <input class="navbar-search__input" type="text" placeholder="Ảnh, mọi người hoặc nhóm" value="<?php echo $value?>">
                                     </span>
                                     <div class="navbar-search__select-wrap">
                                         <ul class="navbar-search__select-list">
@@ -221,5 +250,14 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid body-search-wrap">
+            <div class="container body-search-content">
+                <ul class="body-search__list row">
+                    
+                </ul>
+            </div>
+        </div>
 
-        <!-- <script src="./Assets/JavaScript/search-img.js"></script> -->
+        <script src="../Assets/JavaScript/search-img.js"></script>
+</body>
+</html>
