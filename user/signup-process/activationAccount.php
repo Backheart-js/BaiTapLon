@@ -1,5 +1,12 @@
 <?php
     
+    session_start();// Khởi tạo Session
+    if(!isset($_SESSION['email'])){
+      // $email=$_POST['txtEmail'];
+      //  echo $email;     
+      header("location:../signup.php");
+    }
+    
     if($_GET['email'] && $_GET['token'])
     {
         require "../db.php";
@@ -13,7 +20,7 @@
             if($row['email_verified_at'] == NULL){
                 mysqli_query($conn,"UPDATE users set email_verified_at ='$d',status=1 WHERE email='$email'");
                 $msg = "Congratulations! Your email has been verified.";
-                header("location:./login.php");
+                header("location:../login.php");
             }else{
             $msg = "You have already verified your account with us";
             }

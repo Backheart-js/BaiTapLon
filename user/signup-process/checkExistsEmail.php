@@ -1,4 +1,12 @@
 <?php
+    
+    // session_start();// Khởi tạo Session
+    // if(!isset($_SESSION['email'])){
+    //   // $email=$_POST['txtEmail'];
+    //   //  echo $email;     
+    //   header("location:../signup.php");
+    // }
+    
     if(isset($_POST['Email'])){
         //kết nối đến csdl
         // $conn=mysqli_connect('localhost','root','','database_admin');
@@ -20,7 +28,7 @@
     }
     else{
         // echo 'Message has not been sent1';
-        header("location:signup.php");
+        header("location:../signup.php");
     }
 
 

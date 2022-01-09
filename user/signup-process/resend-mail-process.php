@@ -1,4 +1,18 @@
 <?php
+    // Khởi tạo Session
+    
+    session_start();// Khởi tạo Session
+    if(!isset($_SESSION['email'])){
+      // $email=$_POST['txtEmail'];
+      //  echo $email;     
+      header("location:../signup.php");
+    }
+
+    if(!isset( $_SESSION['email'])){
+      // $email=$_POST['txtEmail'];
+      //  echo $email;     
+      header("location:../signup.php");
+    }
     if(isset($_POST['btnResendMail']) && isset($_GET['email']) ){
         // echo "đã đến đây";
         require "send-mail.php";
@@ -10,6 +24,7 @@
         $token = md5($_POST[$Email]).rand(10,9999);
         $link="<a href='http://localhost/BaiTapLon/user/signup-process/activationAccount.php?email=".$Email."&token=".$token."'>Confirm my Flickr account</a>";
         if(SendMailRegisterAcount($Email,$link)){
+            
             $error= '<p style="color:green;">Message has been resent</p>';
             header("location:resend-mail.php?email=$Email&error=$error");
         }

@@ -1,12 +1,11 @@
-//<?php
-//    if(isset($_POST['btnSignup'])){
-//      $email=$_POST['txtEmail'];
-      // echo $email;
-//      session_start();// Khởi tạo Session
-//      $_SESSION['ReEmail'] = $email;; // Khởi tạo session có tên là ReEmail và giá trị là $email
-//
-//    }
-//?>
+<?php
+    session_start();// Khởi tạo Session
+    if(!isset($_SESSION['email'])){
+      // $email=$_POST['txtEmail'];
+      //  echo $email;     
+      header("location:../signup.php");
+    }
+?>
 
 
 <!DOCTYPE html>
@@ -43,16 +42,16 @@
           <!-- action="./signup-process/signup-process.php" method="post" -->
           <!-- <form class="card py-5 mx-auto mt-5 p-5" action="./resend-mail-process.php?email='.$_GET['email'].'" method="post"> -->
           <form class="card py-5 mx-auto mt-5 p-5" action="<?php 
-              echo "http://localhost/BaiTapLon/user/signup-process/resend-mail-process.php?email=".$_GET['email']."";
+              echo "http://localhost/BaiTapLon/user/signup-process/resend-mail-process.php?email=".$_SESSION['email']."";
           ?>" method="post">
               <i class="bi bi-envelope ms-auto me-auto font-weight-bold"></i>
               <h3 class="ms-auto me-auto fs-4 px-3 font-weight-bold">Check Your Email</h3>   
               <p class="mx-4 fs-5 pt-3 font-weight-bold mb-2" id="email">
                   We sent a verification link to 
                   <?php 
-                      if(isset($_GET['email'])){
-                        $email=$_GET['email'];
-                        echo "<h5 style='font-weight: bold' name='email'> {$_GET['email']} </h5>";
+                      if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                        echo "<h5 style='font-weight: bold' name='email'> {$_SESSION['email']} </h5>";
                         // echo "{$_GET['email']}."."";
                         // echo "http://localhost/BaiTapLon/user/signup-process/resend-mail-process.php?email=".$_GET['email']."";
                       }

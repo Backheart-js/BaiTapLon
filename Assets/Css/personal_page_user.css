@@ -12,6 +12,8 @@ body{
     position: relative;
     overflow: scroll;
     width: 100%;
+    /* overflow-x: hidden; */
+
 }
 .header{
     top: 0;
@@ -37,20 +39,74 @@ body{
     background-size:cover;
     box-sizing: border-box;
     z-index: 0;
+    width: 100%;
     /* background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)); */
 }
 .item_slider{
     height: 500px;
 }
-.slider .edit{
-    z-index: 1;
+.slider #avatar{
+    /* z-index: 1; */
+    background: url(/BaiTapLon/Assets/data_img);
+
 }
-.edit>img{
-    /* line-height: 100px; */
+
+.slider #p-avatar{
+    width: 100px;
+    height: 100px;
+    background-image: url(/BaiTapLon/Assets/data_img/icon_edit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    box-sizing: border-box;
 }
-.edit>img:hover{
+.slider #p-avatar>#pen{
+    display: none;
+}
+
+.slider #p-avatar:hover >#pen{
+    display: block;
+}
+.slider #p-avatar:hover{
+    background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)),
+    url(/BaiTapLon/Assets/data_img/icon_edit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    box-sizing: border-box;
     
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* display: none; */
+    background: rgba(0,0,0,0.3);
+    /* z-index: 1;
+    background-color: white;
+    height: 700px;
+    margin: 50px 100px;
+    width: 80%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal .modal-container{
+    background-color: white ;
+    height: 800px;
+    width: 80%;
+}
+.modal-container .modal-body>img{
+    width: 20%;
+}
+.modal-container .modal-header ul>li:hover{
+    border-bottom: blue solid;
+}
+
 .edit >h1{
     /* line-height: 100px; */
     color: white;
@@ -58,6 +114,8 @@ body{
 .navbar{
     /* display: inline-block; */
      height: 70px;
+     width: 100%;
+     /* overflow-x: hidden; */
      /* box-sizing: border-box; */
 }
 nav li .subnav:hover ,

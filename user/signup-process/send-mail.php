@@ -1,4 +1,13 @@
 <?php
+    session_start();// Khởi tạo Session
+    if(!isset($_SESSION['email'])){
+      // $email=$_POST['txtEmail'];
+      //  echo $email;     
+      header("location:../signup.php");
+    }
+
+
+
     $username ='huyenpham26112001@gmail.com';
     $password ='cofobqiummotidli';
 

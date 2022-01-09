@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(isset($_POST['btnSignup'])){
         require "../db.php";
         $FirstName=$_POST['txtFirstName'];
@@ -28,12 +29,16 @@
             $sqlInsert="INSERT into users (firstname,lastname,age,email,password,email_verification_link) Values ('$FirstName','$LasName','$Age','$Email','$password_hash','$token')";
             $resultIsert = mysqli_query($conn,$sqlInsert);
             if($sqlInsert == true){
+                
                 echo "success";
                 include_once "./send-mail.php";
                 $link="<a href='http://localhost/BaiTapLon/user/signup-process/activationAccount.php?email=".$Email."&token=".$token."'>Confirm my Flickr account</a>";
                 if(SendMailRegisterAcount($Email,$link)){
                     // $email=$Email;
-                    header("location:resend-mail.php?email=$Email");
+                    $resultSelectID = mysqli_query($conn,"SELECT id from users where email='$Email'");
+                    $row=mysqli_fetch_assoc($resultSelectID);
+                    $_SESSION['email']=$Email;
+                    header("location:resend-mail.php");
                     // echo '<p>Message has been resent</p>';
                 }
             }

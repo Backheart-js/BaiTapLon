@@ -2,6 +2,7 @@
     include_once "personal-page-user.php";
 ?>
 
+
 <div id="about-view" class=" border bg-light mt-2 pt-2 " style="heigth:100vh">
         <div class="main  my-5 bg-white border ">
               <div class="status px-5 container-fluid d-flex position-relative">
@@ -57,6 +58,8 @@
 
         </div>
 </div>
+
+
 
 <div id="photostream-view">
   
