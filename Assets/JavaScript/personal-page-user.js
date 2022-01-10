@@ -57,6 +57,24 @@ $(document).ready(function(){
         } */
     })
 
+    $("#js-modal-about").click(function(){
+        $("#js-modal-about").css("border-bottom","blue solid");
+        $("#js-modal-photostream").css("border-bottom","none");
+        $("#js-modal-albums").css("border-bottom","none");
+    })
+    $("#js-modal-photostream").click(function(){
+        $("#js-modal-photostream").css("border-bottom","blue solid");
+        $("#js-modal-about").css("border-bottom","none");
+        $("#js-modal-albums").css("border-bottom","none");
+     })
+    $("#js-modal-albums").click(function(){
+        $("#js-modal-albums").css("border-bottom","blue solid");
+        $("#js-modal-about").css("border-bottom","none");
+        $("#js-modal-photostream").css("border-bottom","none");
+     })
+    
+
+
 
     //xử lý cho mục kho ảnh -phototream
 

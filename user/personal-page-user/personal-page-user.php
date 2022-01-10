@@ -70,14 +70,14 @@
   <nav class="container-fluid navbar navbar-light bg-white pt-0 ">
     <div class="container-fluid text-center ms-5 pb-1 nav-about">
       <ul class=" d-flex mx-5" type="none">
-        <li> <a class="col-md subnav navbar-brand px-3 fs-4 " id="about" href="index.php">Giới thiệu</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="Photostream.php">Kho ảnh</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="albums" href="Albums.php">Album</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="faves" href="Faves.php">Yêu thích</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="galleries" href="Galleries.php">Thư viện</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="group" href="Group.php">Nhóm</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="stats" href="Stats.php">Thống kê</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="cameraRoll" href="Camera_roll.php">Cuộn camera</a></li>
+        <li> <a class="col-md subnav navbar-brand px-3 fs-4 " id="about" href="#about-view" >Giới thiệu</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="#photostream-view">Kho ảnh</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="albums" href="#album-view">Album</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="faves" href="#faves-view">Yêu thích</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="galleries" href="#galleries-view">Thư viện</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="group" href="#group-view">Nhóm</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="stats" href="#stat-view">Thống kê</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="cameraRoll" href="#cameraroll-view">Cuộn camera</a></li>
       </ul>
     </div>
   </nav>
@@ -86,9 +86,9 @@
         <div class="modal-container">
           <header class="container-fluid modal-header navbar navbar-light  d-flex ">
                 <ul class="col-md text-center d-flex d-inline " type="none">
-                  <li class="pb-3"> <a class="col-fm subnav navbar-brand px-5  " id="about" href="index.php">Kho ảnh</a></li>
-                  <li class="pb-3"><a class="col-fm subnav navbar-brand px-5 " id="photostream" href="">Album</a></li>
-                  <li class="pb-3"><a class="col-fm subnav navbar-brand px-5 " id="albums" href="Albums.php">Tải lên</a></li>
+                  <li class="pb-3" id="js-modal-about"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
+                  <li class="pb-3" id="js-modal-photostream"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
+                  <li class="pb-3" id="js-modal-albums"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
                 </ul>
                 <!-- <input id="search" class="col-md mb-4 p-2" type="search" placeholder="Search" aria-label="Search"> -->
                 <div class="col-md d-flex position-relative mb-4 p-2">
@@ -99,16 +99,34 @@
                 <hr>
           </header>
           
-        <div class="modal-body text-center fs-4 p-5 m-5">
+        <div class="modal-body text-center fs-4 p-5 m-5" id="js-photostream">
+              <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
+              <p class="p-5">1111Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
+              
+              Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
+              <form action="upload-avt/upload-avt-process" method="post">
+                  <input type="file" id="files" name="fileupload" visbility="hidden" />
+              </form>
+        </div>
+
+        <div class="modal-body text-center fs-4 p-5 m-5" id="js-album" >
+              <p>Không có album.</p>
+        </div>
+        
+        <div class="modal-body text-center fs-4 p-5 m-5" id="js-update">
               <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
               <p class="p-5">Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
               
               Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
-              <input type="file" id="files" visbility="hidden" />
-
-
-              
+              <form action="upload-avt/upload-avt-process" method="post">
+                  <input type="file" id="files" name="fileupload" visbility="hidden" />
+              </form>
         </div>
+
+
+
+
+
         </div>
   </div>
 

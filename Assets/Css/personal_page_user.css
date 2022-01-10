@@ -108,12 +108,29 @@ body{
 .modal-container .modal-header ul{
     border-bottom: white solid;
 }
-.modal-container .modal-header ul>li:hover{
+
+.modal-container .modal-header #js-modal-about:hover{
     border-bottom: blue solid;
 }
+.modal-container .modal-header #js-modal-about{
+    border-bottom: blue solid;
+}
+.modal .modal-body{
+    display:none;
+    /* border-bottom: blue solid; */
+    /* background-color: chartreuse; */
+}
+.modal .modal-body:target{
+    display:block;
+    /* border-bottom: blue solid; */
+    /* background-color: chartreuse; */
+}
+
 .modal.openmodal{
     display: flex;
 }
+
+
 
 .edit >h1{
     /* line-height: 100px; */
@@ -129,8 +146,9 @@ body{
 .navbar .nav-about{
     overflow-y: hidden;
 }
-nav li .subnav:hover ,
-nav li .subnav:checked {
+
+/* nav li .subnav:checked , */
+nav li .subnav:hover {
     /* background: blue; */
     /* border-style: solid; */
     border-bottom: blue solid;
@@ -148,33 +166,7 @@ nav li .subnav{
     text-align: center;
 }
 
-.footer{
-    box-sizing: border-box;
-    display: inline-block;
-    background-color: black;
-    color: white;
-    /* height: 200px; */
-    overflow: visible;
-    width: 100%;
-}
-.footer div a{
-    color: white;
-}
-.footer div a:hover{
-    color: gray;
-}
-.footer .subFooter a{
-    color: gray;
-}
-.footer .subFooter a:hover{
-    color: white;
-}
-.footer select{
-    background: none;
-    border: none;
-    color: white;
-    /* width: 200px; */
-}
+
 
 /* css for about */
 #about-view {
@@ -220,16 +212,22 @@ nav li .subnav{
 }
 
 /* css for photostream */
-#photostream-view div>ul{
+.subnav-view div>ul{
     font-size: 13px;
+}
+.subnav-view{
+    display: none;
+}
+.subnav-view:target{
+    display: block;
 }
 #cameraroll-view div button>a,
 #galleries-view div button>a,
-#photostream-view div button>a{
+.subnav-view div button>a{
     color: white;
     font-size: 20px;
 }
-#photostream-view .photostream-bg{
+.subnav-view .subnav-view-bg{
     background: url(/BaiTapLon/Assets/data_img/photostream_bg.jpg);
     /* background-image:url(/BTL/assets/data_img/about_empty.jpg); */
     background-repeat: no-repeat;
@@ -241,10 +239,7 @@ nav li .subnav{
 
 
 /* css for galleries */
-#galleries-view{
-
-}
-.galleries-bg{
+.galleries-view-bg{
     background: url(/BaiTapLon/Assets/data_img/galleries_bg.jpg);
     /* background-image:url(/BTL/assets/data_img/about_empty.jpg); */
     background-repeat: no-repeat;
@@ -276,3 +271,31 @@ nav li .subnav{
     display: block;  
     background-color: pink;
 } */
+
+.footer{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    /* height: 200px; */
+    overflow: visible;
+    width: 100%;
+}
+.footer div a{
+    color: white;
+}
+.footer div a:hover{
+    color: gray;
+}
+.footer .subFooter a{
+    color: gray;
+}
+.footer .subFooter a:hover{
+    color: white;
+}
+.footer select{
+    background: none;
+    border: none;
+    color: white;
+    /* width: 200px; */
+}

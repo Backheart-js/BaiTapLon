@@ -2,8 +2,8 @@
     include_once "personal-page-user.php";
 ?>
 
-
-<div id="about-view" class=" border bg-light mt-2 pt-2 " style="heigth:100vh">
+<!-- about -->
+<div id="about-view" class=" border bg-light subnav-view mt-2 pt-2 " style="heigth:100vh">
         <div class="main  my-5 bg-white border ">
               <div class="status px-5 container-fluid d-flex position-relative">
                   <p href="#" id="aboutyou" class="d-block col-md-11 p-5">
@@ -58,11 +58,142 @@
         </div>
 </div>
 
+<!-- end about -->
 
 
-<div id="photostream-view">
-  
+<!-- photostream -->
+<div id="photostream-view" class="bg-light mt-2 pt-2 px-5 subnav-view js-photostream-view" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid mx-5">
+            <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+            <ul class="col-md navbar-nav ms-5 fs-4">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ngày tải lên
+                </a>
+                <ul class="dropdown-menu fs-4" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Ngày tải lên</a></li>
+                    <li><a class="dropdown-item" href="#">Ngày chụp </a></li>
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Chế độ xem công khai
+                </a>
+                <ul class="dropdown-menu fs-4" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Chế độ xem công khai</a></li>
+                    <li><a class="dropdown-item" href="#">Chế độ xem bạn bè</a></li>
+                    <li><a class="dropdown-item" href="#">Gia đình chế độ xem</a></li>
+                    <li><a class="dropdown-item" href="#">Bạn bè và gia đình xem</a></li>
+                    <li><a class="dropdown-item" href="#">Xem tất cả</a></li>
+                </ul>
+                </li>
+            
+            </ul>
+            <i class="col-md bi bi-reply text-end fs-3 me-5"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="photo-main m-5">
+        <div class="text-center m-5">
+            <h2 class="fw-normal">Bạn không có ảnh công khai.</h2>
+            <h4 class="fw-normal p-5">Dòng ảnh của bạn là danh mục đầu tư trực tiếp của bạn. Đặt ảnh của bạn ở chế độ công khai bằng Thư viện ảnh để đưa vào dòng ảnh của bạn.</h4>
+            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Go to camera roll</a></button>
+          </div>
+    </div>
+    <div class="subnav-view-bg mx-5">
+
+    </div>
 </div>
+<!--end photostream -->
+
+<!-- album -->
+<div id="album-view" class="bg-light mt-2 pt-2 px-5 subnav-view js-album-view" >
+    <div class="photo-main m-5">
+        <div class="text-center m-5 px-5">
+            <h2 class="fw-normal">Hãy làm một album.</h2>
+            <h4 class="fw-normal p-5 mx-5">Dễ dàng sắp xếp tất cả ảnh của bạn thành các album đẹp mắt để chia sẻ với bạn bè, gia đình hoặc thậm chí các thành viên Flickr khác.</h4>
+            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Go to camera roll</a></button>
+          </div>
+    </div>
+    <div class="subnav-view-bg-bg mx-5">
+
+    </div>
+</div>
+<!--end album -->
+
+<!-- faves -->
+<div id="faves-view" class="bg-light mt-2 pt-2 px-5 subnav-view js-faves-view" >
+    <div class="photo-main m-5">
+        <div class="text-center m-5 px-5">
+            <h2 class="fw-normal">Bắt đầu chọn ảnh yêu thích của bạn. Chỉ cần nhấn vào dấu sao.</h2>
+            <h4 class="fw-normal p-5 mx-5">Thích điều bạn nhìn thấy? Hãy cho nhiếp ảnh gia biết bằng cách nhấn vào biểu tượng ngôi sao.</h4>
+            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Bắt đầu khám phá Flickr</a></button>
+          </div>
+    </div>
+    <div class="subnav-view-bg mx-5">
+
+    </div>
+</div>
+<!--end faves -->
+
+<!-- galleries -->
+<div id="galleries-view" class="bg-light mt-2 pt-2 p-5 mb-5 subnav-view js-galleries-view" >
+    <div class="photo-main m-5">
+        <div class="text-center m-5 px-5">
+            <h2 class="fw-normal">Các bức tường trong phòng trưng bày của bạn trông trống trải quá.</h2>
+            <h4 class="fw-normal p-5 mx-5">Thư viện là một cách để trưng bày ảnh và video công khai của các nhiếp ảnh gia khác. Khi bạn thấy nội dung yêu thích trên Flickr, hãy nhấn vào biểu tượng [+] để lưu lại trong phòng trưng bày của mình.</h4>
+            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Tạo phòng trưng bày</a></button>
+          </div>
+    </div>
+    <div class="galleries-view-bg mx-5 pb-5">
+
+    </div>
+</div>
+<!--end galleries -->
+
+<!-- group -->
+<div id="group-view" class="bg-light mt-2 pt-2 p-5 mb-5 subnav-view js-group-view" >
+    <div class="photo-main m-5">
+        <div class="text-center m-5 px-5">
+            <h4 class="fw-normal p-5 mx-5">Các Nhóm trên Flickr là cách tuyệt vời để chia sẻ ảnh, đăng bình luận và tổ chức thảo luận về các chủ đề chung.
+Bắt đầu với những Nhóm sau trên Flickr</h4>
+          </div>
+    </div>
+</div>
+<!--end group -->
+
+<!-- stat -->
+<div id="stat-view" class="bg-light mt-2 pt-2 p-5 mb-5 subnav-view js-stat-view" >
+    <div class="photo-main m-5">
+        <div class="text-center m-5 px-5">
+            <h2 class="fw-normal">Giới thiệu thống kê hoàn toàn mới cho Pro</h2>
+            <h4 class="fw-normal p-5 mx-5">Hiểu về cách mọi người khám phá những hình ảnh trên Flickr của bạn. Xem ảnh nào của bạn hiện đang có xu hướng và ảnh nào hoạt động tốt nhất trong toàn bộ thời gian hoạt động của tài khoản Flickr.</h4>
+            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Tìm hiểu thêm về Pro</a></button>
+          </div>
+    </div>
+</div>
+<!--end stat -->
+
+<!-- camera-roll -->
+<div id="cameraroll-view" class="bg-light mt-2 pt-2 p-5 mb-5 subnav-view js-cameraroll-view" >
+    <div class="photo-main m-5">
+        <div class="text-center m-5 px-5">
+            <h2 class="fw-normal">Bạn có rất nhiều ảnh? Chúng tôi có rất nhiều không gian lưu trữ.</h2>
+            <h4 class="fw-normal p-5 mx-5">Bạn có thể kéo và thả ảnh bất kỳ đâu trên trang này
+
+hoặc</h4>
+            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Chọn tập tin để tải lên</a></button>
+          </div>
+    </div>
+    <div class="cameraroll-bg mx-5 pb-5">
+
+    </div>
+</div>
+<!--end camera-roll -->
+
+
+
 
 
 <?php
