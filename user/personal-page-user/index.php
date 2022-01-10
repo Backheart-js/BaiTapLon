@@ -7,16 +7,15 @@
         <div class="main  my-5 bg-white border ">
               <div class="status px-5 container-fluid d-flex position-relative">
                   <p href="#" id="aboutyou" class="d-block col-md-11 p-5">
-                    <i class="py-5 fs-5">Hãy giới thiệu đôi điều về bạn</i>
-                    <textarea name="" id="textarea" cols="80" rows="10" class="py-5 fs-5 "></textarea>
-                    <div class="d-flex position-absolute bottom-0 end-0">
-                      <button id="save" class="btn bg-primary d-inline p-2 m-2 px-3">Lưu  </button>
-                      <button id="cancel" class="btn bg-secondary d-inline p-2 m-2 px-3">Hủy</button>
-                    </div>
+                    <i class="fs-5 js-aboutyou">Hãy giới thiệu đôi điều về bạn</i>
                   </p>
-                  <!-- <a href="" id="write-aboutyou" class=" col-md py-5 text-end"> -->
-                    <i id="write-you" class="col-md py-5 text-end bi bi-pen-fill fs-3"></i>
-                  <!-- </a> -->
+                    <i class="col-md py-5 text-end bi bi-pen-fill fs-3 js-about-write"></i>
+              </div>
+              <div class="container-fluid text-end write-about ">
+                    <textarea name="" id="textarea"  rows="5" class=" fs-5 container-fluid js-write-area"></textarea>
+                    <button id="save" class="btn bg-primary d-inline p-2 m-2 px-3 js-about-save">Lưu  </button>
+                    <button id="cancel" class="btn bg-secondary d-inline p-2 m-2 px-3 js-about-cancel">Hủy</button>
+                   
               </div>
               <hr>
               <div class="nature px-5 pb-3 container-fluid ">

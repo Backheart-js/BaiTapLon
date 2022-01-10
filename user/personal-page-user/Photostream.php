@@ -81,6 +81,9 @@
             <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Go to camera roll</a></button>
           </div>
     </div>
+    <div class="photostream-bg mx-5">
+
+    </div>
 </div>
 <?php
     include "personal-page-footer.php";

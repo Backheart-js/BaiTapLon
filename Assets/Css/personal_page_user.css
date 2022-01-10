@@ -13,7 +13,7 @@ body{
     overflow: scroll;
     width: 100%;
     /* overflow-x: hidden; */
-
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 }
 .header{
     top: 0;
@@ -91,20 +91,28 @@ body{
     margin: 50px 100px;
     width: 80%; */
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    
 }
 .modal .modal-container{
     background-color: white ;
-    height: 800px;
+    height: 700px;
     width: 80%;
+    max-width: calc(100%-100px);
 }
 .modal-container .modal-body>img{
     width: 20%;
 }
+.modal-container .modal-header ul{
+    border-bottom: white solid;
+}
 .modal-container .modal-header ul>li:hover{
     border-bottom: blue solid;
+}
+.modal.openmodal{
+    display: flex;
 }
 
 .edit >h1{
@@ -115,8 +123,11 @@ body{
     /* display: inline-block; */
      height: 70px;
      width: 100%;
-     /* overflow-x: hidden; */
+     
      /* box-sizing: border-box; */
+}
+.navbar .nav-about{
+    overflow-y: hidden;
 }
 nav li .subnav:hover ,
 nav li .subnav:checked {
@@ -174,14 +185,25 @@ nav li .subnav{
     margin-left: 10%;
     margin-right: 10%;
 }
-#aboutyou>textarea {
+/* #aboutyou>textarea {
+    display: none;
     width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+} */
+
+#about-view .write-about{
+    display: none;
 }
-#aboutyou div>#about ,
+#about-view .write-about.opentxt {
+    display: inline-block;;
+}
+
+/* #aboutyou div>#about ,
 #aboutyou div>#save 
 {
     display: none;
-}
+} */
 .main a{
     color: rgb(102, 95, 95);
 }
@@ -201,11 +223,39 @@ nav li .subnav{
 #photostream-view div>ul{
     font-size: 13px;
 }
-
+#cameraroll-view div button>a,
+#galleries-view div button>a,
 #photostream-view div button>a{
     color: white;
     font-size: 20px;
 }
+#photostream-view .photostream-bg{
+    background: url(/BaiTapLon/Assets/data_img/photostream_bg.jpg);
+    /* background-image:url(/BTL/assets/data_img/about_empty.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 400px;
+}
+
+
+
+/* css for galleries */
+#galleries-view{
+
+}
+.galleries-bg{
+    background: url(/BaiTapLon/Assets/data_img/galleries_bg.jpg);
+    /* background-image:url(/BTL/assets/data_img/about_empty.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 400px;
+}
+
+
+
+
 /* .subnav> a{
     text-decoration: none;
     color: black;

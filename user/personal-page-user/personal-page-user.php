@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,9 +57,9 @@
 
   <div class="container-fluid slider position-relative">
     <div class="row my-5 position-absolute mb-3 bottom-0 text-center ms-5">
-      <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4">
+      <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt">
         <!-- <img id="avatar" src="/BaiTapLon/Assets/data_img/icon_edit.png" class="rounded-circle " style="width: 100px;" alt="Avatar" /> -->
-        <i id="pen" class="bi bi-pen-fill fs-3 text-center"></i>
+        <i id="pen" class="bi bi-pen-fill fs-3 text-center "></i>
       </div>
       <div class="edit col-md edit my-5 text-center d-flex">
         <h1 class="text-center my-4">PhamHuyen</h1>
@@ -66,10 +68,10 @@
     </div>
   </div> 
   <nav class="container-fluid navbar navbar-light bg-white pt-0 ">
-    <div class="container-fluid text-center ms-5 pb-1">
+    <div class="container-fluid text-center ms-5 pb-1 nav-about">
       <ul class=" d-flex mx-5" type="none">
         <li> <a class="col-md subnav navbar-brand px-3 fs-4 " id="about" href="index.php">Giới thiệu</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="">Kho ảnh</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="Photostream.php">Kho ảnh</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="albums" href="Albums.php">Album</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="faves" href="Faves.php">Yêu thích</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="galleries" href="Galleries.php">Thư viện</a></li>
@@ -80,7 +82,7 @@
     </div>
   </nav>
 
-  <div class="modal container-fluid">
+  <div class="modal container-fluid mt-2">
         <div class="modal-container">
           <header class="container-fluid modal-header navbar navbar-light  d-flex ">
                 <ul class="col-md text-center d-flex d-inline " type="none">
@@ -88,16 +90,24 @@
                   <li class="pb-3"><a class="col-fm subnav navbar-brand px-5 " id="photostream" href="">Album</a></li>
                   <li class="pb-3"><a class="col-fm subnav navbar-brand px-5 " id="albums" href="Albums.php">Tải lên</a></li>
                 </ul>
-                <input id="search" class="col-md mb-4 p-2" type="search" placeholder="Search" aria-label="Search">
-                <i class="col-md-1 bi bi-x-lg fs-4 pb-4 text-end"></i> 
+                <!-- <input id="search" class="col-md mb-4 p-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <div class="col-md d-flex position-relative mb-4 p-2">
+                  <button class="position-absolute btn " type="submit" style="height:40px"><i class="bi bi-search fs-5"></i></button>
+                  <input class="form-control me-2 ps-5" type="search" placeholder="Search" aria-label="Search">
+              </div>
+                <i class="col-md-1 bi bi-x-lg fs-4 pb-4 text-end js-modal-close"></i> 
                 <hr>
           </header>
           
         <div class="modal-body text-center fs-4 p-5 m-5">
               <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
-              <p class="p-5">Kéo và thả ảnh của bạn để tải lên hoặc <a href="" ><input type="file" id="files" visbility="hidden" style="display:none" />duyệt xem.</label></a>
+              <p class="p-5">Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
               
-              Ảnh được tải lên ở đây sẽ được thêm vào <a href="">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
+              Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
+              <input type="file" id="files" visbility="hidden" />
+
+
+              
         </div>
         </div>
   </div>
