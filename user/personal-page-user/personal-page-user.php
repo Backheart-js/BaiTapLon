@@ -70,8 +70,8 @@
   <nav class="container-fluid navbar navbar-light bg-white pt-0 ">
     <div class="container-fluid text-center ms-5 pb-1 nav-about">
       <ul class=" d-flex mx-5" type="none">
-        <li> <a class="col-md subnav navbar-brand px-3 fs-4 " id="about" href="#about-view" >Giới thiệu</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="#photostream-view">Kho ảnh</a></li>
+        <li> <a class="col-md subnav navbar-brand px-3 fs-4 " id="about" href="#about-view" active>Giới thiệu</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="#photostream-view" >Kho ảnh</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="albums" href="#album-view">Album</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="faves" href="#faves-view">Yêu thích</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="galleries" href="#galleries-view">Thư viện</a></li>
@@ -100,13 +100,17 @@
           </header>
           
         <div class="modal-body text-center fs-4 p-5 m-5" id="js-photostream">
+              <?php
+                // include_once 'upload-avt/show.php';
+              ?>
               <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
               <p class="p-5">1111Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
               
               Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
               <form action="upload-avt/upload-avt-process" method="post">
-                  <input type="file" id="files" name="fileupload" visbility="hidden" />
+                  <input type="file" id="files" name="fileupload" />
               </form>
+              
         </div>
 
         <div class="modal-body text-center fs-4 p-5 m-5" id="js-album" >
@@ -118,9 +122,11 @@
               <p class="p-5">Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
               
               Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
-              <form action="upload-avt/upload-avt-process" method="post">
-                  <input type="file" id="files" name="fileupload" visbility="hidden" />
+              <form action="upload-avt/upload-avt-process.php" method="post" enctype="multipart/form-data">
+                  <input type="file" id="files" name="fileupload"/>
+                  <input type="submit" name="submitUpload" value="Upload">
               </form>
+
         </div>
 
 

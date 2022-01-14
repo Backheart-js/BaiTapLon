@@ -101,7 +101,7 @@ $(document).ready(function(){
     })
 
     $("#photostream").click(function(event){
-        $("#photostream-view").css("display","block");
+        // $("#photostream-view").css("display","block");
     })
 
     //load()

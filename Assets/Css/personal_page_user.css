@@ -218,6 +218,9 @@ nav li .subnav{
 .subnav-view{
     display: none;
 }
+.subnav-view:before{
+    display: none;
+}
 .subnav-view:target{
     display: block;
 }
