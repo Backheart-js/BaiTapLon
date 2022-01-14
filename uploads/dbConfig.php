@@ -3,7 +3,7 @@
 $dbHost     = "localhost";
 $dbUsername = "root";
 $dbPassword = "12345678";
-$dbName     = "BaiTapLon";
+$dbName     = "database_BaiTapLon";
 
 // Create database connection
 $db =  mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);//tương đương sql_connect

@@ -25,12 +25,12 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
             // Lưu đường dẫn vào cơ sở dữ liệu
             //echo $fileName;die;
             try{
-                $sql = "INSERT into db_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
+                $sql = "INSERT into data_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
             //echo $sql;die;
                 $insert=mysqli_query($db,$sql);
                 if($insert){ //kiểm tra việc query thành công
                     $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                    header("location: ../user/personal-page-user/Albums.php");
+                    header("location:show.php");
                 }else{
                     $statusMsg = "File upload failed, please try again.";
                 } 

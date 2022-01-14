@@ -3,7 +3,7 @@
 include 'dbConfig.php';
 
 // Get images from the database
-$sql = "SELECT * FROM db_images ORDER BY uploaded_on DESC"; 
+$sql = "SELECT * FROM data_images ORDER BY uploaded_on DESC"; 
 $result=mysqli_query($db,$sql);
 ?>
 <div style="display:flex;">
