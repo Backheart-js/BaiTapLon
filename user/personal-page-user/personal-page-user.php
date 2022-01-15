@@ -86,38 +86,77 @@
         <div class="modal-container">
           <header class="container-fluid modal-header navbar navbar-light  d-flex ">
                 <ul class="col-md text-center d-flex d-inline " type="none">
-                  <li class="pb-3" id="js-modal-about"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
-                  <li class="pb-3" id="js-modal-photostream"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
-                  <li class="pb-3" id="js-modal-albums"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
+                  <li class="pb-3" id="js-modal-photostream"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
+                  <li class="pb-3" id="js-modal-album"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
+                  <li class="pb-3" id="js-modal-update"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
                 </ul>
                 <!-- <input id="search" class="col-md mb-4 p-2" type="search" placeholder="Search" aria-label="Search"> -->
                 <div class="col-md d-flex position-relative mb-4 p-2">
                   <button class="position-absolute btn " type="submit" style="height:40px"><i class="bi bi-search fs-5"></i></button>
-                  <input class="form-control me-2 ps-5" type="search" placeholder="Search" aria-label="Search">
+                  <input id="search-avt" class="form-control me-2 ps-5" type="search" placeholder="Search" aria-label="Search">
               </div>
                 <i class="col-md-1 bi bi-x-lg fs-4 pb-4 text-end js-modal-close"></i> 
                 <hr>
           </header>
+          <!-- <header class="container-fluid modal-header navbar navbar-light  d-flex ">
+                <ul class="col-md text-center d-flex d-inline " type="none">
+                  <li class="pb-3" id="js-modal-photostream"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
+                  <li class="pb-3" id="js-modal-album"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
+                  <li class="pb-3" id="js-modal-update"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
+                </ul>
+                <div class="col-md d-flex position-relative mb-4 p-2">
+                  <button class="position-absolute btn " type="submit" style="height:40px"><i class="bi bi-search fs-5"></i></button>
+                  <input id="search-avt" class="form-control me-2 ps-5" type="search" placeholder="Search" aria-label="Search">
+              </div>
+                <i class="col-md-1 bi bi-x-lg fs-4 pb-4 text-end js-modal-close"></i> 
+                <hr>
+          </header> -->
           
-        <div class="modal-body text-center fs-4 p-5 m-5" id="js-photostream">
+        <div class="modal-body fs-4 p-0 m-3 text-start" id="js-photostream" >
               <?php
-                // include_once 'upload-avt/show.php';
+                // include_once './upload-avt/show.php'; 
               ?>
-              <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
+              <!-- <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
               <p class="p-5">1111Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
               
               Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
               <form action="upload-avt/upload-avt-process" method="post">
                   <input type="file" id="files" name="fileupload" />
-              </form>
+              </form> -->
+              <?php
+     
+        include '../db.php';
+
+       
+            $sql="SELECT * FROM avt_images ORDER BY uploaded_on DESC";
+            $result = mysqli_query($conn,$sql);
+
+            ?>
+            
+          
+                <?php
+                    
+                    if(mysqli_num_rows($result)){       
+                        while($row=mysqli_fetch_assoc($result)){
+                            $imageURL = './upload-avt/data_upload/'.$row["file_name"];
+                            
+                            // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
+                ?>
+                <img src="<?php echo $imageURL; ?>" alt="" style="height:100px" />
+                    <?php }
+                        }else{ 
+                    ?>
+                        <p>No image(s) found...</p>
+                    <?php } ?>
+           
               
         </div>
 
-        <div class="modal-body text-center fs-4 p-5 m-5" id="js-album" >
+        <div class="modal-body text-center fs-4 p-5 m-3" id="js-album" >
               <p>Không có album.</p>
         </div>
         
-        <div class="modal-body text-center fs-4 p-5 m-5" id="js-update">
+        <div class="modal-body text-center fs-4 p-5 m-3" id="js-update">
               <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
               <p class="p-5">Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
               

@@ -66,7 +66,7 @@
                 ?>
               </span>
               <button type="" class="bg-primary py-2 fs-4 mt-2" name="btnResendMail">Resend Email</button>
-              <a href="#" class="ms-auto me-auto text-decoration-none mt-3">Can't access your email?</a>
+              <a href="../signup.php" class="ms-auto me-auto text-decoration-none mt-3">Can't access your email?</a>
           </form>
         </div>
         <div class="footer d-flex text-alight" >

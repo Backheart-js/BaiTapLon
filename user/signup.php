@@ -85,7 +85,7 @@
             <div class="mt-3 px-3 fw-normal">
               <p style="font-size: 12px" class="text-center lead  px-3 pt-2" >By signing up,you agree with Flickr's <a href="" class="text-decoration-none">Terms of Services</a> and <a href="" class="text-decoration-none">Privacy Policy.</a></p>
               <hr>
-              <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href="" class="text-decoration-none">Log in here.</a></p>
+              <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href="./login.php" class="text-decoration-none">Log in here.</a></p>
             </div>
           </form>
           

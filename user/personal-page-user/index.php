@@ -3,7 +3,7 @@
 ?>
 
 <!-- about -->
-<div id="about-view" class=" border bg-light subnav-view mt-2 pt-2 " style="heigth:100vh">
+<div id="about-view" class=" border bg-light subnav-view mt-2 pt-2 js-about-view" style="heigth:100vh">
         <div class="main  my-5 bg-white border ">
               <div class="status px-5 container-fluid d-flex position-relative">
                   <p href="#" id="aboutyou" class="d-block col-md-11 p-5">
@@ -59,8 +59,6 @@
 </div>
 
 <!-- end about -->
-
-
 <!-- photostream -->
 <div id="photostream-view" class="bg-light mt-2 pt-2 px-5 subnav-view js-photostream-view" >
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

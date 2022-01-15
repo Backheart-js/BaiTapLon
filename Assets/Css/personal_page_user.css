@@ -98,7 +98,7 @@ body{
 }
 .modal .modal-container{
     background-color: white ;
-    height: 700px;
+    height: 600px;
     width: 80%;
     max-width: calc(100%-100px);
 }
@@ -108,19 +108,24 @@ body{
 .modal-container .modal-header ul{
     border-bottom: white solid;
 }
-
-.modal-container .modal-header #js-modal-about:hover{
+.modal-container #js-modal-photostream:hover,
+.modal-container #js-modal-albums:hover,
+.modal-container #js-modal-update:hover{
     border-bottom: blue solid;
 }
-.modal-container .modal-header #js-modal-about{
+.modal-container #js-modal-photostream{
     border-bottom: blue solid;
 }
-.modal .modal-body{
+.modal #js-album,
+.modal #js-update,
+.modal #js-photostream{
     display:none;
     /* border-bottom: blue solid; */
     /* background-color: chartreuse; */
 }
-.modal .modal-body:target{
+.modal #js-update:target,
+.modal #js-photostream:target,
+.modal #js-album:target{
     display:block;
     /* border-bottom: blue solid; */
     /* background-color: chartreuse; */
@@ -130,7 +135,9 @@ body{
     display: flex;
 }
 
-
+.modal #search-avt{
+    /* width: ;     */
+}
 
 .edit >h1{
     /* line-height: 100px; */

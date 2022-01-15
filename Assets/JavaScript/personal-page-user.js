@@ -4,6 +4,7 @@ $(document).ready(function(){
     $(".js-change-avt").click(function(){
         // alert("Đây rùi");
         $(".modal").addClass('openmodal');
+        // $("#js-photostream").css("display","block");
     })
 
     $(".js-modal-close").click(function(){
@@ -57,21 +58,35 @@ $(document).ready(function(){
         } */
     })
 
-    $("#js-modal-about").click(function(){
-        $("#js-modal-about").css("border-bottom","blue solid");
+    $("#js-modal-update").click(function(){
+        $("#js-modal-update").css("border-bottom","blue solid");
         $("#js-modal-photostream").css("border-bottom","none");
-        $("#js-modal-albums").css("border-bottom","none");
+        $("#js-modal-album").css("border-bottom","none");
     })
     $("#js-modal-photostream").click(function(){
         $("#js-modal-photostream").css("border-bottom","blue solid");
-        $("#js-modal-about").css("border-bottom","none");
-        $("#js-modal-albums").css("border-bottom","none");
+        $("#js-modal-update").css("border-bottom","none");
+        $("#js-modal-album").css("border-bottom","none");
      })
-    $("#js-modal-albums").click(function(){
-        $("#js-modal-albums").css("border-bottom","blue solid");
-        $("#js-modal-about").css("border-bottom","none");
+    $("#js-modal-album").click(function(){
+        $("#js-modal-album").css("border-bottom","blue solid");
+        $("#js-modal-update").css("border-bottom","none");
         $("#js-modal-photostream").css("border-bottom","none");
      })
+     
+
+    //  $("#"+event.target.id).css("display", "none");
+
+    //  var  border=$("#js-modal-photostream").css("border-bottom");
+    //  if(border==="blue solid"){
+
+    //      alert("đây");
+    //     $("#js-photostream").css("display","block");
+    // }
+    // else{
+    //     alert("đây else");
+    // }
+    
     
 
 

@@ -3,7 +3,6 @@
 include '../../db.php';
 
 // Get images from the database
-
     $sql="SELECT * FROM avt_images ORDER BY uploaded_on DESC";
     $result = mysqli_query($conn,$sql);
 
@@ -14,7 +13,7 @@ include '../../db.php';
             
             if(mysqli_num_rows($result)){       
                 while($row=mysqli_fetch_assoc($result)){
-                    $imageURL = './data_upload/'.$row["file_name"];
+                    $imageURL = './upload-avt/data_upload/'.$row["file_name"];
                     
                     // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
         ?>

@@ -7,12 +7,6 @@
       //  echo $email;     
       header("location:../signup.php");
     }
-
-    if(!isset( $_SESSION['email'])){
-      // $email=$_POST['txtEmail'];
-      //  echo $email;     
-      header("location:../signup.php");
-    }
     if(isset($_POST['btnResendMail']) && isset($_GET['email']) ){
         // echo "đã đến đây";
         require "send-mail.php";

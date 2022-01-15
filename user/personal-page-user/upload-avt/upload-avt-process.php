@@ -36,11 +36,11 @@ if(isset($_POST["submitUpload"]) && !empty($_FILES["fileupload"]["name"])){
             // Lưu đường dẫn vào cơ sở dữ liệu
         //   echo"1"; die;
             $sql = "INSERT into avt_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
-            // echo $sql;
+            echo $sql;
             $insert=mysqli_query($conn,$sql);
             if($insert){ //kiểm tra việc query thành công
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                header("location:show.php");
+                // header("location:show.php");
             }else{
                 $statusMsg = "File upload failed, please try again.";
             } 

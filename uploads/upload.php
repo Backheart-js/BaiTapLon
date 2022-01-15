@@ -1,4 +1,9 @@
 <?php
+
+session_start();// Khởi tạo Session
+if(!isset($_SESSION['isLoginOK'])){
+}
+
 // import cấu hình bước 1
 require 'dbConfig.php';
 $statusMsg = '';//tạo ra 1 biến để lưu lại trang thái upload nhằm phản hồi cho người dùng
@@ -19,8 +24,6 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){//Kiểm tra 1 giá trị có thuộc mảng không
         //xử lí upload đang lưu ở thư mục tạm
-
-
         $tagetFile = "/uploads/" . $fileName;
         var_dump($tagetFile);
         copy($_FILES["myfile"]["tmp_name"], $tagetFile);
@@ -33,7 +36,8 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
             $insert=mysqli_query($db,$sql);
             if($insert){ //kiểm tra việc query thành công
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                header("location:show.php");
+                header("location:../index.php#js-update");
+                // http://localhost/BaiTapLon/user/personal-page-user/#js-update
             }else{
                 $statusMsg = "File upload failed, please try again.";
             } 
