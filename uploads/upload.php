@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['isLoginOK'])){
+  header("location: login.php");
+}
 // import cấu hình bước 1
 require 'dbConfig.php';
 $statusMsg = '';//tạo ra 1 biến để lưu lại trang thái upload nhằm phản hồi cho người dùng
@@ -24,13 +28,16 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
             //echo $fileName;die;
+           
             try{
-                $sql = "INSERT into data_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
-            //echo $sql;die;
+                $sql = "INSERT into data_images (email,file_name, uploaded_on) VALUES ('".$_SESSION['isLoginOK']."','".$fileName."', NOW())"; 
+                // echo $sql;die;
+                
                 $insert=mysqli_query($db,$sql);
+               
                 if($insert){ //kiểm tra việc query thành công
-                    $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                    header("location:show.php");
+                    $statusMsg = " ".$fileName. " has been uploaded successfully.";
+                    
                 }else{
                     $statusMsg = "File upload failed, please try again.";
                 } 

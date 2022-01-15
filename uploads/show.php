@@ -1,9 +1,14 @@
 <?php
+
 // Include the database configuration file
 include 'dbConfig.php';
+session_start();
+if(!isset($_SESSION['isLoginOK'])){
+  header("location: login.php");
+}
 
 // Get images from the database
-$sql = "SELECT * FROM data_images ORDER BY uploaded_on DESC"; 
+$sql = "SELECT * FROM data_images where email= '".$_SESSION['isLoginOK']."' ORDER BY uploaded_on DESC"; 
 $result=mysqli_query($db,$sql);
 ?>
 <div style="display:flex;">
