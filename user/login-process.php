@@ -1,6 +1,6 @@
 <?php
     //login.php  truyền dữ liệu sang: nhận dữ liệu từ login.php  gửi sang
- // Tạo session: Măc định mỗi phiên làm việc có thời hạn 24 phút
+ // Tạo session: Măc định mỗi phiên làm việc có thời hạn 24 phút
  session_start();
 if(isset($_POST['btnloginone'])){ 
     $email=$_POST['txtEmail'];

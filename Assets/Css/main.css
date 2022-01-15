@@ -4,7 +4,7 @@
 }
 .mymodal{
  
-    background-image: url('../Assets/data_img/background2.jpeg') ;
+    background-image: url('../data_img/background2.jpeg');
     padding-top: 57%;
     background-repeat: no-repeat;
     background-position: center;
@@ -23,7 +23,9 @@
     justify-content: center;
     right: 0;
     left: 0
+    
 }
+
 .modal__body{
     width: 416px;
     height: 426px;

@@ -1,4 +1,5 @@
 <?php
+    
     include "./signup-process/activationAccount.php";
 ?>
 <!DOCTYPE html>
