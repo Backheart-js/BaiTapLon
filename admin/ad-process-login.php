@@ -6,10 +6,14 @@
         $password = $_POST['textPassword'];
 
         // Kết nối với mySQL
-        $conn = mysqli_connect('localhost','root','','database_baitaplon');
-        if(!$conn){
-            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-        }
+        // $conn = mysqli_connect('localhost','root','','database_baitaplon');
+        // if(!$conn){
+        //     die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
+        // }
+        require_once('../config/connect_db.php');
+        
+        
+
         // Bước 02: Thực hiện truy vấn
         $sql = "SELECT * FROM db_admin WHERE tendangnhap = '$admin' AND matkhau='$password'"; //Lấy bản ghi có email và mật khẩu từ trong database
         // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
@@ -18,7 +22,7 @@
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $admin;
-            header("location: admin.php"); //Chuyển hướng về Trang quản trị
+            header("location: index.php"); //Chuyển hướng về Trang quản trị
         }else{
             $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
             header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi

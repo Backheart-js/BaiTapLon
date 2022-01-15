@@ -57,7 +57,7 @@
                 <h1>Dashboard</h1>
             </div>
 
-            <div class="admin-search mt-3">
+            <div class="container admin-search mt-3">
                 <div class="container">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Recipient's username"

@@ -1,5 +1,10 @@
 <?php
     $value = $_POST['textInput'];
+
+    session_start();
+    if(!isset($_SESSION['isLoginOK'])) { //Nếu không có thẻ
+        header('Location: login.php');   //Đi ra
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -141,7 +146,7 @@
     
                             <div class="navbar-search__user-wrap d-flex col-md-5">
                                 <div class="navbar-search__upload">
-                                    <a href="" class="navbar-search__upload-link">
+                                    <a href="../uploads/index.php" class="navbar-search__upload-link">
                                         <i class="navbar-search__upload-icon fas fa-cloud-upload-alt"></i>
                                     </a>
                                 </div>
@@ -155,6 +160,16 @@
                                         Đăng ký
                                     </button>
                                 </div>
+                                <!-- <div class="navbar-search__noti">
+                                    <a href="" class="navbar-search__upload-link">
+                                        <i class="navbar-search__upload-icon bi bi-bell-fill"></i>
+                                    </a>
+                                </div>
+                                <div class="navbar-search__user">
+                                    <span class="navbar-search__upload-link">
+                                        <i class="navbar-search__upload-icon bi bi-person-circle"></i>
+                                    </span>
+                                </div> -->
                             </div>
                         </div>
                     </div>

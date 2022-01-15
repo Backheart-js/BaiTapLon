@@ -1,4 +1,9 @@
 <?php
+// Kiểm tra thẻ làm việc
+session_start();
+if(!isset($_SESSION['isLoginOK'])) { //Nếu không có thẻ
+    header('Location: login.php');   //Đi ra
+}
 // import cấu hình bước 1
 require 'dbConfig.php';
 $statusMsg = '';//tạo ra 1 biến để lưu lại trang thái upload nhằm phản hồi cho người dùng
@@ -28,7 +33,7 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
           echo"1"; die;
-            $sql = "INSERT into db_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
+            $sql = "INSERT into db_images (email,file_name, uploaded_on) VALUES ('".$_SESSION['isLoginOK']."','".$fileName."', NOW())"; 
             echo $sql;
             $insert=mysqli_query($db,$sql);
             if($insert){ //kiểm tra việc query thành công

@@ -2,9 +2,15 @@
     // Kiểm tra thẻ làm việc
     session_start();
     if(!isset($_SESSION['isLoginOK'])) { //Nếu không có thẻ
-        header('Location: ad-login.php');   //Đi ra
+        header('Location: login.php');   //Đi ra
     }
 ?>
+
+<!-- loannguyen@
+    declare @id
+    select @id = id from user where email = $_SESSION['isLoginOK']
+    insert into data_img values(id =, id_user = @id )
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,14 +24,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../Assets/Css/base.css"/>
     <link rel="stylesheet" href="../Assets/Css/main.css" /> 
-    <link rel="stylesheet" href="../Assets/Css/search.css"/>
-    <link rel="stylesheet" href="../Assets/Css/navbar.css">
-    <link rel="stylesheet" href="../Assets/Css/responsive.css"/>
-  </head>
-  <body>
-    
     <?php 
-      include "./link-navbar.php";
+      require_once("./link-navbar.php");
     ?>
     <!-- <div class="home-header container-fluid">
       <div class="header-navbar container">

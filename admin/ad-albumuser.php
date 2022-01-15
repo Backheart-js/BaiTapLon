@@ -9,10 +9,8 @@
     $id_user = $_GET['id'];
 
     // Bước 01: Kết nối Database Server
-    $conn = mysqli_connect('localhost','root','','dhtl_danhba');
-    if(!$conn){
-        die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-    }
+    require_once('../config/connect_db.php');
+
     // Bước 02: Thực hiện truy vấn
     $sql = "SELECT * FROM db_nhanvien WHERE ma_nhanvien = '$ma_nhanvien'";
 
