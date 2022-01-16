@@ -19,7 +19,7 @@
 <body>
     <header class="header">
         <nav class="navbar navbar-light bg-dark" style="height:50px">
-            <div class="container-fluid ms-5">
+            <div class="container-fluid-lg container-fluid-md container-fluid-sm  ms-5">
                 <a class="navbar-brand ms-5" href="#">
                     <img src="/BaiTapLon/Assets/data_img/flickr_demo.svg" alt=""
                         class="d-inline-block align-text-top ps-5" style="height:20px">
@@ -29,8 +29,8 @@
     </header>
     <!-- body -->
     <main>
-        <div class="body-background">
-            <div class="container-fluid d-flex justify-content-center align-items-center  ">
+        <div class="body-background align-items-center">
+            <div class="container-fluid- d-flex justify-content-center align-items-center  ">
                 <!-- action="./signup-process/signup-process.php" method="post" -->
                 <!-- <form class="card p-3 text-center pt-4" action="./signup-process/resend-mail.php" method="post"> -->
                 <form class="card p-3 text-center pt-4" action="./signup-process/signup-process.php" method="post"
@@ -62,8 +62,8 @@
                         <label for="inputEmail" class="placeholder">Email address</label>
                         <span for="" class="errorInput" id="errorEmail"></span>
                     </div>
-                    <div class="mt-3 mx-3 position-relative text-start">
-                        <input type="password" class="form-control ps-4 z-index-1" name="txtPassword" id="inputPassword"
+                    <div class="mt-3 mx-3 me-3 position-relative text-start">
+                        <input type="password" class="form-control ps-4 " name="txtPassword" id="inputPassword"
                             placeholder=" ">
                         <label for="inputPassword" class="placeholder ps-0 " id="password">Password</label>
                         <!--  p-2 px-3 rounded-end top-50 end-0 translate-middle-y me-1 -->
@@ -92,20 +92,13 @@
                             Flickr's <a href="" class="text-decoration-none">Terms of Services</a> and <a href=""
                                 class="text-decoration-none">Privacy Policy.</a></p>
                         <hr>
-                        <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href=""
+                        <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href="./login.php"
                                 class="text-decoration-none">Log in here.</a></p>
                     </div>
                 </form>
 
             </div>
-<<<<<<< HEAD
-            
-            <div class="mt-3 px-3 fw-normal">
-              <p style="font-size: 12px" class="text-center lead  px-3 pt-2" >By signing up,you agree with Flickr's <a href="" class="text-decoration-none">Terms of Services</a> and <a href="" class="text-decoration-none">Privacy Policy.</a></p>
-              <hr>
-              <p style="font-size: 12px" class="text-center lead  ">Already a Flickr member? <a href="./login.php" class="text-decoration-none">Log in here.</a></p>
-=======
-            <div class="footer d-flex text-alight">
+            <div class="row footer d-flex text-center">
                 <div class="col-md-6">
                     <select id="cars" name="cars">
                         <option value="volvo">VietNamese</option>
@@ -114,10 +107,9 @@
                         <option value="audi">Chinese</option>
                     </select>
                 </div>
-                <div class="col-md"><a href="#">Help</a> </div>
-                <div class="col-md"><a href="#">Privacy</a> </div>
-                <div class="col-md"><a href="#">Terms</a> </div>
->>>>>>> 7495715627a358583c3fd364c4b6a2242a848556
+                <div class="col-md-2"><a href="#">Help</a> </div>
+                <div class="col-md-2"><a href="#">Privacy</a> </div>
+                <div class="col-md-2"><a href="#">Terms</a> </div>
             </div>
             <div class="end">033120190455 by HuyenPham , From VietNam</div>
         </div>

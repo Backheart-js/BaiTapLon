@@ -1,6 +1,11 @@
 <?php
 // import cấu hình bước 1
-require '../../db.php';
+   session_start();
+   if(!isset($_SESSION['isLoginOK'])) { 
+       header('Location: login.php');
+   }
+require "../../../config/connect_db.php";
+// require '../../db.php';
 $statusMsg = '';//tạo ra 1 biến để lưu lại trang thái upload nhằm phản hồi cho người dùng
 
 // Những động tác về thiết lập cho việc chuẩn bị upload
@@ -35,12 +40,13 @@ if(isset($_POST["submitUpload"]) && !empty($_FILES["fileupload"]["name"])){
         if(move_uploaded_file($_FILES["fileupload"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
         //   echo"1"; die;
-            $sql = "INSERT into avt_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
+            $sql = "INSERT into avt_images (email,file_name, uploaded_on) VALUES ('".$_SESSION['isLoginOK']."','".$fileName."', NOW())"; 
+            // $sql = "INSERT into avt_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
             echo $sql;
             $insert=mysqli_query($conn,$sql);
             if($insert){ //kiểm tra việc query thành công
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                // header("location:show.php");
+                header("location:../index.php/avt=$fileName");
             }else{
                 $statusMsg = "File upload failed, please try again.";
             } 

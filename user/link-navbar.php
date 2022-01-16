@@ -28,25 +28,28 @@
                                 <a href="./personal-page-user/Albums.php" class="navbar__cate-link">Bạn</a>
                                 <ul class="navbar__subcate-list">
                                     <li class="navbar__subcate-item">
-                                        <a href="./personal-page-user/about.php" class="navbar__subcate-link">Giới thiệu</a>
+                                        <a href="./personal-page-user/#about-view" class="navbar__subcate-link">Giới thiệu</a>
                                     </li>
                                     <li class="navbar__subcate-item">
-                                        <a href="./personal-page-user/Albums.php" class="navbar__subcate-link">Kho ảnh</a>
+                                        <a href="./personal-page-user/#photostream-view" class="navbar__subcate-link">Kho ảnh</a>
                                     </li>
                                     <li class="navbar__subcate-item">
-                                        <a href="./personal-page-user/Albums.php" class="navbar__subcate-link">Album</a>
+                                        <a href="./personal-page-user/#album-view" class="navbar__subcate-link">Album</a>
                                     </li>
                                     <li class="navbar__subcate-item">
-                                        <a href="./personal-page-user/Faves.php" class="navbar__subcate-link">Yêu thích</a>
+                                        <a href="./personal-page-user/#faves-view" class="navbar__subcate-link">Yêu thích</a>
                                     </li>
                                     <li class="navbar__subcate-item">
-                                        <a href="" class="navbar__subcate-link">Thư viện</a>
+                                        <a href="./personal-page-user/#galleries-view" class="navbar__subcate-link">Thư viện</a>
                                     </li>
                                     <li class="navbar__subcate-item">
-                                        <a href="" class="navbar__subcate-link">Nhóm</a>
+                                        <a href="./personal-page-user/#group-view" class="navbar__subcate-link">Nhóm</a>
                                     </li>
                                     <li class="navbar__subcate-item">
-                                        <a href="" class="navbar__subcate-link">Cuộn camera</a>
+                                        <a href="./personal-page-user/#stat-view" class="navbar__subcate-link">Thống kê</a>
+                                    </li>
+                                    <li class="navbar__subcate-item">
+                                        <a href="./personal-page-user/#cameraroll-view" class="navbar__subcate-link">Cuộn camera</a>
                                     </li>
                                 </ul>
                             </li>

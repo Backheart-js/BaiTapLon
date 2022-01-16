@@ -28,13 +28,8 @@
             <div class="container navbar-search-content">
                 <div class="row ps-4 pe-4 h-100">
                     <div class="navbar-search__logo-wrap col-md-5 col-sm-5 row">
-<<<<<<< HEAD:link-navbar.php
                         <a href="index.php" class="col-md-3 col-sm-8 d-flex">
                             <img class="navbar-search__logo-img" src="/BaiTapLon/Assets/data_img/flickr_demo.svg" alt="">
-=======
-                        <a href="./Home.php" class="col-md-3 col-sm-8 d-flex">
-                            <img class="navbar-search__logo-img" src="../Assets/data_img/flickr_demo.svg" alt="">
->>>>>>> 7495715627a358583c3fd364c4b6a2242a848556:user/search-user.php
                         </a>
                         <div class="navbar__cate-wrap col-md-9">
                             <ul class="navbar__cate-list">

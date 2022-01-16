@@ -1,4 +1,16 @@
-
+<?php
+  session_start();
+  if(!isset($_SESSION['isLoginOK'])) { 
+      header('Location:../login.php');
+  }
+  require "../../config/connect_db.php";
+  $sql = "select firstname,lastname, month(email_verified_at) as month, year(email_verified_at) as year FROM users WHERE Email = '{$_SESSION['isLoginOK']}'";
+  $result = mysqli_query($conn,$sql);
+  $row= mysqli_fetch_array($result);
+  $month=$row['month'];
+  $year=$row['year'];
+  $name=$row['firstname'].''.$row['lastname'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,17 +66,44 @@
   </header>
 
   
-
-  <div class="container-fluid slider position-relative">
-    <div class="row my-5 position-absolute mb-3 bottom-0 text-center ms-5">
-      <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt">
-        <!-- <img id="avatar" src="/BaiTapLon/Assets/data_img/icon_edit.png" class="rounded-circle " style="width: 100px;" alt="Avatar" /> -->
-        <i id="pen" class="bi bi-pen-fill fs-3 text-center "></i>
-      </div>
+<div class="container-fluid-lg body-personal">
+  <div class="container-fluid slider position-relative ">
+    <div class="row my-5 position-absolute mb-5 bottom-0 text-center ms-5">
+      <?php
+          if(isset($_GET['avt'])){
+            $avteURL = './upload-avt/data_upload/'.$_GET['avt'];
+      ?>
+           <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(<?php echo $avteURL ?>);">
+      <?php
+          }else{
+        ?>
+            <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(/BaiTapLon/Assets/data_img/icon_edit.png);">
+           
+        <?php
+        }
+        ?>
+      <!-- <img id="avatar" src="/BaiTapLon/Assets/data_img/icon_edit.png" class="rounded-circle " style="width: 100px;" alt="Avatar" /> -->
+      <i id="pen" class="bi bi-pen-fill fs-3 text-center "></i>
+           </div>
       <div class="edit col-md edit my-5 text-center d-flex">
-        <h1 class="text-center my-4">PhamHuyen</h1>
+        <h2 class="text-center my-4">
+          <?php
+             echo "<span >".$name."</span>";
+          ?>
+        </h2>
         <button class="text-center ms-5 py-2 m-auto fs- bg-transparent border border-white"><i class="bi bi-three-dots p-3"></i></button>
       </div>
+      
+    </div>
+    <div class="position-absolute bottom-0 m-5 d-flex" style="color: white">
+        <?php
+            echo "<span class='navbar__link ms-5 px-5'>".$_SESSION['isLoginOK']."</span>"; 
+            echo "<span >Đã tham gia ".$month."/".$year."</span>";
+            // echo "<span >Đã tham gia ".$month."</span>";
+            // echo "<span >/".$year."</span>";
+        ?> 
+
+
     </div>
   </div> 
   <nav class="container-fluid navbar navbar-light bg-white pt-0 ">
@@ -82,6 +121,7 @@
     </div>
   </nav>
 
+
   <div class="modal container-fluid mt-2">
         <div class="modal-container">
           <header class="container-fluid modal-header navbar navbar-light  d-flex ">
@@ -98,58 +138,36 @@
                 <i class="col-md-1 bi bi-x-lg fs-4 pb-4 text-end js-modal-close"></i> 
                 <hr>
           </header>
-          <!-- <header class="container-fluid modal-header navbar navbar-light  d-flex ">
-                <ul class="col-md text-center d-flex d-inline " type="none">
-                  <li class="pb-3" id="js-modal-photostream"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
-                  <li class="pb-3" id="js-modal-album"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
-                  <li class="pb-3" id="js-modal-update"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
-                </ul>
-                <div class="col-md d-flex position-relative mb-4 p-2">
-                  <button class="position-absolute btn " type="submit" style="height:40px"><i class="bi bi-search fs-5"></i></button>
-                  <input id="search-avt" class="form-control me-2 ps-5" type="search" placeholder="Search" aria-label="Search">
-              </div>
-                <i class="col-md-1 bi bi-x-lg fs-4 pb-4 text-end js-modal-close"></i> 
-                <hr>
-          </header> -->
-          
+         
         <div class="modal-body fs-4 p-0 m-3 text-start" id="js-photostream" >
-              <?php
-                // include_once './upload-avt/show.php'; 
-              ?>
-              <!-- <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
-              <p class="p-5">1111Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
-              
-              Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
-              <form action="upload-avt/upload-avt-process" method="post">
-                  <input type="file" id="files" name="fileupload" />
-              </form> -->
-              <?php
-     
-        include '../db.php';
-
-       
+            <?php   
+            require "../../config/connect_db.php";
             $sql="SELECT * FROM avt_images ORDER BY uploaded_on DESC";
             $result = mysqli_query($conn,$sql);
-
             ?>
-            
-          
                 <?php
-                    
                     if(mysqli_num_rows($result)){       
                         while($row=mysqli_fetch_assoc($result)){
                             $imageURL = './upload-avt/data_upload/'.$row["file_name"];
-                            
                             // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
                 ?>
-                <img src="<?php echo $imageURL; ?>" alt="" style="height:100px" />
+                <img src="<?php echo $imageURL; ?>" alt="" style="height:100px" class="m-2"/>
                     <?php }
                         }else{ 
                     ?>
-                        <p>No image(s) found...</p>
-                    <?php } ?>
-           
-              
+                          <div class="modal-body text-center fs-4 p-5 m-3" >
+                          <img src="/BaiTapLon/Assets/data_img/cloud-arrow-up.png" alt="">
+                          <p class="p-5">Kéo và thả ảnh của bạn để tải lên hoặc <a href="" >duyệt xem.</label></a>
+                          
+                          Ảnh được tải lên ở đây sẽ được thêm vào <a href="Photostream.php">Kho ảnh</a> của bạn ở chế độ riêng tư.</p>
+                          <form action="upload-avt/upload-avt-process.php" method="post" enctype="multipart/form-data">
+                              <input type="file" id="files" name="fileupload"/>
+                              <input type="submit" name="submitUpload" value="Upload">
+                          </form>
+                          </div>
+                        
+                    <?php } 
+                    ?>             
         </div>
 
         <div class="modal-body text-center fs-4 p-5 m-3" id="js-album" >

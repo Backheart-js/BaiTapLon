@@ -13,7 +13,7 @@
         // if(!$conn){
         //     die("The connection failed.");
         // }
-        require "../db.php";
+        require "../../config/connect_db.php";
         $sqlCheckEmail="SELECT * From users where email='".$_POST['Email']."' ";
         //B1: kiểm tra đã tồn tại email người dùng hay chưa
         $resultCheckEmail = mysqli_query($conn,$sqlCheckEmail);

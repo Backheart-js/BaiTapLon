@@ -9,7 +9,7 @@
 
 
     $username ='cyberspteam@gmail.com';
-    $password ='cofobqiummotidli';
+    $password ='hzukzvkphyvhxghe';
 
     require 'PHPMailer/Exception.php';
     require 'PHPMailer/PHPMailer.php';
@@ -41,7 +41,7 @@ function SendMailRegisterAcount($email,$link)
             $mail->Charset= 'UTF-8';                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('huyenpham26112001@gmail.com', 'The Flickr Team');
+            $mail->setFrom('cyberspteam@gmail.com', 'The Flickr Team');
             $mail->addAddress($email);     //Add a recipient
             
 

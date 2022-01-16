@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_POST['btnSignup'])){
-        require "../db.php";
+        require "../../config/connect_db.php";
         $FirstName=$_POST['txtFirstName'];
         $LasName=$_POST['txtLastName'];
         $Age=$_POST['txtAge'];

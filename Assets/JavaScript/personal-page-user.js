@@ -73,51 +73,20 @@ $(document).ready(function(){
         $("#js-modal-update").css("border-bottom","none");
         $("#js-modal-photostream").css("border-bottom","none");
      })
-     
 
-    //  $("#"+event.target.id).css("display", "none");
-
-    //  var  border=$("#js-modal-photostream").css("border-bottom");
-    //  if(border==="blue solid"){
-
-    //      alert("đây");
-    //     $("#js-photostream").css("display","block");
-    // }
-    // else{
-    //     alert("đây else");
-    // }
-    
-    
-
-
-
-    //xử lý cho mục kho ảnh -phototream
-
-
-
-
-
-
-    // $("#write-you").click(function(){
-    //     // $("#aboutyou>i").toggle();
-    //     $("#textarea").toggle();
-
-    //     // $("#save").toggle();
-    //     // $("#cancel").toggle();
-    // })
-
-    $("#about").click(function(event){
-        $("#about").css("border-bottom","blue solid");
-        // $("#about-view").css("display","block");
-        $get("/user/personal-page-user/index.php",function(data){
-            $("#about-view").html(data);
-            // event.preventDefault();
-        })
+     $(".subnav").click(function(){
+        var eid = $(this).attr("id");
+        const eidarray = ["about", "photostream", "albums","faves","galleries","group","stats","cameraRoll"];
+        $("#"+eid).addClass('js-subnav-add-border');
+        for (let i = 0; i < eidarray.length; i++) {
+            if (eidarray[i]!=eid) {
+                //  alert(eidarray[i]);
+                var id=eidarray[i];
+                $("#"+id).removeClass('js-subnav-add-border');
+                // alert("hello");
+            }
+          }
     })
 
-    $("#photostream").click(function(event){
-        // $("#photostream-view").css("display","block");
-    })
-
-    //load()
+   
 })
