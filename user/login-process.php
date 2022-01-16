@@ -1,10 +1,11 @@
 <?php
-
- // Tạo session: Măc định mỗi phiên làm việc có thời hạn 24 phút
+    //login.php  truyền dữ liệu sang: nhận dữ liệu từ login.php  gửi sang
+ // Tạo session: Măc định mỗi phiên làm việc có thời hạn 24 phút
  session_start();
 if(isset($_POST['btnloginone'])){ 
     $email=$_POST['txtEmail'];
     $password=$_POST['txtPass1'];
+<<<<<<< HEAD
 }
 else {
     //header("location:login.php");
@@ -12,16 +13,23 @@ else {
 
     // Bước 01: Kết nối Database Server
     $conn = mysqli_connect('localhost','root','','database_baitaplon');
+=======
+    //ở đây còn phải ktra người dùng có nhập không
+    $conn = mysqli_connect('localhost','root','','database_BaiTapLon');
+>>>>>>> 7495715627a358583c3fd364c4b6a2242a848556
     
     if(!$conn){
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
     $sql = "select * FROM login WHERE Email = '$email'";
+<<<<<<< HEAD
   
+=======
+>>>>>>> 7495715627a358583c3fd364c4b6a2242a848556
     
     $result = mysqli_query($conn,$sql);
-
+   
     
     if(mysqli_num_rows($result) > 0){
         
@@ -49,7 +57,11 @@ else {
 
     // Bước 03: Đóng kết nối
     mysqli_close($conn);
+}
+
+else {
+    header("location:login.php");
+}
+
+   
 ?>
-
-
-

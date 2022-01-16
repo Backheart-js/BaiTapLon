@@ -27,7 +27,7 @@
                     <div class="container-fluid col-md-10">
                         <div class="row h-100">
                             <div class="navbar__search-wrap col-md-9 d-flex">
-                                <form action="search.php" method="POST" class="navbar__input-wrap">
+                                <form action="search-guest.php" method="POST" class="navbar__input-wrap">
                                     <span class="navbar__input-icon">
                                         <i class="fas fa-search" style="font-size: 17px; transform: translateY(3px); color: #999;"></i>
                                     </span>

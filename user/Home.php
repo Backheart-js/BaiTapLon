@@ -1,3 +1,12 @@
+<?php 
+    // Kiểm tra thẻ làm việc
+    session_start();
+    if(!isset($_SESSION['isLoginOK'])) { //Nếu không có thẻ
+        header('Location: login.php');   //Đi ra
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,154 +14,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang chủ | Flickr</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Assets/Css/base.css"/>
     <link rel="stylesheet" href="../Assets/Css/main.css" /> 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    />
-  </head>
-  <body>
-    
-    <div class="home-header container-fluid">
-      <div class="header-navbar container">
-        <nav
-          class="navbar navbar-expand-lg container home-container home-navbar"
-        >
-          <div class="img_header-navbar">
-            <img 
-              src="../Assets/data_img/flickr_demo.svg"
-              alt=""
-              class="header_img"
-            />
-          </div>
- <!-- -->
-          <div class="container-fluid navbar__category">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a
-                    class="
-                      nav-link
-                      navbar__category-link
-                      active
-                      nav-link-active
-                    "
-                    aria-current="page"
-                    href="#"
-                  >
-                    Bạn
-                  </a>
-                  <div class="header-myself">
-                    <div class="header-myselt-list row ms-2">
-                      <a href="" class="header-myself-link">Giới thiệu</a>
-                      <a href="" class="header-myself-link"> Kho ảnh</a>
-                      <a href="" class="header-myself-link">Album</a>
-                      <a href="" class="header-myself-link">Yêu thích</a>
-                      <a href="" class="header-myself-link">Thư viện</a>
-                      <a href="" class="header-myself-link">Nhóm</a>
-                      <a href="" class="header-myself-link">Cuộn camera</a>
-                    </div>
-                    <hr />
-                    <div class="header-myselt-list row ms-2">
-                      <a href="" class="header-myself-link"
-                        >Hoạt động gần đây</a
-                      >
-                      <a href="" class="header-myself-link">Mọi người</a>
-                      <a href="" class="header-myself-link">Sắp xếp</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link navbar__category-link" href="#"
-                    >Khám phá</a>
-                  <div class="header-myself-list">
-                    <div class="row ms-2">
-                      <a href="" class="header-myself-link">Ảnh gần đây</a>
-                      <a href="" class="header-myself-link"> Xu hướng</a>
-                      <a href="" class="header-myself-link">The Commons</a>
-                      <a href="" class="header-myself-link"
-                        >Phòng trưng bày trên Flickr</a
-                      >
-                      <a href="" class="header-myself-link">Bản đồ thế giới</a>
-                      <a href="" class="header-myself-link">Tìm máy ảnh</a>
-                      <a href="" class="header-myself-link">Flickr Blog</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link navbar__category-link" href="#">In</a>
-                  <div class="header-myself-print">
-                    <div class="row ms-2">
-                      <a href="" class="header-myself-link"
-                        >In và hình nền nghệ thuật</a
-                      >
-                      <a href="" class="header-myself-link"> Phóng sự ảnh</a>
-                    </div>
-                    <hr />
-                    <div class="row ms-2">
-                      <a href="" class="header-myself-link $gray-200">
-                        Xem giỏ hàng(0)</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link navbar__category-link"
-                    href="#"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Dùng Pro</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="container-fluid navbar__search">
-            <form class="d-flex">
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-              <input
-                class="form-control me-2"
-                type="text"
-                placeholder="Ảnh,mọi người hoặc nhóm"
-                aria-label="Search"
-              />
-              <div class="d-flex">
-              <a href="../uploads" class="text-white ms-2">
-               <i class="fas fa-cloud-download-alt"></i> 
-               </a> 
-               <a href="" class="text-white ms-2">
-                 <i class="far fa-bell"></i>
-               </a>
-                <a href="../user/logout.php" class="text-white ms-2">
-                 <i class="fas fa-camera-retro"></i> 
-                </a>
-                
-              </div>
-              
-              
-            </form>
-          </div>
-        </nav>
-      </div>
-    </div>
+    <link rel="stylesheet" href="../Assets/Css/search.css"/>
+    <link rel="stylesheet" href="../Assets/Css/navbar.css">
+    <link rel="stylesheet" href="../Assets/Css/responsive.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <?php 
+      require_once("./link-navbar.php");
+    ?>
+  
     <div class="container-fluid content-wrapper" style="margin-top: 50px">
       <div class="container">
         <div class="row">
           <div class="content__activity col-md-8">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg">
               <div class="container-fluid">
                 <li class="nav-item dropdown col-md-10">
                   <a
-                    class="nav-link dropdown-toggle bg-light"
+                    class="nav-link dropdown-toggle"
                     href="#"
                     id="navbarDropdownMenuLink"
                     role="button"
@@ -339,7 +224,7 @@
           <div class="col-md-4">
           <div class="content__group col-md ">
             <strong>
-              <h5 style="font-size: 1rem;"> Các nhóm dành cho bạn</h5>
+              <h5 style="font-size: 1rem;">Các nhóm dành cho bạn</h5>
             </strong>
             <div>
             <div class="content__group-list  ">
@@ -420,5 +305,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="../Assets/JavaScript/link-navbar.js"></script>
   </body>
 </html>

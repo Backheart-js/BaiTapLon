@@ -1,4 +1,5 @@
 <?php
+    
     include "./signup-process/activationAccount.php";
     
 ?>
@@ -16,7 +17,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
     <link rel="stylesheet" href="../Assets/Css/main.css">
-    
+
 </head>
 
 <body>
@@ -36,14 +37,14 @@
                 <div class="modal__body">
                     <div class="modal__body-icon col-md col-sm row">
 
-                        
+
                         <use xlink:href="/img/icons.c121c832.svg#blue-pink-balls"
                             xmlns:xlink="http://www.w3.org/1999/xlink"></use>
 
                         <div class="form-text">
                             <svg data-v-337e9a4c="" xmlns="http://www.w3.org/2000/svg" data-v-0f36bfa4=""
                                 style="fill: currentcolor; height: 1.5rem; width: 1.5rem;">
-                                
+
                                 <use xlink:href="/img/icons.c121c832.svg#blue-pink-balls"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                             </svg>
@@ -54,26 +55,23 @@
                                         <input type="email" class="form-control" placeholder="Địa chỉ email" required
                                             autofocus aria-label="Recipient's username" aria-describedby="button-addon2"
                                             name="txtEmail" id="email" />
-                                          <!-- form-control form-cotrol-password -->
-                                          <small id="emailHelp" class="form-text "></small>
+                                        <!-- form-control form-cotrol-password -->
+                                        <small id="emailHelp" class="form-text "></small>
                                     </div>
                                     <div class="col-md-12  password">
                                         <input type="password" class="form-control form-cotrol-password"
-                                            placeholder="Mật khẩu" 
-                                            name="txtPass1" id="pwd"required 
+                                            placeholder="Mật khẩu" name="txtPass1" id="pwd" required />
 
-                                         />
-                                        
                                         <span>
-                                        <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+                                            <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
                                         </span>
-                                            
-                                        
+
+
                                     </div>
                                 </div>
 
-                                <div class="contact__agree mt-3">
-                                    <label>
+                                <div class="contact__agree mt-3 d-flex flex-column">
+                                    <label class="d-block">
                                         <input type="checkbox" class="checkbox" value="remember-me">
                                         Ghi nhớ địa chỉ email
                                     </label>
@@ -81,12 +79,10 @@
 
                                       if(isset($_GET['error']))
                                       {
-                                        echo "<h5 style ='color:red'> {$_GET['error']} </h5>";
+                                        echo "<h5 style ='color:red;font-size:0.8rem;'> {$_GET['error']} </h5>";
                                       }
                                     ?>
-
                                 </div>
-
                             </div>
                             <button type="submit" class="btn btn-primary" type="submit" name="btnloginone">Đăng
                                 nhập</button>
@@ -96,16 +92,16 @@
                         <hr class="form-hr">
                         <div>
                             <p class="form_link-logup">Bạn chưa tham gia Flickr?
-                                <a href="" class="form_link ">Đăng kí tại đây.</a>
+                                <a href="./signup.php" class="form_link ">Đăng kí tại đây.</a>
                             </p>
 
                         </div>
                     </div>
                 </div>
         </form>
-         
 
-     
+
+
 
     </div>
     </div>
@@ -117,11 +113,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
