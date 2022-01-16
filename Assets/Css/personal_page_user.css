@@ -42,7 +42,7 @@ body{
     background-size:cover;
     box-sizing: border-box;
     z-index: 0;
-    padding-top: 40%;
+    padding-top: 30%;
     /* width: 100%; */
     /* background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)); */
 }
@@ -102,7 +102,7 @@ body{
 }
 .modal .modal-container{
     background-color: white ;
-    height: 600px;
+    height: 650px;
     width: 80%;
     max-width: calc(100%-100px);
 }
@@ -154,9 +154,7 @@ body{
      
      /* box-sizing: border-box; */
 }
-nav .nav-about{
-    overflow-x: scroll;
-}
+
 nav li .subnav{
     /* border-bottom: white solid; */
 }
@@ -302,11 +300,15 @@ nav li .subnav{
 
 /* Mobile:width <740px */
 @media only screen and (max-width: 46.1875em){
-    
+    nav .nav-about{
+        overflow-x: scroll;
+    }
 }
 
 /* Tablet:width>=740px and width<1024px */
 @media only screen and (min-width: 46.25em) and (max-width:63.937){
-
+    nav .nav-about{
+        overflow-x: scroll;
+    }
 }
 

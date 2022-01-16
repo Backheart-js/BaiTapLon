@@ -46,7 +46,7 @@ if(isset($_POST["submitUpload"]) && !empty($_FILES["fileupload"]["name"])){
             $insert=mysqli_query($conn,$sql);
             if($insert){ //kiểm tra việc query thành công
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                header("location:../index.php/avt=$fileName");
+                header("location:../index.php");
             }else{
                 $statusMsg = "File upload failed, please try again.";
             } 

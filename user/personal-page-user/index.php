@@ -8,7 +8,19 @@
           <div class="main  my-5 bg-white border ">
                 <div class="status px-5 container-fluid d-flex position-relative">
                     <p href="" id="aboutyou" class="d-block col-md-11 p-5">
-                      <i class="fs-5 js-aboutyou">Hãy giới thiệu đôi điều về bạn</i>
+                    <?php
+                      $sql="SELECT * FROM users where email='".$_SESSION['isLoginOK']."'";
+                      // echo $sql;
+                      $result = mysqli_query($conn,$sql);
+                      if(mysqli_num_rows($result)){       
+                        $row=mysqli_fetch_assoc($result);
+                        // echo "<i> ".$row['description']."</i>";
+                      ?>
+                        <i class="fs-5 js-aboutyou"><?php echo $row['description'] ?></i>
+                      <?php
+                      }
+                      ?>
+                      <!-- <i class="fs-5 js-aboutyou">Hãy giới thiệu đôi điều về bạn</i> -->
                     </p>
                       <i class="col-md py-5 text-end bi bi-pen-fill fs-3 js-about-write"></i>
                 </div>
@@ -105,7 +117,7 @@
           // require "../../uploads/show.php";
           
           require "../../config/connect_db.php";
-          $sql="SELECT * FROM avt_images ORDER BY uploaded_on DESC";
+          $sql="SELECT * FROM avt_images where email='$email' ORDER BY uploaded_on DESC";
           $result = mysqli_query($conn,$sql);
           ?>
               <?php
@@ -228,7 +240,7 @@
           // require "../../uploads/show.php";
           
           require "../../config/connect_db.php";
-          $sql="SELECT * FROM avt_images ORDER BY uploaded_on DESC";
+          $sql="SELECT * FROM avt_images where email='$email' ORDER BY uploaded_on DESC";
           $result = mysqli_query($conn,$sql);
           ?>
               <?php

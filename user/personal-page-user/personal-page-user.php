@@ -4,9 +4,10 @@
       header('Location:../login.php');
   }
   require "../../config/connect_db.php";
-  $sql = "select firstname,lastname, month(email_verified_at) as month, year(email_verified_at) as year FROM users WHERE Email = '{$_SESSION['isLoginOK']}'";
+  $sql = "SELECT firstname,lastname, month(email_verified_at) as month, year(email_verified_at) as year FROM users WHERE Email = '{$_SESSION['isLoginOK']}'";
   $result = mysqli_query($conn,$sql);
   $row= mysqli_fetch_array($result);
+  $email=$_SESSION['isLoginOK'];
   $month=$row['month'];
   $year=$row['year'];
   $name=$row['firstname'].''.$row['lastname'];
@@ -69,11 +70,20 @@
 <div class="container-fluid-lg body-personal">
   <div class="container-fluid slider position-relative ">
     <div class="row my-5 position-absolute mb-5 bottom-0 text-center ms-5">
+
+
       <?php
-          if(isset($_GET['avt'])){
-            $avteURL = './upload-avt/data_upload/'.$_GET['avt'];
+         
+            // $avteURL = './upload-avt/data_upload/'.$_GET['avt'];
+            $sql="SELECT * FROM `avt_images` WHERE email='$email' ORDER BY uploaded_on DESC LIMIT 1";
+            // $sql="SELECT * FROM avt_images where email='$email' ORDER BY uploaded_on DESC";
+            $result = mysqli_query($conn,$sql);
+            if(mysqli_num_rows($result)){       
+              $row=mysqli_fetch_assoc($result);
+              $avtURL = './upload-avt/data_upload/'.$row["file_name"];
+              // echo $avtURL;
       ?>
-           <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(<?php echo $avteURL ?>);">
+           <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(<?php echo $avtURL ?>);">
       <?php
           }else{
         ?>
@@ -142,7 +152,7 @@
         <div class="modal-body fs-4 p-0 m-3 text-start" id="js-photostream" >
             <?php   
             require "../../config/connect_db.php";
-            $sql="SELECT * FROM avt_images ORDER BY uploaded_on DESC";
+            $sql="SELECT * FROM avt_images where Email='$email' ORDER BY uploaded_on DESC";
             $result = mysqli_query($conn,$sql);
             ?>
                 <?php
@@ -151,7 +161,7 @@
                             $imageURL = './upload-avt/data_upload/'.$row["file_name"];
                             // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
                 ?>
-                <img src="<?php echo $imageURL; ?>" alt="" style="height:100px" class="m-2"/>
+                <img src="<?php echo $imageURL; ?>" alt="" style="height:100px" class=" m-2"/>
                     <?php }
                         }else{ 
                     ?>
