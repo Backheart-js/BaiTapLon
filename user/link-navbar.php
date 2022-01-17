@@ -19,7 +19,7 @@
         <div class="container navbar-search-content">
             <div class="row ps-4 pe-4 h-100">
                 <div class="navbar-search__logo-wrap col-md-5 col-sm-5 row">
-                    <a href="./Home.php" class="col-md-3 col-sm-8 d-flex">
+                    <a href="/BaiTapLon/user/Home.php" class="col-md-3 col-sm-8 d-flex">
                         <img class="navbar-search__logo-img" src="/BaiTapLon/Assets/data_img/flickr_demo.svg" alt="">
                     </a>
                     <div class="navbar__cate-wrap col-md-9">

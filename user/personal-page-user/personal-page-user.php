@@ -102,12 +102,14 @@
 
   <div class="modal container-fluid mt-2">
         <div class="modal-container">
-          <header class="container-fluid modal-header navbar navbar-light  d-flex ">
-                <ul class="col-md text-center d-flex d-inline " type="none">
-                  <li class="pb-3" id="js-modal-photostream"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
-                  <li class="pb-3" id="js-modal-album"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
-                  <li class="pb-3" id="js-modal-update"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
-                </ul>
+          <header class="container-fluid modal-header navbar navbar-light  d-flex bt-modal">
+                <i class="bi bi-list bt-menu p-2 fs-3 mb-3">
+                  <ul class="row col-md text-center bt-subnav-modal" type="none">
+                    <li class="col-md-4 bt-subnav pb-3" id="js-modal-photostream"> <a class="col-fm subnav navbar-brand px-5"  href="#js-photostream" active>Kho ảnh</a></li>
+                    <li class="col-md-4 bt-subnav pb-3" id="js-modal-album"><a class="col-fm subnav navbar-brand px-5 "  href="#js-album">Album</a></li>
+                    <li class="col-md-4 bt-subnav pb-3" id="js-modal-update"><a class="col-fm subnav navbar-brand px-5 "  href="#js-update">Tải lên</a></li>
+                  </ul>
+                </i>
                 <!-- <input id="search" class="col-md mb-4 p-2" type="search" placeholder="Search" aria-label="Search"> -->
                 <div class="col-md d-flex position-relative mb-4 p-2">
                   <button class="position-absolute btn " type="submit" style="height:40px"><i class="bi bi-search fs-5"></i></button>

@@ -311,6 +311,47 @@ nav li .subnav{
     .body-personal .slider #bt-date{
         margin-bottom: 40px;
     }
+    .modal .modal-header .bt-menu{
+        display: none;
+    }
+    .bt-menu{
+        position: relative;
+    }
+    .bt-subnav-modal{
+        position: absolute;
+        display:inline-block;
+        /* background-color: gray; */
+        /* margin-top: 230px; */
+        z-index: 1;
+        display: none;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.25);
+        background-color: white;
+        
+    }
+    .bt-subnav-modal>li{
+        /* background-color: white;
+        width: 200px; */
+        width: 200px;
+    }
+    .bt-subnav-modal>li>a{
+        color: white;
+    }
+    .bt-subnav-modal>li{
+        border: none;
+    }
+    .modal-container .bt-menu:hover .bt-subnav-modal{
+        display: block;
+        /* background-color: hotpink; */
+    }
+    .bt-subnav-modal .bt-subnav:hover{
+        background-color: gainsboro;
+        color: white;
+        
+    }
+    .modal .modal-header .bt-menu{
+        display: block;
+    }
+
     
 }
 
@@ -319,6 +360,7 @@ nav li .subnav{
     .body-personal .slider #bt-date{
         display: none;
     }
+    
 }
 
 /* Tablet */
@@ -363,6 +405,57 @@ nav li .subnav{
     .modal-container .modal-header button{
         height: 10px;
     }
+    .modal-container .modal-header>ul{
+        /* display: block; */
+        /* overflow-x: scroll; */
+    }
+    .modal-container .modal-header .bt-subnav-modal{
+        /* display: none; */
+        
+    }
+    /* .bt-modal{
+       width: 20px;
+       height: 20px;
+       background-color: palevioletred;
+    } */
+    .bt-menu{
+        position: relative;
+    }
+    .bt-subnav-modal{
+        position: absolute;
+        display:inline-block;
+        /* background-color: gray; */
+        /* margin-top: 230px; */
+        z-index: 1;
+        display: none;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.25);
+        background-color: white;
+        
+    }
+    .bt-subnav-modal>li{
+        /* background-color: white;
+        width: 200px; */
+        width: 200px;
+    }
+    .bt-subnav-modal>li>a{
+        color: white;
+    }
+    .bt-subnav-modal>li{
+        border: none;
+    }
+    .modal-container .bt-menu:hover .bt-subnav-modal{
+        display: block;
+        /* background-color: hotpink; */
+    }
+    .bt-subnav-modal .bt-subnav:hover{
+        background-color: gainsboro;
+        color: white;
+        
+    }
+    .modal .modal-header .bt-menu{
+        display: block;
+    }
+
 
 } 
 
