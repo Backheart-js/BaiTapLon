@@ -3,16 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body.html{
     /* background-image:url(/BTL/assets/data_img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;*/
-    height: 100vh;   
+    /* height: 100vh;   
     position: relative;
     overflow: scroll;
+    width: 100%; */
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 }
 .header{
@@ -102,7 +103,7 @@ body{
 }
 .modal .modal-container{
     background-color: white ;
-    height: 650px;
+    height: 90%;
     width: 80%;
     max-width: calc(100%-100px);
 }
@@ -233,6 +234,9 @@ nav li .subnav{
 .subnav-view{
     display: none;
 }
+.subnav-show{
+    display: block;
+}
 .subnav-view:before{
     display: none;
 }
@@ -298,17 +302,67 @@ nav li .subnav{
     /* width: 200px; */
 }
 
-/* Mobile:width <740px */
-@media only screen and (max-width: 46.1875em){
-    nav .nav-about{
-        overflow-x: scroll;
+
+/* Laptop */
+@media (min-width: 1024px){
+    .body-personal .slider .bt-avt{
+        margin-bottom: 50px;
+    }
+    .body-personal .slider #bt-date{
+        margin-bottom: 40px;
+    }
+    
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .body-personal .slider #bt-date{
+        display: none;
     }
 }
 
-/* Tablet:width>=740px and width<1024px */
-@media only screen and (min-width: 46.25em) and (max-width:63.937){
-    nav .nav-about{
-        overflow-x: scroll;
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .body-personal .slider #bt-date{
+        display: none;
     }
 }
+
+/* Mobile *//* Tablet */
+@media (max-width: 1023px){
+    html{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .body-personal .slider #bt-date{
+        display: none;
+        padding-bottom: 20px;
+    }
+    .body-personal .slider .bt-avt{
+        margin-bottom: 0px;
+        margin-top: 20%;
+    }
+    .body-personal .nav-about{
+        overflow-x: scroll;
+    }
+    .slider #p-avatar{
+        /* width: 10%;
+        height: 10%; */
+    }
+    .slider{
+        height: 50%;
+    }
+    .body-personal .modal{
+       height: 90%;
+       /* overflow: hidden; */
+    }
+    .modal-container .modal-header{
+        /* overflow-x: scroll; */
+    }
+    .modal-container .modal-header button{
+        height: 10px;
+    }
+
+} 
 

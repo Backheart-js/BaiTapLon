@@ -148,7 +148,7 @@
   <!--end photostream -->
 
   <!-- album -->
-  <div id="album-view" class="bg-light mt-2 pt-2 px-5 subnav-view js-album-view" >
+  <div id="albums-view" class="bg-light mt-2 pt-2 px-5 subnav-view js-album-view" >
       <div class="photo-main m-5">
           <div class="text-center m-5 px-5">
               <h2 class="fw-normal">Hãy làm một album.</h2>

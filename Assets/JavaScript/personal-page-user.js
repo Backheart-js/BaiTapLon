@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+    $("#about-view").addClass('subnav-show');
+    $("#about").addClass('js-subnav-add-border');
+    $("#js-photostream").addClass('subnav-show');
     // xử lý cho mục about - giới thiệu
     $(".js-change-avt").click(function(){
         // alert("Đây rùi");
@@ -79,11 +81,14 @@ $(document).ready(function(){
         var eid = $(this).attr("id");
         const eidarray = ["about", "photostream", "albums","faves","galleries","group","stats","cameraRoll"];
         $("#"+eid).addClass('js-subnav-add-border');
+        $("#"+eid+"-view").addClass('subnav-show');
+        //  alert("#"+eid+"-view");
         for (let i = 0; i < eidarray.length; i++) {
             if (eidarray[i]!=eid) {
-                //  alert(eidarray[i]);
+                
                 var id=eidarray[i];
                 $("#"+id).removeClass('js-subnav-add-border');
+                $("#"+id+"-view").removeClass('subnav-show');
                 // alert("hello");
             }
           }

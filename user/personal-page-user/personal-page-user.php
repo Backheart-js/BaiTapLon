@@ -33,50 +33,15 @@
   <script type="text/javascript" src="/BaiTapLon/Assets/Javascript/personal-page-user.js"></script>
 </head>
 
-<body>
-  <!-- <header class="header ">
-    <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid me-5">
-        <img src="/BaiTapLon/Assets/data_img/flickr_demo.svg" alt="" class="d-inline-block align-text-top ps-5 ms-5" style="height:30px">
-        <div class="collapse navbar-collapse ms-2" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-3 fs-5">
-              <a class="nav-link" aria-current="page" href="#">You</a>
-            </li>
-            <li class="nav-item mx-3 fs-5">
-              <a class="nav-link" href="#">Explore</a>
-            </li>
-            <li class="nav-item dropdown mx-3 fs-5">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Prints</a>
-            </li>
-            <li class="nav-item mx-3 fs-5">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Get Pro</a>
-            </li>
-          </ul>
-          
-          <div class="d-flex position-relative">
-            <button class="position-absolute btn " type="submit" style="height:40px"><i class="bi bi-search fs-5"></i></button>
-            <input class="form-control me-2 ps-5" type="search" placeholder="Photos,people,or groups" aria-label="Search">
-          </div>
-          <div class="d-flex me-5">
-            <a href=""><i class="icon bi bi-cloud-arrow-up-fill mx-2 fs-3"></i></a>
-            <a href=""><i class="icon bi bi-bell-fill mx-2 fs-3"></i></a>
-            <a href=""> <i class="icon bi bi-person-circle mx-2 fs-3"></i></a>
-          </div>
-        </div> 
-      </div>
-  </nav>
-  </header> -->
+<body class="container-fluid-lg container-fluid-sm">
+  
   <?php 
       require_once("../link-navbar.php");
     ?>
   
-<div class="container-fluid-lg body-personal">
+<div class="container-fluid-lg container-fluid-sm body-personal">
   <div class="container-fluid slider position-relative ">
-    <div class="row my-5 position-absolute mb-5 bottom-0 text-center ms-5">
-
-
+    <div class="row position-absolute  bottom-0 text-center ms-5 bt-avt">
       <?php
          
             // $avteURL = './upload-avt/data_upload/'.$_GET['avt'];
@@ -88,11 +53,11 @@
               $avtURL = './upload-avt/data_upload/'.$row["file_name"];
               // echo $avtURL;
       ?>
-           <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(<?php echo $avtURL ?>);">
+           <div id="p-avatar" class="col-md-lg edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(<?php echo $avtURL ?>);">
       <?php
           }else{
         ?>
-            <div id="p-avatar" class="col-md edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(/BaiTapLon/Assets/data_img/icon_edit.png);">
+            <div id="p-avatar" class="col-md-lg edit m-5 d-inline rounded-circle p-4 js-change-avt" style="background-image: url(/BaiTapLon/Assets/data_img/icon_edit.png);">
            
         <?php
         }
@@ -110,15 +75,13 @@
       </div>
       
     </div>
-    <div class="position-absolute bottom-0 m-5 d-flex" style="color: white">
+    <div class="position-absolute bottom-0  d-flex" id="bt-date" style="color: white">
         <?php
             echo "<span class='navbar__link ms-5 px-5'>".$_SESSION['isLoginOK']."</span>"; 
             echo "<span >Đã tham gia ".$month."/".$year."</span>";
             // echo "<span >Đã tham gia ".$month."</span>";
             // echo "<span >/".$year."</span>";
         ?> 
-
-
     </div>
   </div> 
   <nav class="container-fluid navbar navbar-light bg-white pt-0 ">
@@ -126,7 +89,7 @@
       <ul class=" d-flex mx-5" type="none">
         <li> <a class="col-md subnav navbar-brand px-3 fs-4 " id="about" href="#about-view" active>Giới thiệu</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="photostream" href="#photostream-view" >Kho ảnh</a></li>
-        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="albums" href="#album-view">Album</a></li>
+        <li><a class="col-md subnav navbar-brand px-3 fs-4" id="albums" href="#albums-view">Album</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="faves" href="#faves-view">Yêu thích</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="galleries" href="#galleries-view">Thư viện</a></li>
         <li><a class="col-md subnav navbar-brand px-3 fs-4" id="group" href="#group-view">Nhóm</a></li>
@@ -166,7 +129,7 @@
                             $imageURL = './upload-avt/data_upload/'.$row["file_name"];
                             // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
                 ?>
-                <img src="<?php echo $imageURL; ?>" alt="" style="height:100px" class=" m-2"/>
+                <img src="<?php echo $imageURL; ?>" alt="" style="height:20%;width:20%" class="ms-2"/>
                     <?php }
                         }else{ 
                     ?>
