@@ -26,12 +26,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <!-- <link rel="stylesheet" href="/BTL/css/signup.css"> -->
   <link rel="stylesheet" href="/BaiTapLon/Assets/Css/personal_page_user.css">
+    <link rel="stylesheet" href="../../Assets/Css/search.css"/>
+    <link rel="stylesheet" href="../../Assets/Css/navbar.css">
+    <link rel="stylesheet" href="../../Assets/Css/responsive.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="/BaiTapLon/Assets/Javascript/personal-page-user.js"></script>
 </head>
 
 <body>
-  <header class="header ">
+  <!-- <header class="header ">
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid me-5">
         <img src="/BaiTapLon/Assets/data_img/flickr_demo.svg" alt="" class="d-inline-block align-text-top ps-5 ms-5" style="height:30px">
@@ -64,8 +67,10 @@
         </div> 
       </div>
   </nav>
-  </header>
-
+  </header> -->
+  <?php 
+      require_once("../link-navbar.php");
+    ?>
   
 <div class="container-fluid-lg body-personal">
   <div class="container-fluid slider position-relative ">

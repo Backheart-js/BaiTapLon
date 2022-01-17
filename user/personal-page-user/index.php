@@ -117,14 +117,14 @@
           // require "../../uploads/show.php";
           
           require "../../config/connect_db.php";
-          $sql="SELECT * FROM avt_images where email='$email' ORDER BY uploaded_on DESC";
+          $sql="SELECT * FROM data_images where email='$email' ORDER BY uploaded_on DESC";
           $result = mysqli_query($conn,$sql);
           ?>
               <?php
                   // echo(mysqli_num_rows($result));
                   if(mysqli_num_rows($result)){       
                       while($row=mysqli_fetch_assoc($result)){
-                          $imageURL = './upload-avt/data_upload/'.$row["file_name"];
+                          $imageURL = '../../uploads/'.$row["file_name"];
                           // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
               ?>
               <img src="<?php echo $imageURL; ?>" alt="" style="height:150px" class="m-2"/>

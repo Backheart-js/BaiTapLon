@@ -73,7 +73,8 @@ $(document).ready(function(){
         $("#js-modal-update").css("border-bottom","none");
         $("#js-modal-photostream").css("border-bottom","none");
      })
-
+     
+     //làm sao để lấy ra đươc ID trong class subnav??
      $(".subnav").click(function(){
         var eid = $(this).attr("id");
         const eidarray = ["about", "photostream", "albums","faves","galleries","group","stats","cameraRoll"];
