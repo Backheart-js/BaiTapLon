@@ -24,8 +24,7 @@ document.getElementById("eye").addEventListener("click", function () {
 
 //
 
-$(document).ready(function()
-{
+
 
     //kiểm tra tính hơp lệ của email
     $("#email").change(function(){
@@ -48,5 +47,5 @@ $(document).ready(function()
             })*/
         }
     })
-})
+
 

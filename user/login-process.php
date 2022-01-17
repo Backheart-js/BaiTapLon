@@ -6,11 +6,7 @@ if(isset($_POST['btnloginone'])){
     $email=$_POST['txtEmail'];
     $password=$_POST['txtPass1'];
     //ở đây còn phải ktra người dùng có nhập không
-    $conn = mysqli_connect('localhost','root','','database_BaiTapLon');
-    
-    if(!$conn){
-        die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-    }
+  require "../config/connect_db.php";
     // Bước 02: Thực hiện truy vấn
     $sql = "select * FROM login WHERE Email = '$email'";
     
