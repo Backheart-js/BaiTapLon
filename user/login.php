@@ -18,7 +18,7 @@
 
 <body>
     <div class="mymodal ">
-        <div class="header container-fluid">
+        <div class="header container-fluid d-flex" style="align-items: center;">
             <div class="container">
                 <div class="row ">
                     <div class="img_header-icon col-md-2 col-sm-2">
@@ -30,7 +30,7 @@
         </div>
         <form action="login-process.php" class="form-login" method="post">
             <div class="container modal__container">
-                <div class="modal__body">
+                <div class="modal__body col-lg-4 col-md-8 col-12">
                     <div class="modal__body-icon col-md col-sm row">
 
 

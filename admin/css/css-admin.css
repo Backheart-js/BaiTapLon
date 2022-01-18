@@ -1,3 +1,16 @@
+/* *{
+    overflow: hidden;
+} */
+
+.navbar-admin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #ccc;
+}
+
 .navbar__user {
     list-style: none;
 }
@@ -8,13 +21,56 @@
     text-decoration: none;
 }
 
-/* Content */
-.admin-content {
-   
-}
+/* User */
 .admin-dashboard {
-
+    margin-top: 54px;
 }
-.admin-search {
 
+.body-wallpaper {
+    background-image: url(/Assets/data_img/img_slider.jpg);
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#background {
+    padding-top: 52px;
+    min-height: 800px;
+}
+
+.user-content {
+    height: 80%;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 100px;
+}
+
+.user-infor {
+    height: 170px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+.user__avatar {
+    display: flex;
+    justify-content: end;
+}
+.avatar-user {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-top: 100%;
+}
+.user__avatar-img {
+    margin-top: 40px;
+    width: 72%;
+}
+
+.user__account,
+.user__count {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }

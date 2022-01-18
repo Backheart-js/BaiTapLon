@@ -1,7 +1,7 @@
 <?php
     //login.php  truyền dữ liệu sang: nhận dữ liệu từ login.php  gửi sang
  // Tạo session: Măc định mỗi phiên làm việc có thời hạn 24 phút
- session_start();
+session_start();
 if(isset($_POST['btnloginone'])){ 
     $email=$_POST['txtEmail'];
     $password=$_POST['txtPass1'];
@@ -9,7 +9,7 @@ if(isset($_POST['btnloginone'])){
   require "../config/connect_db.php";
 
     // Bước 02: Thực hiện truy vấn
-    $sql = "select * FROM login WHERE Email = '$email'";
+    $sql = "select * FROM login WHERE Email = '$email' AND status = 1";
     
     $result = mysqli_query($conn,$sql);
    
@@ -33,7 +33,7 @@ if(isset($_POST['btnloginone'])){
         }
 
     } else {
-        $error="Email hoặc mật khẩu không chính xác";
+        $error="Tài khoản chưa xác thực";
         header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
     }
 

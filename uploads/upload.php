@@ -17,7 +17,7 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);//đang bắt định d
 //Bước 2: Kiểm tra người dùng đã bấm submit và file đã được chọn chưa
 if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
      if (file_exists($targetFilePath)) {
-        echo "Tệp tin đã tồn tại";
+        
     }
     else{
     // Khai báo biến mảng lưu trữ các định dạng mà bạn cho phép upload lên
@@ -37,7 +37,7 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
                 $insert=mysqli_query($conn,$sql);
                
                 if($insert){ //kiểm tra việc query thành công
-                    $statusMsg = " ".$fileName. " has been uploaded successfully.";
+                    $statusMsg = "successfully";
                     
                 }else{
                     $statusMsg = "File upload failed, please try again.";
@@ -58,7 +58,31 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
 }else{
     $statusMsg = 'Please select a file to upload.';
 }
-
-// Display status message
-echo $statusMsg;
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <?php
+        if($statusMsg=="successfully"){
+            $srcVideo = "Check  Mark  2sec Video.mp4";
+            
+        }
+        else {
+            $srcVideo = "404 Animation Logo.mp4";
+        }
+    ?>
+    <video playsinline="" muted="" autoplay="" loop="" src="../Assets/video/<?php echo $srcVideo; ?>" class="attachment-video" data-silent="true" style="width:100%;margin-top: -110px; position: relative;">
+    </video>
+    <a href="../user/Home.php" class="btn btn-primary" style="position: fixed; top:40px; left:110px;">Go back Home</a>
+
+
+</body>
+</html>

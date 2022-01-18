@@ -21,7 +21,7 @@
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
-            $_SESSION['isLoginOK'] = $admin;
+            $_SESSION['adLoginOK'] = $admin;
             header("location: index.php"); //Chuyển hướng về Trang quản trị
         }else{
             $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";

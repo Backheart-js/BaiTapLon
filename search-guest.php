@@ -21,12 +21,17 @@
 <body>
         <div class="container-fluid navbar-search-wrap">
             <div class="container navbar-search-content">
-                <div class="row ps-4 pe-4 h-100">
-                    <div class="navbar-search__logo-wrap col-md-5 col-sm-5 row">
-                        <a href="index.php" class="col-md-3 col-sm-8 d-flex">
+                <div class="navbar-on-mobile row ps-4 pe-4 h-100">
+
+                    <div class="navbar-search__logo-wrap col-lg-5 col-md-5 col-sm-5 col-6 row">
+                        <label for="sub-cate-mobile-tab" class="navbar-search__menu-on-mb col-md-3 col-4 hide-on-pc">
+                            <i class="navbar-search__menu-on-mb-icon bi bi-list"></i>
+                        </label>
+
+                        <a href="index.php" class="col-lg-3 col-md-6 col-8 d-flex">
                             <img class="navbar-search__logo-img" src="./Assets/data_img/flickr_demo.svg" alt="">
                         </a>
-                        <div class="navbar__cate-wrap col-md-9">
+                        <div class="navbar__cate-wrap col-lg-9 hide-on-tab-mobile">
                             <ul class="navbar__cate-list">
                                 <li class="navbar__cate-item">
                                     <a href="" class="navbar__cate-link">Khám phá</a>
@@ -75,15 +80,21 @@
                         </div>
                     </div>
 
-                    <div class="navbar-search__input-login col-md-7">
-                        <div class="row h-100">
-                            <div class="navbar-search__input-wrapper col-md-7 d-flex">
-                                <form action="search.php" method="POST" class="navbar-search__input-wrap">
+                    <div class="navbar-search__input-login col-lg-7 col-md-7 col-sm-7 col-6 ">
+                        <div class="login-on-mobile row h-100">
+                            <div class="navbar-search__input-wrapper col-lg-7 col-md-5 col-3 d-flex">   
+                                <label for="search-mb-checkbox" class="navbar-search__wrap-on-mb hide-on-pc">
+                                    <i class="bi bi-search navbar-search__icon-on-mb"></i>
+                                </label>
+
+                                <input type="checkbox" hidden id="search-mb-checkbox" class="navbar-search__search-checkbox">
+
+                                <form action="/BaiTapLon/search-guest.php" method="POST" class="navbar-search__input-wrap ">
                                     <span class="navbar-search__input-icon">
                                         <i class="fas fa-search" style="font-size: 17px; transform: translateY(3px); color: #999;"></i>
                                     </span>
                                     <span>
-                                        <input class="navbar-search__input" type="text" placeholder="Ảnh, mọi người hoặc nhóm" value="<?php echo $value?>">
+                                        <input class="navbar-search__input" name="textInput" type="text" placeholder="Ảnh, mọi người hoặc nhóm" value="<?php echo $value?>">
                                     </span>
                                     <div class="navbar-search__select-wrap">
                                         <ul class="navbar-search__select-list">
@@ -111,29 +122,31 @@
                                         </ul>
                                     </div>
                                 </form>
+
                             </div>
     
-                            <div class="navbar-search__user-wrap d-flex col-md-5">
-                                <div class="navbar-search__upload">
+                            <div class="navbar-search__user-wrap d-flex col-lg-5 col-md-7 col-8">
+                                <div class="navbar-search__upload hide-on-tab-mobile">
                                     <a href="" class="navbar-search__upload-link">
                                         <i class="navbar-search__upload-icon fas fa-cloud-upload-alt"></i>
                                     </a>
                                 </div>
-                                <div class="navbar-search__login-wrap">
-                                    <button class="navbar-search__login-btn btn">
+                                <div class="navbar-search__login-wrap hide-on-mobile">
+                                    <a href="/BaiTapLon/user/login.php" class="navbar-search__login-btn btn">
                                         Đăng nhập
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="navbar-search__signup-wrap">
-                                    <button class="navbar-search__signup-btn btn btn-primary">
+                                    <a href="/BaiTapLon/user/signup.php" class="navbar-search__signup-btn btn btn-primary">
                                         Đăng ký
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="container-fluid category-search-wrap">
                 <div class="container category-search-content ps-4 pe-4">
                     <div class="container-fluid category-search__select">
@@ -161,7 +174,7 @@
                 </div>
                 <div class="container category-search-content ps-4 pe-4" style="height: 40px;">
                     <div class="row" style="height: 100%; justify-content: space-between;">
-                        <div class="category-dropdown col-md-4">
+                        <div class="category-dropdown col-lg-4 col-md-6">
                             <div class="category-dropdown__wrap">
                                 <h5 class="dropdown__content">
                                     Mọi giấy phép <i class="fas fa-angle-down dropdown__icon"></i>
@@ -200,7 +213,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="category-filter col-md-4">
+                        <div class="category-filter col-lg-4 col-md-6 hide-on-mobile">
                             <div class="category-filter__wrap">
                                 <h5 class="category-filter__content">
                                     <i class="fas fa-share"></i>
@@ -223,7 +236,45 @@
                     </div>
                 </div>
             </div>
+
+            <input type="checkbox" hidden id="sub-cate-mobile-tab" class="sub-cate-checkbox">
+            <div class="subcate-on-mobile-tablet hide-on-pc h-100">
+                <ul class="subcate-on-mobile-table__list">
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="/BaiTapLon/user/login.php" class="subcate-on-mobile-tablet__link">Đăng nhập</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Khám phá</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Xu hướng</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Sự kiện</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">The Commons</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Trưng bày</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Blogs</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">In hình nền</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Phóng sự ảnh</a>
+                    </li>
+                    <li class="subcate-on-mobile-table__item">
+                        <a href="" class="subcate-on-mobile-tablet__link">Dùng Pro</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+
         <div class="container-fluid body-search-wrap">
             <div class="container body-search-content">
                 <ul class="body-search__list row">

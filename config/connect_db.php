@@ -2,8 +2,8 @@
 //Database configuration
         $dbHost     = "localhost";
         $dbUsername = "root";
-        $dbPassword = "12345678";
-        $dbName     = "database_BaiTapLon";
+        $dbPassword = "";
+        $dbName     = "database_baitaplon";
 
         // Create database connection
         $conn =  mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);//tương đương sql_connect

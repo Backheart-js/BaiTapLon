@@ -135,7 +135,7 @@
                         <div class="text-center m-5">
                             <h2 class="fw-normal">Bạn không có ảnh công khai.</h2>
                             <h4 class="fw-normal p-5">Dòng ảnh của bạn là danh mục đầu tư trực tiếp của bạn. Đặt ảnh của bạn ở chế độ công khai bằng Thư viện ảnh để đưa vào dòng ảnh của bạn.</h4>
-                            <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Go to camera roll</a></button>
+                            <button class="btn p-2 bg-primary mb-5"><a href="#cameraroll-view" class=" text-decoration-none">Go to camera roll</a></button>
                         </div>
                       </div>
                         <div class="subnav-view-bg mx-5">
@@ -153,7 +153,7 @@
           <div class="text-center m-5 px-5">
               <h2 class="fw-normal">Hãy làm một album.</h2>
               <h4 class="fw-normal p-5 mx-5">Dễ dàng sắp xếp tất cả ảnh của bạn thành các album đẹp mắt để chia sẻ với bạn bè, gia đình hoặc thậm chí các thành viên Flickr khác.</h4>
-              <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Go to camera roll</a></button>
+              <button class="btn p-2 bg-primary mb-5"><a href="#cameraroll-view" class=" text-decoration-none">Go to camera roll</a></button>
             </div>
       </div>
       <div class="subnav-view-bg-bg mx-5">
@@ -167,7 +167,7 @@
           <div class="text-center m-5 px-5">
               <h2 class="fw-normal">Bắt đầu chọn ảnh yêu thích của bạn. Chỉ cần nhấn vào dấu sao.</h2>
               <h4 class="fw-normal p-5 mx-5">Thích điều bạn nhìn thấy? Hãy cho nhiếp ảnh gia biết bằng cách nhấn vào biểu tượng ngôi sao.</h4>
-              <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Bắt đầu khám phá Flickr</a></button>
+              <button class="btn p-2 bg-primary mb-5"><a href="" class=" text-decoration-none">Bắt đầu khám phá Flickr</a></button>
             </div>
       </div>
       <div class="subnav-view-bg mx-5">
@@ -182,7 +182,7 @@
           <div class="text-center m-5 px-5">
               <h2 class="fw-normal">Các bức tường trong phòng trưng bày của bạn trông trống trải quá.</h2>
               <h4 class="fw-normal p-5 mx-5">Thư viện là một cách để trưng bày ảnh và video công khai của các nhiếp ảnh gia khác. Khi bạn thấy nội dung yêu thích trên Flickr, hãy nhấn vào biểu tượng [+] để lưu lại trong phòng trưng bày của mình.</h4>
-              <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Tạo phòng trưng bày</a></button>
+              <button class="btn p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Tạo phòng trưng bày</a></button>
             </div>
       </div>
       <div class="galleries-view-bg mx-5 pb-5">
@@ -208,7 +208,7 @@
           <div class="text-center m-5 px-5">
               <h2 class="fw-normal">Giới thiệu thống kê hoàn toàn mới cho Pro</h2>
               <h4 class="fw-normal p-5 mx-5">Hiểu về cách mọi người khám phá những hình ảnh trên Flickr của bạn. Xem ảnh nào của bạn hiện đang có xu hướng và ảnh nào hoạt động tốt nhất trong toàn bộ thời gian hoạt động của tài khoản Flickr.</h4>
-              <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Tìm hiểu thêm về Pro</a></button>
+              <button class="btn p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Tìm hiểu thêm về Pro</a></button>
             </div>
       </div>
   </div>
@@ -247,7 +247,7 @@
                   if(mysqli_num_rows($result)){       
                       while($row=mysqli_fetch_assoc($result)){
                           $imageURL = './upload-avt/data_upload/'.$row["file_name"];
-                          // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
+                          
               ?>
               <img src="<?php echo $imageURL; ?>" alt="" style="height:150px" class="m-2"/>
                   <?php }
@@ -258,7 +258,7 @@
                               <h2 class="fw-normal">Bạn có rất nhiều ảnh? Chúng tôi có rất nhiều không gian lưu trữ.</h2>
                               <h4 class="fw-normal p-5 mx-5">Bạn có thể kéo và thả ảnh bất kỳ đâu trên trang này
                                 hoặc</h4>
-                              <button class="p-2 bg-primary mb-5"><a href="" class="text-decoration-none">Chọn tập tin để tải lên</a></button>
+                              <button class="btn p-2 bg-primary mb-5"><a href="/BaiTapLon/uploads/index.php" class="text-decoration-none">Chọn tập tin để tải lên</a></button>
                             </div>
                         </div>
                       <div class="cameraroll-bg mx-5 pb-5">
@@ -278,4 +278,5 @@
 <?php
     include_once "personal-page-footer.php";
 ?>
+
 

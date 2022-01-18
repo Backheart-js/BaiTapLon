@@ -31,5 +31,6 @@
     else
     {
         $msg = "Danger! Your something goes to wrong.";
+        header("location:../error.php");
     }
 ?>

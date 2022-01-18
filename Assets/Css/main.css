@@ -27,7 +27,6 @@
 }
 
 .modal__body{
-    width: 416px;
     height: 426px;
     background-color: #ffffff;
     padding: 0 14px;
@@ -368,6 +367,13 @@ height: 2px;
     }
     .nav-item {
         margin-right: 0;
+    }
+    .container-head_text {
+        text-align: center;
+    }
+
+    .container-head_style {
+        margin: 0;
     }
 
 }

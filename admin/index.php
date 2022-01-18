@@ -1,9 +1,10 @@
 <?php 
     // Kiểm tra thẻ làm việc
     session_start();
-    if(!isset($_SESSION['isLoginOK'])) { //Nếu không có thẻ
+    if(!isset($_SESSION['adLoginOK'])) { //Nếu không có thẻ
         header('Location: ad-login.php');   //Đi ra
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-admin">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">ADMIN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,15 +35,13 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">User Profile</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Images search</a>
                 </ul>
             </div>
             <div class="navbar__user me-3">
                 <?php
-                    if(isset($_SESSION['isLoginOK'])) { 
+                    if(isset($_SESSION['adLoginOK'])) { 
                         echo '<li class="nav-item navbar__item">';
-                        echo "<a class='nav-link navbar__link'>Wellcome: ".$_SESSION['isLoginOK']."</a>";
+                        echo "<a class='nav-link navbar__link'>Wellcome: ".$_SESSION['adLoginOK']."</a>";
                         echo '</li>';
                     }
                 ?>
@@ -60,17 +59,18 @@
             <div class="container admin-search mt-3">
                 <div class="container">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username"
+                        <input type="text" class="form-control input-search" placeholder="Id username"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <input class="btn btn-outline-secondary" type="submit" id="button-addon2"
+                        <input class="btn btn-outline-secondary btn-submit" type="submit" id="button-addon2"
                             value="Search"></input>
                     </div>
                 </div>
             </div>
 
+
             <div class="admin-table mt-5">
                 <table class="table table-striped table-hover">
-                    <thead class="table-primary">
+                    <thead class="table-primary search-table">
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">First Name</th>
@@ -78,7 +78,6 @@
                             <th scope="col">Age</th>
                             <th scope="col">Email</th>
                             <th scope="col">Album</th>
-                            
                         </tr>
                     </thead>
                     
@@ -86,10 +85,7 @@
                         <!-- Vùng này là Dữ liệu cần lặp lại hiển thị từ CSDL -->
                     <?php
                         // Bước 01: Kết nối Database Server
-                        $conn = mysqli_connect('localhost','root','','database_baitaplon');
-                        if(!$conn){
-                            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-                        }
+                        require_once('../config/connect_db.php');
                         // Bước 02: Thực hiện truy vấn
                         $sql = "SELECT id, firstname, lastname, age, email FROM users";
                         $result = mysqli_query($conn,$sql);
@@ -98,7 +94,7 @@
                         if(mysqli_num_rows($result) > 0){
                             while($row = mysqli_fetch_assoc($result)){
                     ?>
-                                
+
                                 <tr>
                                     <th scope="row"><?php echo $row['id'];?></th>
                                     <td><?php echo $row['firstname'];?></td>
@@ -106,7 +102,7 @@
                                     <td><?php echo $row['age'];?></td>
                                     <td><?php echo $row['email'];?></td>
                                     <!-- Chú ý: nếu truyền giá trị Null vào thì sẽ bị lỗi -->
-                                    <td><a href="ad-albumuser.php?id=<?php echo $row['id']; ?>"><i class="fas fa-images"></i></a></td>
+                                    <td><a href="ad-albumuser.php?email=<?php echo $row['email']; ?>"><i class="fas fa-images"></i></a></td>
                                 </tr> 
                                 
                     <?php
@@ -125,7 +121,9 @@
     </div>
 
 
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="/BaiTapLon/admin/js/jquery.min.js"></script>
+    <script src="/BaiTapLon/admin/js/app.js"></script>
 </body>
 
 </html>

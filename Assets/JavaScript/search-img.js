@@ -17,8 +17,6 @@ var input = document.querySelector('.navbar-search__input'),
     }
 
 
-var btn_search = document.querySelector('.navbar-search__select-item')
-
 input.addEventListener('input', function(e) {
     value = e.target.value;
     if(value!=='') {    //Nếu có giá trị trong input thì sự kiện lắng nghe của focusout bị remove
@@ -42,18 +40,9 @@ $('.navbar-search__select-wrap').mouseleave(function() {
 })
 
 
-var btn_login = document.querySelector('.navbar-search__login-btn'),
-    btn_signup = document.querySelector('.navbar-search__signup-btn');
-
-btn_login.addEventListener('click', function(e) {
-    window.location.assign('user/login.php');
-})
-btn_signup.addEventListener('click', function(e) {
-    window.location.assign('user/signup.php');
-})
-
 
 //Fetch API
+    //Lấy ảnh khi tìm kiếm từ trang khác
 var photoQueryURL = 'https://api.flickr.com/services/rest/?' + $.param({
             'method': 'flickr.photos.search',
             'api_key': 'da0eebbdc8f5e56327a367f37bdfc6ac',
@@ -82,7 +71,7 @@ var photoQueryURL = 'https://api.flickr.com/services/rest/?' + $.param({
           }
       });
 
-
+      //Lấy ảnh khi tìm kiếm tại trang tìm kiếm
   $('.navbar-search__input').change(function () {
     var output = $(this).val();
     console.log(output);
@@ -117,3 +106,14 @@ var photoQueryURL = 'https://api.flickr.com/services/rest/?' + $.param({
         });       
       });
   });
+
+
+//   var btn_login = document.querySelector('.navbar-search__login-btn'),
+//     btn_signup = document.querySelector('.navbar-search__signup-btn');
+
+// btn_login.addEventListener('click', function(e) {
+//     window.location.assign('user/login.php');
+// })
+// btn_signup.addEventListener('click', function(e) {
+//     window.location.assign('user/signup.php');
+// })

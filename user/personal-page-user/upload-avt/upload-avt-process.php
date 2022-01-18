@@ -55,6 +55,7 @@ if(isset($_POST["submitUpload"]) && !empty($_FILES["fileupload"]["name"])){
             var_dump($_FILES["fileupload"]["error"]);  
             echo"2"; die;
             $statusMsg = "Sorry, there was an error uploading your file.";
+            header("location:../../error.php");
         }
     }
     else{
