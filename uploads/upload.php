@@ -10,7 +10,7 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 // Những động tác về thiết lập cho việc chuẩn bị upload
-$targetDir = ('./../uploads/') . '/';//Thư mục chỉ định để lưu trữ tệp tải lên;
+$targetDir = ('containerUploads/');//Thư mục chỉ định để lưu trữ tệp tải lên;
 $fileName = basename($_FILES["myfile"]["name"]);//$_file biến siêu toàn cục
 $targetFilePath = $targetDir . $fileName;//đây là tên đầy đủ+đường dẫn tệp tin lưu trữ toàn bộ phần tử
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);//đang bắt định dạng tệp tin
@@ -24,23 +24,26 @@ if(isset($_POST["sbmUpload"]) && !empty($_FILES["myfile"]["name"])){
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){//Kiểm tra 1 giá trị có thuộc mảng không
         //xử lí upload đang lưu ở thư mục tạm
-        $tagetFile = "/uploads/" . $fileName;
-        var_dump($tagetFile);
-        copy($_FILES["myfile"]["tmp_name"], $tagetFile);
-        echo "<img src='".$tagetFile."'>";
-        if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $tagetFile)){//Lấy từ nơi tạm đẩy vào nơi chính
+        //var_dump($_FILES["myfile"]["tmp_name"]);
+        //echo $targetFilePath;
+        if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetFilePath)){//Lấy từ nơi tạm đẩy vào nơi chính
             // Lưu đường dẫn vào cơ sở dữ liệu
-          echo"1"; die;
-            $sql = "INSERT into db_images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())"; 
-            echo $sql;
-            $insert=mysqli_query($db,$sql);
-            if($insert){ //kiểm tra việc query thành công
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-                header("location:../index.php#js-update");
-                // http://localhost/BaiTapLon/user/personal-page-user/#js-update
-            }else{
-                $statusMsg = "File upload failed, please try again.";
-            } 
+            // echo $fileName;die;
+         
+            try{
+                $sql = "INSERT into data_images (email,file_name, uploaded_on) VALUES ('".$_SESSION['isLoginOK']."','".$fileName."', NOW())"; 
+                // echo $sql;die;
+                // where
+                $insert=mysqli_query($conn,$sql);
+               
+                if($insert){ //kiểm tra việc query thành công
+                    $statusMsg = " ".$fileName. " has been uploaded successfully.";
+                    
+                }else{
+                    $statusMsg = "File upload failed, please try again.";
+                } 
+            }catch(\Exception $e){
+            }
         }
         else{      
             echo"<br>error"; die;

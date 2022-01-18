@@ -302,6 +302,14 @@ height: 2px;
     width: 100%;
     height: 200px;
 }
+.container-head_text{
+    margin: 40px 126px 20px 126px; 
+    font-weight: 250 ;
+}
+.container-head_style{
+    margin: 0 20px ;
+    text-align:center ;
+}
 .card-body{
     display: flex;
     width: 90%;
@@ -324,5 +332,54 @@ height: 2px;
     background-color: #128fdc;
     margin: 0 0 0 12px;
 }
+/* Laptop */
+@media (min-width: 1024px)
+{
 
+}
+/* Mobile */
+@media (max-width: 890px)
+{
+    .content__poster{
+        display:none;
+    }
+    .content__group{
+        display:none;
+    }
+    .content__Blog{
+        display:none;
+    }
+    .container-head_text {
+        margin: 40px 126px 20px 0;
+        
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px)
+{
+    .content__poster{
+        display:none;
+    }
+    .content__group{
+        display:none;
+    }
+    .content__Blog{
+        display:none;
+    }
+    .nav-item {
+        margin-right: 0;
+    }
 
+}
+@media (max-width: 1023px)
+{
+    .content__poster{
+        display:none;
+    }
+    .content__group{
+        display:none;
+    }
+    .content__Blog{
+        display:none;
+    }
+}

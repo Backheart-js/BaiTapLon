@@ -25,14 +25,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <?php 
-      require_once("./link-navbar.php");
-    ?>
   
-    <div class="container-fluid content-wrapper" style="margin-top: 50px">
+      <?php
+      require "./link-navbar.php"
+      ?>
+    <div class="container-fluid content-wrapper " style="margin-top: 50px">
       <div class="container">
         <div class="row">
-          <div class="content__activity col-md-8">
+          <div class="content__activity  col-md-12 col-12 col-lg-8">
             <nav class="navbar navbar-expand-lg">
               <div class="container-fluid">
                 <li class="nav-item dropdown col-md-10">
@@ -74,11 +74,11 @@
                 </div>
               </div>
             </nav>
-            <div class="container-head" style="justify-content: center">
-              <h4 style="margin: 40px 126px 20px 126px; font-weight: 250">
+            <div class="container-head col-12 col-md-12 col-lg-12" style="justify-content: center">
+              <h4 style="" class="container-head_text col-md-12 col-lg-12 col-12">
                 Hiện tại không có hoạt động nào để hiển thị
               </h4>
-              <p style="margin: 0 20px ;text-align:center ;">
+              <p style=""class="col-md-12 col-lg-12 col-12 container-head_style">
                 Hãy xem thông tin về các nhiếp ảnh gia được khuyến nghị bên dưới
                 và bắt đầu theo dõi những người này để xem nội dung của họ ở
                 đây.
@@ -124,7 +124,7 @@
             </div>
             <div class="row">
               <div class="card-group col-md-10">
-                <div class="card col-md-6">
+                <div class="card col-md-6 ">
                   <a href="">
                     <img
                       src="../Assets/data_img/river.jpeg"
@@ -133,7 +133,7 @@
                     />
                   </a>
                 </div>
-                <div class="card col-md-6">
+                <div class="card col-md-6 ">
                   <a href="">
                     <img
                       src="../Assets/data_img/sky.jpeg"
@@ -142,7 +142,7 @@
                     />
                   </a>
                 </div>
-                <div class="card col-md-6">
+                <div class="card col-md-6 ">
                   <a href="" class="">
                     <img
                       src="../Assets/data_img/mountains_hero.jpeg"
@@ -161,7 +161,7 @@
                   Những người bạn có thể muốn theo dõi
                 </h5>
               </strong>
-              <div class=" col-md-6">
+              <div class=" col-md-6 col-12 col-lg-6 col-12 col-lg-6">
                 <img
                   src="../Assets/data_img/field.jpeg"
                   class="card-img-top-subribe"
@@ -175,7 +175,7 @@
                   >
                 </div>
               </div>
-              <div class=" col-md-6">
+              <div class=" col-md-6 col-12 col-lg-6">
                 <img
                   src="../Assets/data_img/snow.jpeg"
                   class="card-img-top-subribe"
@@ -190,7 +190,7 @@
                   </a>
                 </div>
               </div>
-              <div class=" col-md-6">
+              <div class=" col-md-6 col-12 col-lg-6">
                 <img
                   src="../Assets/data_img/village.jpeg"
                   class="card-img-top-subribe"
@@ -205,7 +205,7 @@
                   </a>
                 </div>
               </div>
-              <div class=" col-md-6">
+              <div class=" col-md-6 col-12 col-lg-6">
                 <img
                   src="../Assets/data_img/forest.jpeg"
                   class="card-img-top-subribe"

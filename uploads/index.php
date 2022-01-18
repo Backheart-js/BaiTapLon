@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['isLoginOK'])){
+  header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
