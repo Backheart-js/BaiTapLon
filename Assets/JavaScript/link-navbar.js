@@ -45,14 +45,3 @@ var user_selection = document.querySelector('.navbar__user-selection');
 $('.navbar-search__user').click(function() {
     user_selection.classList.toggle('d-block');
 })
-
-
-var btn_login = document.querySelector('.navbar-search__login-btn'),
-    btn_signup = document.querySelector('.navbar-search__signup-btn');
-
-btn_login.addEventListener('click', function(e) {
-    window.location.assign('user/login.php');
-})
-btn_signup.addEventListener('click', function(e) {
-    window.location.assign('user/signup.php');
-})

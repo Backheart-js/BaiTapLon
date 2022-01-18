@@ -17,15 +17,21 @@
     <div class="Main">
         <header>
             <div class="container-fluid" id="navbar">
-                <div class="row ps-4 pe-4 h-100">
-                    <div class="navbar__logo-wrap col-md-2 d-flex">
+                <div class="navbar-wrap row h-100 no-gutters-on-tab-mobi">
+                    <div class="navbar__logo-wrap col-lg-2 col-md-2 col-3 ps-4 d-flex">
                         <a href="#" class="d-flex">
                             <img class="navbar__logo-img" src="./Assets/data_img/flickr_demo.svg" alt="">
                         </a>
                     </div>
-                    <div class="container-fluid col-md-10">
+                    <div class="col-3 hide-on-pc hide-on-tablet"></div>
+                    <div class="container-fluid col-lg-10 col-md-10 col-6">
                         <div class="row h-100">
-                            <div class="navbar__search-wrap col-md-9 d-flex">
+                            <div class="navbar__search-wrap col-lg-9 col-md-9 col-3 d-flex">
+                                <label for="search-mb-checkbox" class="navbar-search__wrap-on-mb hide-on-pc hide-on-tablet">
+                                    <i class="bi bi-search navbar-search__icon-on-mb"></i>
+                                </label>
+                                <input type="checkbox" hidden id="search-mb-checkbox" class="navbar-search__search-checkbox">
+
                                 <form action="search-guest.php" method="POST" class="navbar__input-wrap">
                                     <span class="navbar__input-icon">
                                         <i class="fas fa-search" style="font-size: 17px; transform: translateY(3px); color: #999;"></i>
@@ -61,13 +67,13 @@
                                 </form>
                             </div>
     
-                            <div class="navbar__user-wrap d-flex col-md-3">
+                            <div class="navbar__user-wrap d-flex col-lg-3 col-md-3 col-9">
                                 <div class="navbar__login-wrap">
                                     <button class="navbar__login-btn btn">
                                         Đăng nhập
                                     </button>
                                 </div>
-                                <div class="navbar__signup-wrap">
+                                <div class="navbar__signup-wrap hide-on-tab-mobile">
                                     <button class="navbar__signup-btn btn btn-light">
                                         Đăng ký
                                     </button>
@@ -86,13 +92,13 @@
                 <div id="carouselExampleFade" class="bg-slider-guest carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="Assets/data_img/bg-home-guest-4.jpg" class="d-block w-100" alt="...">
+                        <div class="bg-slider__img" style="background: url('./Assets/data_img/bg-home-guess-1.jpg') top center/cover no-repeat;"></div>
                       </div>
                       <div class="carousel-item">
-                        <img src="Assets/data_img/bg-home-guess-2.jpg" class="d-block w-100" alt="...">
+                        <div class="bg-slider__img" style="background: url('./Assets/data_img/bg-home-guess-2.jpg') top center/cover no-repeat;"></div>
                       </div>
                       <div class="carousel-item">
-                        <img src="Assets/data_img/bg-home-guess-3.jpg" class="d-block w-100" alt="...">
+                        <div class="bg-slider__img" style="background: url('./Assets/data_img/bg-home-guess-3.jpg') top center/cover no-repeat;"></div>
                       </div>
                     </div>
                     <!-- Text on slider -->
@@ -113,64 +119,61 @@
             </div>
         </div>
         <footer class="footer__home-guest container-fluid">
-            <ul class="footer__home-guest-list">
-                <div class="row" style="justify-content: space-around;">
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Giới thiệu</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Việc làm</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Blog</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Nhà phát triển</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Quy tắc</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Trợ giúp</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Diễn đàn</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Sự riêng tư</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Điều khoản</a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <a href="" class="footer__home-guest-link">Cookie</a>
-                    </li>
-                    <li class="footer__home-guest-item">
+            <ul class="footer__home-guest-list row ps-3 pe-3">
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Giới thiệu</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Việc làm</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Blog</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Nhà phát triển</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Quy tắc</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Trợ giúp</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Diễn đàn</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Điều khoản</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">Cookie</a>
+                </li>
+                <li class="footer__home-guest-item col-md-2">
+                    <a href="" class="footer__home-guest-link">
+                        Tiếng Việt
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                </li>
+                <li class="col-md-2"></li>
+                <li class="footer__home-guest-item col-md-2">
+                    <div class="footer__guest-icon">
                         <a href="" class="footer__home-guest-link">
-                            Tiếng Việt
-                            <i class="fas fa-caret-down"></i>
+                            <i class="footer__home-guest-icon fab fa-facebook-square"></i>
                         </a>
-                    </li>
-                    <li class="footer__home-guest-item">
-                        <div class="footer__guest-icon">
-                            <a href="" class="footer__home-guest-link">
-                                <i class="footer__home-guest-icon fab fa-facebook-square"></i>
-                            </a>
-                        </div>
-                        <div class="footer__guest-icon">
-                            <a href="" class="footer__home-guest-link">
-                                <i class="footer__home-guest-icon fab fa-twitter"></i>
-                            </a>
-                        </div>
-                        <div class="footer__guest-icon">
-                            <a href="" class="footer__home-guest-link">
-                                <i class="footer__home-guest-icon fab fa-instagram"></i>
-                            </a>
-                            
-                        </div>
+                    </div>
+                    <div class="footer__guest-icon">
+                        <a href="" class="footer__home-guest-link">
+                            <i class="footer__home-guest-icon fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="footer__guest-icon">
+                        <a href="" class="footer__home-guest-link">
+                            <i class="footer__home-guest-icon fab fa-instagram"></i>
+                        </a>
                         
-                    </li>
-                </div>
+                    </div>
+                    
+                </li>
+            
             </ul>
         </footer>
     </div>  

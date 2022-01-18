@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-admin">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">ADMIN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,8 +34,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">User Profile</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Images search</a>
                 </ul>
             </div>
             <div class="navbar__user me-3">
@@ -86,10 +84,7 @@
                         <!-- Vùng này là Dữ liệu cần lặp lại hiển thị từ CSDL -->
                     <?php
                         // Bước 01: Kết nối Database Server
-                        $conn = mysqli_connect('localhost','root','','database_baitaplon');
-                        if(!$conn){
-                            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-                        }
+                        require_once('../config/connect_db.php');
                         // Bước 02: Thực hiện truy vấn
                         $sql = "SELECT id, firstname, lastname, age, email FROM users";
                         $result = mysqli_query($conn,$sql);
@@ -106,7 +101,7 @@
                                     <td><?php echo $row['age'];?></td>
                                     <td><?php echo $row['email'];?></td>
                                     <!-- Chú ý: nếu truyền giá trị Null vào thì sẽ bị lỗi -->
-                                    <td><a href="ad-albumuser.php?id=<?php echo $row['id']; ?>"><i class="fas fa-images"></i></a></td>
+                                    <td><a href="ad-albumuser.php?email=<?php echo $row['email']; ?>"><i class="fas fa-images"></i></a></td>
                                 </tr> 
                                 
                     <?php

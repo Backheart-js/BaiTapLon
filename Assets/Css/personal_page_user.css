@@ -30,7 +30,7 @@ body{
 }
 .slider{
     background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.03) 8%,rgba(0,0,0,.11) 21%,rgba(0,0,0,.61) 78%,rgba(0,0,0,.7) 95%,rgba(0,0,0,.7)),
-    url(/BTL_Test/BaiTapLon/assets/data_img/img_slider.jpg);
+    url(/BaiTapLon/Assets/data_img/img_slider.jpg);
     height: 500px;
     background-repeat: no-repeat;
     background-position: center;
