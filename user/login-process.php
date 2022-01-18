@@ -7,6 +7,7 @@ if(isset($_POST['btnloginone'])){
     $password=$_POST['txtPass1'];
     //ở đây còn phải ktra người dùng có nhập không
   require "../config/connect_db.php";
+
     // Bước 02: Thực hiện truy vấn
     $sql = "select * FROM login WHERE Email = '$email'";
     
