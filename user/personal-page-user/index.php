@@ -124,7 +124,7 @@
                   // echo(mysqli_num_rows($result));
                   if(mysqli_num_rows($result)){       
                       while($row=mysqli_fetch_assoc($result)){
-                          $imageURL = '../../uploads/'.$row["file_name"];
+                          $imageURL = '../../uploads/ContainerUploads/'.$row["file_name"];
                           // $imageURL = ('./../data_upload/') . '/'.$row["file_name"];
               ?>
               <img src="<?php echo $imageURL; ?>" alt="" style="height:150px" class="m-2"/>
