@@ -15,7 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Flickr</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/css-admin.css">
 
@@ -61,15 +63,30 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control input-search" placeholder="Id username"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <input class="btn btn-outline-secondary btn-submit" type="submit" id="button-addon2"
-                            value="Search"></input>
+                        <button class="btn btn-outline-secondary btn-submit" type="submit" id="button-addon2">Search</button>
                     </div>
                 </div>
             </div>
 
-
+            <!-- Bảng thông tin user -->
             <div class="admin-table mt-5">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover" id="search-table">
+                    <thead class="table-primary">
+                        <tr>
+                        <th scope="col">ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Album</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "search-table__content">
+                                              
+                    </tbody>
+                </table>
+                
+                <table class="table table-striped table-hover" id = "main-table">
                     <thead class="table-primary search-table">
                         <tr>
                             <th scope="col">ID</th>
@@ -80,10 +97,10 @@
                             <th scope="col">Album</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
                         <!-- Vùng này là Dữ liệu cần lặp lại hiển thị từ CSDL -->
-                    <?php
+                        <?php
                         // Bước 01: Kết nối Database Server
                         require_once('../config/connect_db.php');
                         // Bước 02: Thực hiện truy vấn
@@ -95,23 +112,24 @@
                             while($row = mysqli_fetch_assoc($result)){
                     ?>
 
-                                <tr>
-                                    <th scope="row"><?php echo $row['id'];?></th>
-                                    <td><?php echo $row['firstname'];?></td>
-                                    <td><?php echo $row['lastname'];?></td>
-                                    <td><?php echo $row['age'];?></td>
-                                    <td><?php echo $row['email'];?></td>
-                                    <!-- Chú ý: nếu truyền giá trị Null vào thì sẽ bị lỗi -->
-                                    <td><a href="ad-albumuser.php?email=<?php echo $row['email']; ?>"><i class="fas fa-images"></i></a></td>
-                                </tr> 
-                                
-                    <?php
+                        <tr>
+                            <th scope="row"><?php echo $row['id'];?></th>
+                            <td><?php echo $row['firstname'];?></td>
+                            <td><?php echo $row['lastname'];?></td>
+                            <td><?php echo $row['age'];?></td>
+                            <td><?php echo $row['email'];?></td>
+                            <!-- Chú ý: nếu truyền giá trị Null vào thì sẽ bị lỗi -->
+                            <td><a href="ad-albumuser.php?email=<?php echo $row['email']; ?>"><i
+                                        class="fas fa-images"></i></a></td>
+                        </tr>
+
+                        <?php
                             }
                         }
                         // Bước 04: Đóng kết nối Database Server
                         mysqli_close($conn);
                     ?>
-                        
+
                     </tbody>
                 </table>
             </div>

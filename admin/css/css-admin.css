@@ -22,6 +22,10 @@
 }
 
 /* User */
+#search-table {
+    display: none;
+}
+
 .admin-dashboard {
     margin-top: 54px;
 }
